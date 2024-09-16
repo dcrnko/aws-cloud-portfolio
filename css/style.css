@@ -70,7 +70,7 @@ p{
   justify-content: center;
   align-items: center;
   color: white;
-  height: 100vh;
+  height: 90vh;
   background-color: transparent;
   margin: 0;
   padding: 0;
@@ -82,7 +82,7 @@ p{
   justify-content: center;
   align-items: center;
   color: white;
-  height: 100vh;
+  height: 90vh;
   background-color: transparent;
   margin: 0;
   padding: 0;
@@ -107,7 +107,7 @@ p{
     justify-content: center;
     align-items: center;
     color: white;
-    height: 100vh;
+    height: 90vh;
     background-color: transparent;
     margin: 0;
     padding: 0;
@@ -163,7 +163,7 @@ p{
   /* Add any other custom styles you want for the full-screen section */
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 90vh;
 }
 
 .aboutme-container-content1 {
@@ -175,11 +175,11 @@ p{
   color: black;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 90vh;
 }
 
 .aboutme-container-content2 {
-  height: 100vh;
+  height: 90vh;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -191,7 +191,7 @@ p{
 }
 
 .skills-container {
-  height: 100vh;
+  height: 90vh;
   margin: 0;
   padding: 0;
 }
@@ -209,11 +209,11 @@ p{
   color: white;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 90vh;
 }
 
 .skills-container-content2 {
-  height: 100vh;
+  height: 90vh;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -318,7 +318,7 @@ img{
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 100vh; /* Adjust the height as needed */
+          height: 90vh; /* Adjust the height as needed */
       }
 .icon {
           font-size: 36px; /* Adjust the icon size as needed */
