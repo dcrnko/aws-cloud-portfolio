@@ -1,11 +1,13 @@
-body,
-html {
+body,html {
   margin: 0;
   padding: 0;
   font-family: 'Abel', sans-serif;
   overflow-x: hidden;
   background-color: #51713a; background-image: linear-gradient(314deg, #51713a 0%, #000e21 74%);
 }
+/* NAVBAR SECTION START!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
 .navbar {
   position: sticky;
   top: 0;
@@ -18,12 +20,6 @@ html {
 .nav-item:hover {
   transform: scale(1.15); /* Slightly increases size to make it stand out */
 }
-
-.divider {
-  border: 0;
-  height: 1px;
-  background-color: white; /* Makes the line white */
-}
 .navbar .nav-item .nav-link{
   font-size: 20px;
   color: white;
@@ -32,22 +28,15 @@ li {
   margin: 0 10px;
   color: white;
 }
-p{
-  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-}
 
-@media (max-width: 768px) {
-  nav {
-    height: 10%;
-  }
+/* NAVBAR SECTION OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-  ul {
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    height: auto;
-    padding: 10px;
-  }
+/* HOME SECTION START!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.profilepic{
+  width: 20%; /* Set the width to 30% of the parent container */
+  border-radius: 50%; /* Make the image rounded */
+  object-fit: cover; 
 }
 
 .custom-col {
@@ -56,140 +45,136 @@ p{
 }
 
 .home-container {
-  text-align: center;
-  /*height: 100vh; /* 100% of the viewport height */
-  /* Add any other custom styles you want for the full-screen section */
+  text-align: center; /* Center content in the container */
   margin: 0;
   padding: 0;
 }
 
 .home-container-content1 {
   font-size: 110px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
-  height: 90vh;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
+  height: 90vh; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: flex-end; /* Align items to the right */
+  text-align: right; /* Ensure text is aligned to the right */
 }
 
 .home-container-content2 {
-  text-align: left;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
   color: white;
-  height: 90vh;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
+  height: 90vh; /* Adjust the height as needed */
 }
 
 .IAM {
   font-size: 50px;
 }
 
-.freelance {
-  font-size: 30px;
-  color: white;
-}
-
-.sysadmin {
-  font-size: 50px;
-}
-@media screen and (max-width: 768px) {
-  .home-container-content2 {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    height: 90vh;
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-    /* Change this to your desired alignment */
-  }
-
-  .IAM {
-    font-size: 60px;
-  }
-
-  .freelance {
-    font-size: 40px;
-  }
-
-  .sysadmin {
-    font-size: 60px;
-  }
-}
-
-.home-container-content2 h3 {
-  color: white;
-}
-
 .welcome {
   font-size: 40px;
 }
 
-.freelance {
-  text-decoration: line-through;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home-container-content1 {
+    font-size: 60px; /* Decrease font size on smaller screens */
+    align-items: center; /* Center items in smaller screens */
+    text-align: center; /* Center text for smaller devices */
+  }
+
+  .home-container-content2 {
+    text-align: center; /* Center content for smaller devices */
+  }
+
+  .profilepic {
+    width: 40%; /* Adjust the image width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+/* HOME SECTION OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: white; /* Makes the line white */
 }
 
+/* ABOUT ME SECTION START!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 #aboutme {
-  margin: 0;
-  padding: 0;
+  height: 100vh; /* Set section height to full viewport height */
+  background-color: transparent; /* Optional: background color */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  flex-direction: column; /* Stack items vertically */
+  color: white; /* Set text color to white */
+  padding: 20px; /* Add padding for spacing */
 }
 
 .whoami {
-  color: white;;
-  font-size: 60px;
-  margin: 0;
-  padding: 0;
+  font-size: 3rem; /* Responsive font size */
+  margin: 0; /* Remove default margin */
+  text-align: center; /* Center text */
 }
 
 .desc {
-  font-size: 25px;
+  font-size: 1.25rem; /* Responsive font size */
+  margin: 20px 0; /* Add margin for spacing */
+  text-align: center; /* Center text */
+  max-width: 600px; /* Optional: limit width for better readability */
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .whoami {
+    font-size: 3rem; /* Decrease font size on smaller screens */
+  }
+
+  .desc {
+    font-size: 1rem; /* Adjust description font size for smaller screens */
+    padding: 0 10px; /* Add padding to prevent text from touching edges */
+  }
+
+  #aboutme {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+}
+
+/* ABOUT ME SECTION OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+
+#blog {
   margin: 0;
   padding: 0;
 }
-
-.aboutme-container {
-  text-align: center;
-  /*height: 100vh; /* 100% of the viewport height */
-  /* Add any other custom styles you want for the full-screen section */
-  margin: 0;
-  padding: 0;
-  height: 90vh;
+.blog-container-content1{
+ color: white;
+ text-align: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 0;
+ padding: 0;
+ height: 90vh;
 }
-
-.aboutme-container-content1 {
-  background-color: transparent;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  margin: 0;
-  padding: 0;
-  height: 90vh;
-}
-
-.aboutme-container-content2 {
-  height: 90vh;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.blog-container-content2{
   color: white;
-  background-color: transparent;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
+  height: 90vh;
 }
-
+.blog_article1{
+  color:white;
+}
 .skills-container {
   height: 90vh;
   margin: 0;
@@ -345,3 +330,5 @@ svg {
     opacity: 1;
   }
 }
+
+
