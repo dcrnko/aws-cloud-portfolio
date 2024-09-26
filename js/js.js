@@ -8,3 +8,6 @@ document.getElementById('toggleLink').addEventListener('click', function(e) {
       section.style.display = 'none';
     }
   });
+  function scrollToNextSection() {
+    document.getElementById('next-section').scrollIntoView({ behavior: 'smooth' });
+  }

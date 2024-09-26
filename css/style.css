@@ -15,13 +15,13 @@ body,html {
   /* z-index: 100;*/
   color: white;
   transition: background-color 0.3s ease; /* Smooth transition */
-
+  z-index: 100;
 }
 .nav-item:hover {
   transform: scale(1.15); /* Slightly increases size to make it stand out */
 }
 .navbar .nav-item .nav-link{
-  font-size: 20px;
+  font-size: 1.2rem;
   color: white;
 }
 li {
@@ -32,67 +32,138 @@ li {
 /* NAVBAR SECTION OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 /* HOME SECTION START!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
-.profilepic{
-  width: 20%; /* Set the width to 30% of the parent container */
-  border-radius: 50%; /* Make the image rounded */
+.profilepic {
+  width: 20%; /* Maintain the 20% width */
+  border-radius: 50%; /* Rounded image */
   object-fit: cover; 
-}
-
-.custom-col {
-  margin: 0;
-  padding: 0;
+  height: auto;
+  max-width: 300px; /* Maintain consistency across different screens */
+  z-index: 2; /* Keep image above the wave */
 }
 
 .home-container {
-  text-align: center; /* Center content in the container */
-  margin: 0;
-  padding: 0;
+  display: flex;
+  height: 90vh;
+  position: relative;
+  z-index: 1; /* Ensures content is above the waves */
 }
 
 .home-container-content1 {
-  font-size: 110px;
-  color: white;
-  height: 90vh; /* Adjust the height as needed */
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  justify-content: center; /* Center items vertically */
-  align-items: flex-end; /* Align items to the right */
-  text-align: right; /* Ensure text is aligned to the right */
-}
 
+  font-size: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  height: 90vh;
+  width:100%;
+}
 .home-container-content2 {
   display: flex;
-  justify-content: center; /* Center image horizontally */
-  align-items: center; /* Center image vertically */
+  justify-content: left;
+  align-items: center;
   color: white;
-  height: 90vh; /* Adjust the height as needed */
-}
-
-.IAM {
-  font-size: 50px;
-}
-
-.welcome {
-  font-size: 40px;
+  height: 90vh;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .home-container-content1 {
-    font-size: 60px; /* Decrease font size on smaller screens */
-    align-items: center; /* Center items in smaller screens */
-    text-align: center; /* Center text for smaller devices */
+  .home-container {
+    display: flex;
+    height: 25vh;
+    position: relative;
+    z-index: 1; /* Ensures content is above the waves */
   }
-
+  .home-container-content1 {
+    font-size: 2rem;
+    align-items: center;
+    text-align: center;
+    height: 60vh;
+  }
   .home-container-content2 {
-    text-align: center; /* Center content for smaller devices */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
   }
 
   .profilepic {
-    width: 40%; /* Adjust the image width for smaller screens */
-    height: auto; /* Maintain aspect ratio */
+    width: 40%; /* Adjust for smaller screens */
+    height: auto;
   }
+}
+
+/* Wave Animation Styles */
+.wave-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Waves go behind content */
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #0ff, transparent);
+  opacity: 0.1;
+  animation: wave-animation 2s infinite linear;
+}
+
+.wave1 {
+  top: 20%;
+  animation-delay: 0s;
+  transform: rotate(15deg);
+}
+
+.wave2 {
+  top: 50%;
+  animation-delay: 0.5s;
+  transform: rotate(-15deg);
+}
+
+.wave3 {
+  top: 80%;
+  animation-delay: 1s;
+  transform: rotate(0deg);
+}
+
+/* Animation Keyframes */
+@keyframes wave-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* Animation for wave movement */
+@keyframes wave-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.down-arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem; /* Size of the arrow */
+  color: white;
+  cursor: pointer;
+  z-index: 3; /* Ensure it's above other content */
+  transition: transform 0.3s ease;
+}
+
+.down-arrow:hover {
+  transform: translateX(-50%) translateY(10px); /* Slight move down on hover */
 }
 /* HOME SECTION OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
@@ -330,5 +401,4 @@ svg {
     opacity: 1;
   }
 }
-
 
