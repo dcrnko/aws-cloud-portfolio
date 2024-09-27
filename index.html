@@ -37,70 +37,73 @@
     </div>
   </nav>
 
-<hr class="divider">
+  <hr class="divider">
 
-<main>
- <!-- Home/landing section -->
- <section id="Home">
-  <div class="container-fluid">
-    <div class="row">
-      <!-- Add wave container to avoid layout shifting -->
-      <div class="wave-container">
-        <div class="wave wave1"></div>
-        <div class="wave wave2"></div>
-        <div class="wave wave3"></div>
+  <main>
+    <!-- Home/landing section -->
+    <section id="Home">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Add wave container to avoid layout shifting -->
+          <div class="wave-container">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="home-container">
+              <div class="home-container-content1">
+                <p class="IAM">I am David</p>
+                <p class="fade-in-text">Welcome to my digital portfolio</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="home-container-content2">
+              <img class="profilepic" alt="Profile Picture" src="images/profilepic.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="down-arrow" onclick="scrollToNextSection()">&#x2193;</div>
+
+        <!-- Placeholder for the next section -->
+        <section id="next-section">
+          <!-- Your next section content -->
+        </section>
       </div>
+    </section>
 
-      <div class="col-md-6">
-        <div class="home-container">
-          <div class="home-container-content1">
-            <p class="IAM">I am David</p>
-            <p class="fade-in-text">Welcome to my digital portfolio</p>
+    <hr class="divider">
+
+
+    <!-- About Me Section -->
+    <section id="aboutme">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 custom-col">
+            <div class="aboutme-container">
+              <p class="whoami">a few words about me....</p>
+            </div>
+          </div>
+          <div class="col-md-6 custom-col">
+            <div class="aboutme-container">
+              <p class="desc fade-in-text">
+                I am an IT guy often drowned in tweaking his lab and experimenting with new technologies. I completed my
+                degree in the UK but am happily living in the Czech Republic. I have been a Linux administrator for most
+                of my career, and now, I would love to learn how to automate everything. I love playing football,
+                spending time with friends, reading, or playing good games.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      
-      <div class="col-md-6">
-        <div class="home-container-content2">
-          <img class="profilepic" alt="Profile Picture" src="images/profilepic.jpg">
-        </div>
-      </div>
-    </div>
-    <div class="down-arrow" onclick="scrollToNextSection()">&#x2193;</div>
-    
-    <!-- Placeholder for the next section -->
-    <section id="next-section">
-      <!-- Your next section content -->
     </section>
-  </div>
-</section>
 
+    <!-- about me section OVER -->
     <hr class="divider">
-
-
-<!-- About Me Section -->
-<section id="aboutme">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-6 custom-col">
-        <div class="aboutme-container">
-          <p class="whoami">a few words about me....</p>
-        </div>
-      </div>
-      <div class="col-md-6 custom-col">
-        <div class="aboutme-container">
-          <p class="desc fade-in-text">
-            I am an IT guy often drowned in tweaking his lab and experimenting with new technologies. I completed my degree in the UK but am happily living in the Czech Republic. I have been a Linux administrator for most of my career, and now, I would love to learn how to automate everything. I love playing football, spending time with friends, reading, or playing good games.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- about me section OVER -->
-    <hr class="divider">
-  <!-- blog section -->
+    <!-- blog section -->
     <section id="blog">
       <div class="container-fluid">
         <div class="row">
@@ -117,61 +120,16 @@
             <div class="blog-container">
               <div class="blog-container-content2">
                 <div class="row">
-                <ul>
-                  <li><a href="#toggleSection" id="toggleLink">What I learned by creating this website</p></a></li>
-                  <li><a href="#toggleSection" id="toggleLink">Article 2</p></a></li>
-                  <li><a href="#toggleSection" id="toggleLink">Article 3</p></a></li>
-                  <li><a href="#toggleSection" id="toggleLink">Article 4</p></a></li>
-                </ul>
+                  <ul>
+                    <li><a href="#toggleSection" id="toggleLink">What I learned by creating this website</p></a></li>
+                    <li><a href="#toggleSection" id="toggleLink">Article 2</p></a></li>
+                    <li><a href="#toggleSection" id="toggleLink">Article 3</p></a></li>
+                    <li><a href="#toggleSection" id="toggleLink">Article 4</p></a></li>
+                  </ul>
                   <section id="toggleSection" style="display: none;">
                     <div id="blog_article1">
-                    <p>1. **Certification**
-I have obtained the AWS Cloud Practitioner certification. This provided me with an introduction to the AWS cloud ecosystem. </p>
-
-                    <p>2. **HTML**
-My resume is written entirely in HTML, ensuring it is web-ready and structured properly for online deployment.</p>
-
-                    <p>3. **CSS**
-The resume is styled with CSS, which adds basic visual structure and aesthetics. While I kept the design simple, it visually enhances the HTML.</p>
-
-                    <p>4. **Static Website**
-I deployed my HTML resume as a static website using Amazon S3. This ensures that the resume is hosted directly from AWS storage.</p>
-
-<p>5. **HTTPS**
-The S3 website uses HTTPS for secure access. To achieve this, I configured Amazon CloudFront as a content delivery network (CDN) with SSL.</p>
-
-<p>6. **DNS**
-I have connected a custom domain to the CloudFront distribution, ensuring my resume is accessible via a personalized domain name.</p>
-
-<p>7. **JavaScript**
-I implemented a visitor counter using JavaScript, which tracks how many people visit my resume site.</p>
-
-<p>8. **Database**
-The visitor counter updates its count using Amazon DynamoDB as the backend database, ensuring persistent and scalable data storage.</p>
-
-<p>9. **API**
-I created an API to interact with DynamoDB using AWS API Gateway and Lambda. The API handles requests from the web page to retrieve and update the visitor count.</p>
-
-10. **Python**
-In the Lambda function, I wrote Python code that interacts with DynamoDB using the boto3 library. This code efficiently handles the back-end logic for the visitor counter.
-
-11. **Tests**
-I included unit tests for the Python code to ensure the functionality works as expected. These tests help maintain the integrity of the Lambda function.
-
-12. **Infrastructure as Code**
-I used the AWS Serverless Application Model (SAM) to define and deploy the API resources. This allowed me to automate the deployment process and manage infrastructure as code (IaC).
-
-13. **Source Control**
-All code, both for the back-end API and front-end website, is version-controlled using GitHub repositories. This setup ensures proper code management and tracking.
-
-14. **CI/CD (Back end)**
-For the back-end, I set up GitHub Actions that run tests and, upon passing, automatically package and deploy the SAM application to AWS whenever I push updates.
-
-15. **CI/CD (Front end)**
-For the front-end, I created a separate GitHub repository and configured GitHub Actions to automatically update the S3 bucket with new website code upon any push, while also invalidating the CloudFront cache as necessary.
-                </p>                    
-                </div>
-                </section>
+                    </div>
+                  </section>
                 </div>
                 <div class="container"></div>
               </div>
