@@ -217,37 +217,43 @@ li {
 }
 
 /* ABOUT ME SECTION OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* Blog SECTION START!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-
-
-
-#blog {
-  margin: 0;
-  padding: 0;
-}
-.blog-container-content1{
- color: white;
- text-align: center;
- display: flex;
- justify-content: center;
- align-items: center;
- margin: 0;
- padding: 0;
- height: 90vh;
-}
-.blog-container-content2{
-  color: white;
-  text-align: center;
+.blog-posts {
+  margin-bottom: 5rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  height: 90vh;
+  flex-direction: column;
+  gap: 1rem; /* Space between blog posts */
 }
-.blog_article1{
-  color:white;
+.text-center{
+  color: white;
 }
+.blog-post {
+  background: transparent; /* Light background */
+  border: 1px solid #dee2e6; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px; /* Padding for inner content */
+  transition: background 0.3s ease; /* Smooth background transition */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.blog-post:hover {
+  background: transparent; /* Slightly darker background on hover */
+  transform: scale(1.01); /* Slightly increases size to make it stand out */
+}
+
+.blog-title {
+  margin: 0; /* Remove default margin */
+  color: white;
+}
+
+.blog-content {
+  margin-top: 10px; /* Space above content */
+  font-size: 1em; /* Slightly smaller font for content */
+  color: white; /* Darker text color */
+}
+/*BLOG SECTION OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
 .skills-container {
   height: 90vh;
   margin: 0;

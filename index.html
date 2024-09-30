@@ -103,36 +103,111 @@
 
     <!-- about me section OVER -->
     <hr class="divider">
-    <!-- blog section -->
+
+    <!-- Blog Section -->
     <section id="blog">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 custom-col">
-            <div class="blog-container">
-              <div class="blog-container-content1">
-                <div class="row">
-                  <p class="whoami">read my latest articles:</p>
-                </div>
-              </div>
+      <div class="container">
+        <h2 class="text-center my-4">My latest blog posts:</h2>
+        <div class="blog-posts">
+          <div class="blog-post" onclick="toggleContent(this)">
+            <h3 class="blog-title">What I learned by creating this website...</h3>
+            <div class="blog-content" style="display: none;">
+              <p><em>I have included the AWS Cloud Practitioner certification on my resume. This introductory
+                  certification has provided me with a solid orientation on the industry-leading AWS cloud. While I may
+                  have pursued a more advanced AWS certification, the Cloud Practitioner was a perfect starting point. I
+                  completed this exam online for $100 USD.</em></p>
+
+              <p><em>I took advantage of a helpful Cloud Practitioner prep course provided by Pluralsight, a sponsor of
+                  the Cloud Resume Challenge. Thanks to their special 30-day free trial of the Premium plan, I was able
+                  to study effectively and pass the exam within the allotted time.</em></p>
+
+              <p><em>I have written my resume in HTML, steering clear of Word documents and PDFs. This choice has
+                  allowed me to present my work in a modern and accessible format.</em></p>
+
+              <p><em>My resume has been styled with CSS, adding a personal touch to the presentation. While I am not a
+                  designer, I ensured that my resume looks polished and inviting, going beyond just raw HTML.</em></p>
+
+              <p><em>I successfully deployed my HTML resume online as an Amazon S3 static website. Although I considered
+                  other services like Netlify and GitHub Pages, I opted for S3 to keep things straightforward and
+                  aligned with my learning objectives.</em></p>
+
+              <p><em>The S3 website URL uses HTTPS for enhanced security, thanks to Amazon CloudFront, which I
+                  configured to handle this requirement.</em></p>
+
+              <p><em>I pointed a custom DNS domain name to the CloudFront distribution, allowing my resume to be
+                  accessed at my-c00l-resume-website.com. Using Amazon Route 53, I registered my domain name for about
+                  ten bucks.</em></p>
+
+              <p><em>My resume webpage includes a visitor counter that displays how many people have accessed the site.
+                  I wrote a bit of JavaScript to implement this feature, following a helpful tutorial to guide me
+                  through the process.</em></p>
+
+              <p><em>The visitor counter retrieves and updates its count in a database, for which I chose to use
+                  Amazon’s DynamoDB. I opted for on-demand pricing, ensuring minimal costs unless I store or retrieve
+                  much more data than required for this project. I even took a great free course on DynamoDB to deepen
+                  my understanding.</em></p>
+
+              <p><em>I did not communicate directly with DynamoDB from my JavaScript code. Instead, I created an API
+                  that accepts requests from my web app and interacts with the database. I utilized AWS’s API Gateway
+                  and Lambda services for this purpose, which remained free or nearly free for my project's scope.</em>
+              </p>
+
+              <p><em>I wrote some code in the Lambda function, exploring Python as my programming language of choice. I
+                  found the boto3 library for AWS to be particularly useful. A good, free Python tutorial helped me get
+                  started with this new language.</em></p>
+
+              <p><em>To ensure code quality, I included tests for my Python code. I referenced several resources on
+                  writing effective Python tests to make sure my code runs smoothly.</em></p>
+
+              <p><em>I configured my API resources—DynamoDB table, API Gateway, and Lambda function—using an AWS
+                  Serverless Application Model (SAM) template. This “infrastructure as code” approach allowed me to save
+                  time and streamline my deployment process.</em></p>
+
+              <p><em>I established a continuous integration and deployment (CI/CD) pipeline to avoid manually updating
+                  my back-end API or front-end website. I created a GitHub repository for my backend code, enabling
+                  automatic updates whenever I made code changes.</em></p>
+
+              <p><em>I set up GitHub Actions so that when I push an update to my Serverless Application Model template
+                  or Python code, my Python tests automatically run. If the tests pass, the SAM application gets
+                  packaged and deployed to AWS seamlessly.</em></p>
+
+              <p><em>Additionally, I created a second GitHub repository for my website code. I configured GitHub Actions
+                  to ensure that when I push new website code, the S3 bucket automatically updates. I was careful not to
+                  commit AWS credentials to source control, protecting my resources from potential misuse.</em></p>
+
+              <p><em>Lastly, I included a link in the text of my resume to a short blog post detailing the things I
+                  learned while working on this project. I published it on Dev.to, which was a great platform for
+                  sharing my insights.</em></p>
+
+              <p><em>And that’s the gist of it! I explored various strategies, tools, and further challenges that have
+                  helped me enhance my skills and prepare for opportunities in the cloud. I even delved into the AWS
+                  edition of the Cloud Resume Challenge book for additional guidance.</em></p>
             </div>
           </div>
-          <div class="col-md-6 custom-col">
-            <div class="blog-container">
-              <div class="blog-container-content2">
-                <div class="row">
-                  <ul>
-                    <li><a href="#toggleSection" id="toggleLink">What I learned by creating this website</p></a></li>
-                    <li><a href="#toggleSection" id="toggleLink">Article 2</p></a></li>
-                    <li><a href="#toggleSection" id="toggleLink">Article 3</p></a></li>
-                    <li><a href="#toggleSection" id="toggleLink">Article 4</p></a></li>
-                </div>
-                <div class="container"></div>
-              </div>
+          <div class="blog-post" onclick="toggleContent(this)">
+            <h3 class="blog-title">Blog Post 2</h3>
+            <div class="blog-content" style="display: none;">
+              <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec egestas.
+              </p>
+            </div>
+          </div>
+          <div class="blog-post" onclick="toggleContent(this)">
+            <h3 class="blog-title">Blog Post 3</h3>
+            <div class="blog-content" style="display: none;">
+              <p>Aliquam erat volutpat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque.</p>
+            </div>
+          </div>
+          <div class="blog-post" onclick="toggleContent(this)">
+            <h3 class="blog-title">Blog Post 4</h3>
+            <div class="blog-content" style="display: none;">
+              <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <hr class="divider">
     <section id="Skills">
       <div class="container-fluid ">
