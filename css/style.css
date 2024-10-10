@@ -72,16 +72,18 @@ li {
   font-size: 1.2rem;
 
 }
-.counter-container {
-  display: flex; /* Enable flexbox on this container */
-  flex-direction: column; /* Stack the <p> elements vertically */
-  justify-content: center; /* Center <p> elements vertically */
-  align-items: center; /* Center <p> elements horizontally */
-  font-size: 2rem;
-  text-align: center; /* Ensure text inside the <p> tags is centered */
+.counter-number{
+  display: flex;
+  flex-direction: column;
   color: white;
-  height: 40vh;
+  font-size: 1.2rem;
+  height: 30vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
 }
+
 /* Wave Animation Styles */
 .wave-container {
   position: absolute;
