@@ -25,7 +25,7 @@ const counter = document.querySelector(".counter-number");
 async function updateCounter() {
     let response = await fetch("https://c6wbwoqerqnmuuoxkeluqvmhni0jnwsk.lambda-url.eu-central-1.on.aws/");
     let data = await response.json();
-    counter.innerHTML = ` This page has ${data} Views!`;
+    counter.innerHTML = ` the portfolio has ${data} views`;
 }
 
 updateCounter();
