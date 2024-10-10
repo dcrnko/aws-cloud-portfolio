@@ -28,7 +28,7 @@
       </button>
       <div class="container collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" aria-current="page" href="#aboutme">about me</a></li>
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="#aboutme">home</a></li>
           <li class="nav-item"><a class="nav-link" aria-current="page" href="#blog">blog</a></li>
           <li class="nav-item"><a class="nav-link" aria-current="page" href="#Skills">my experience</a></li>
           <li class="nav-item"><a class="nav-link" aria-current="page" href="#Wanttolearn">future learning</a></li>
@@ -38,293 +38,267 @@
   </nav>
 
   <hr class="divider">
-
-  <main>
-    <!-- Home/landing section -->
-    <section id="Home">
-      <div class="container-fluid">
-        <div class="row">
-          <!-- Add wave container to avoid layout shifting -->
-          <div class="wave-container">
-            <div class="wave wave1"></div>
-            <div class="wave wave2"></div>
-            <div class="wave wave3"></div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="home-container">
-              <div class="home-container-content1">
-                <p class="IAM">I am David</p>
-                <p class="fade-in-text">Welcome to my digital portfolio</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="home-container-content2">
-              <img class="profilepic" alt="Profile Picture" src="images/profilepic.jpg">
-            </div>
-          </div>
+  <section id="Home">
+    <main>
+      <div class="home-container">
+        <div class="wave-container">
+          <div class="wave wave1"></div>
+          <div class="wave wave2"></div>
+          <div class="wave wave3"></div>
         </div>
-        <div class="down-arrow" onclick="scrollToNextSection()">&#x2193;</div>
-
-        <!-- Placeholder for the next section -->
-        <section id="next-section">
-          <!-- Your next section content -->
-        </section>
-      </div>
-    </section>
-
-    <hr class="divider">
-
-
-    <!-- About Me Section -->
-    <section id="aboutme">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-6 custom-col">
-            <div class="aboutme-container">
-              <p class="whoami">a few words about me....</p>
-            </div>
-          </div>
-          <div class="col-md-6 custom-col">
-            <div class="aboutme-container">
-              <p class="desc fade-in-text">
-                I am an IT guy often drowned in tweaking his lab and experimenting with new technologies. I completed my
-                degree in the UK but am happily living in the Czech Republic. I have been a Linux administrator for most
-                of my career, and now, I would love to learn how to automate everything. I love playing football,
-                spending time with friends, reading, or playing good games.
-              </p>
-            </div>
+        <div class="home-content-container1 col-md-6">
+          <p class="IAM">I am David</p>
+          <p class="Welcome">Welcome to my digital portfolio
+          <p>
+        </div>
+        <div class="home-content-container2 col-md-6">
+          <div class="picturecontainer"><img class="profilepic" alt="Profile Picture" src="images/profilepic.jpg">
           </div>
         </div>
       </div>
-    </section>
+      <div class="desc-container">
+        <p class="desc"><i>
+            "An IT guy often drowned in tweaking his lab and experimenting with new technologies. I completed my
+            degree in the UK but happily living in the Czech Republic.<br> I have been working as Linux Technical
+            Support
+            engineer for most
+            of my career, and now, I would love to learn Cloud and how to automate everything.<br> I love playing
+            football,
+            spending time with friends, reading, or playing good games."</i>
+        </p>
+      </div>
+      <div class="counter-container">
+        <p>the portfolio has views
+      </div>
+  </section>
 
-    <!-- about me section OVER -->
-    <hr class="divider">
 
-    <!-- Blog Section -->
-    <section id="blog">
-      <div class="container">
-        <h2 class="text-center my-4">My latest blog posts:</h2>
-        <div class="blog-posts">
-          <div class="blog-post" onclick="toggleContent(this)">
-            <h3 class="blog-title">What I learned by creating this website...</h3>
-            <div class="blog-content" style="display: none;">
-              <p><em>I have included the AWS Cloud Practitioner certification on my resume. This introductory
-                  certification has provided me with a solid orientation on the industry-leading AWS cloud. While I may
-                  have pursued a more advanced AWS certification, the Cloud Practitioner was a perfect starting point. I
-                  completed this exam online for $100 USD.</em></p>
 
-              <p><em>I took advantage of a helpful Cloud Practitioner prep course provided by Pluralsight, a sponsor of
-                  the Cloud Resume Challenge. Thanks to their special 30-day free trial of the Premium plan, I was able
-                  to study effectively and pass the exam within the allotted time.</em></p>
 
-              <p><em>I have written my resume in HTML, steering clear of Word documents and PDFs. This choice has
-                  allowed me to present my work in a modern and accessible format.</em></p>
+  <!-- about me section OVER -->
+  <hr class="divider">
 
-              <p><em>My resume has been styled with CSS, adding a personal touch to the presentation. While I am not a
-                  designer, I ensured that my resume looks polished and inviting, going beyond just raw HTML.</em></p>
+  <!-- Blog Section -->
+  <section id="blog">
+    <div class="container">
+      <h2 class="text-center my-4">My latest blog posts:</h2>
+      <div class="blog-posts">
+        <div class="blog-post" onclick="toggleContent(this)">
+          <h3 class="blog-title"><i>What I learned by creating this website...</i></h3>
+          <div class="blog-content" style="display: none;">
+            <p><em>I have included the AWS Cloud Practitioner certification on my resume. This introductory
+                certification has provided me with a solid orientation on the industry-leading AWS cloud. While I may
+                have pursued a more advanced AWS certification, the Cloud Practitioner was a perfect starting point. I
+                completed this exam online for $100 USD.</em></p>
 
-              <p><em>I successfully deployed my HTML resume online as an Amazon S3 static website. Although I considered
-                  other services like Netlify and GitHub Pages, I opted for S3 to keep things straightforward and
-                  aligned with my learning objectives.</em></p>
+            <p><em>I took advantage of a helpful Cloud Practitioner prep course provided by Pluralsight, a sponsor of
+                the Cloud Resume Challenge. Thanks to their special 30-day free trial of the Premium plan, I was able
+                to study effectively and pass the exam within the allotted time.</em></p>
 
-              <p><em>The S3 website URL uses HTTPS for enhanced security, thanks to Amazon CloudFront, which I
-                  configured to handle this requirement.</em></p>
+            <p><em>I have written my resume in HTML, steering clear of Word documents and PDFs. This choice has
+                allowed me to present my work in a modern and accessible format.</em></p>
 
-              <p><em>I pointed a custom DNS domain name to the CloudFront distribution, allowing my resume to be
-                  accessed at my-c00l-resume-website.com. Using Amazon Route 53, I registered my domain name for about
-                  ten bucks.</em></p>
+            <p><em>My resume has been styled with CSS, adding a personal touch to the presentation. While I am not a
+                designer, I ensured that my resume looks polished and inviting, going beyond just raw HTML.</em></p>
 
-              <p><em>My resume webpage includes a visitor counter that displays how many people have accessed the site.
-                  I wrote a bit of JavaScript to implement this feature, following a helpful tutorial to guide me
-                  through the process.</em></p>
+            <p><em>I successfully deployed my HTML resume online as an Amazon S3 static website. Although I considered
+                other services like Netlify and GitHub Pages, I opted for S3 to keep things straightforward and
+                aligned with my learning objectives.</em></p>
 
-              <p><em>The visitor counter retrieves and updates its count in a database, for which I chose to use
-                  Amazon’s DynamoDB. I opted for on-demand pricing, ensuring minimal costs unless I store or retrieve
-                  much more data than required for this project. I even took a great free course on DynamoDB to deepen
-                  my understanding.</em></p>
+            <p><em>The S3 website URL uses HTTPS for enhanced security, thanks to Amazon CloudFront, which I
+                configured to handle this requirement.</em></p>
 
-              <p><em>I did not communicate directly with DynamoDB from my JavaScript code. Instead, I created an API
-                  that accepts requests from my web app and interacts with the database. I utilized AWS’s API Gateway
-                  and Lambda services for this purpose, which remained free or nearly free for my project's scope.</em>
-              </p>
+            <p><em>I pointed a custom DNS domain name to the CloudFront distribution, allowing my resume to be
+                accessed at my-c00l-resume-website.com. Using Amazon Route 53, I registered my domain name for about
+                ten bucks.</em></p>
 
-              <p><em>I wrote some code in the Lambda function, exploring Python as my programming language of choice. I
-                  found the boto3 library for AWS to be particularly useful. A good, free Python tutorial helped me get
-                  started with this new language.</em></p>
+            <p><em>My resume webpage includes a visitor counter that displays how many people have accessed the site.
+                I wrote a bit of JavaScript to implement this feature, following a helpful tutorial to guide me
+                through the process.</em></p>
 
-              <p><em>To ensure code quality, I included tests for my Python code. I referenced several resources on
-                  writing effective Python tests to make sure my code runs smoothly.</em></p>
+            <p><em>The visitor counter retrieves and updates its count in a database, for which I chose to use
+                Amazon’s DynamoDB. I opted for on-demand pricing, ensuring minimal costs unless I store or retrieve
+                much more data than required for this project. I even took a great free course on DynamoDB to deepen
+                my understanding.</em></p>
 
-              <p><em>I configured my API resources—DynamoDB table, API Gateway, and Lambda function—using an AWS
-                  Serverless Application Model (SAM) template. This “infrastructure as code” approach allowed me to save
-                  time and streamline my deployment process.</em></p>
+            <p><em>I did not communicate directly with DynamoDB from my JavaScript code. Instead, I created an API
+                that accepts requests from my web app and interacts with the database. I utilized AWS’s API Gateway
+                and Lambda services for this purpose, which remained free or nearly free for my project's scope.</em>
+            </p>
 
-              <p><em>I established a continuous integration and deployment (CI/CD) pipeline to avoid manually updating
-                  my back-end API or front-end website. I created a GitHub repository for my backend code, enabling
-                  automatic updates whenever I made code changes.</em></p>
+            <p><em>I wrote some code in the Lambda function, exploring Python as my programming language of choice. I
+                found the boto3 library for AWS to be particularly useful. A good, free Python tutorial helped me get
+                started with this new language.</em></p>
 
-              <p><em>I set up GitHub Actions so that when I push an update to my Serverless Application Model template
-                  or Python code, my Python tests automatically run. If the tests pass, the SAM application gets
-                  packaged and deployed to AWS seamlessly.</em></p>
+            <p><em>To ensure code quality, I included tests for my Python code. I referenced several resources on
+                writing effective Python tests to make sure my code runs smoothly.</em></p>
 
-              <p><em>Additionally, I created a second GitHub repository for my website code. I configured GitHub Actions
-                  to ensure that when I push new website code, the S3 bucket automatically updates. I was careful not to
-                  commit AWS credentials to source control, protecting my resources from potential misuse.</em></p>
+            <p><em>I configured my API resources—DynamoDB table, API Gateway, and Lambda function—using an AWS
+                Serverless Application Model (SAM) template. This “infrastructure as code” approach allowed me to save
+                time and streamline my deployment process.</em></p>
 
-              <p><em>Lastly, I included a link in the text of my resume to a short blog post detailing the things I
-                  learned while working on this project. I published it on Dev.to, which was a great platform for
-                  sharing my insights.</em></p>
+            <p><em>I established a continuous integration and deployment (CI/CD) pipeline to avoid manually updating
+                my back-end API or front-end website. I created a GitHub repository for my backend code, enabling
+                automatic updates whenever I made code changes.</em></p>
 
-              <p><em>And that’s the gist of it! I explored various strategies, tools, and further challenges that have
-                  helped me enhance my skills and prepare for opportunities in the cloud. I even delved into the AWS
-                  edition of the Cloud Resume Challenge book for additional guidance.</em></p>
-            </div>
+            <p><em>I set up GitHub Actions so that when I push an update to my Serverless Application Model template
+                or Python code, my Python tests automatically run. If the tests pass, the SAM application gets
+                packaged and deployed to AWS seamlessly.</em></p>
+
+            <p><em>Additionally, I created a second GitHub repository for my website code. I configured GitHub Actions
+                to ensure that when I push new website code, the S3 bucket automatically updates. I was careful not to
+                commit AWS credentials to source control, protecting my resources from potential misuse.</em></p>
+
+            <p><em>Lastly, I included a link in the text of my resume to a short blog post detailing the things I
+                learned while working on this project. I published it on Dev.to, which was a great platform for
+                sharing my insights.</em></p>
+
+            <p><em>And that’s the gist of it! I explored various strategies, tools, and further challenges that have
+                helped me enhance my skills and prepare for opportunities in the cloud. I even delved into the AWS
+                edition of the Cloud Resume Challenge book for additional guidance.</em></p>
           </div>
-          <div class="blog-post" onclick="toggleContent(this)">
-            <h3 class="blog-title">Blog Post 2</h3>
-            <div class="blog-content" style="display: none;">
-              <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec egestas.
-              </p>
-            </div>
+        </div>
+        <div class="blog-post" onclick="toggleContent(this)">
+          <h3 class="blog-title">Blog Post 2</h3>
+          <div class="blog-content" style="display: none;">
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec egestas.
+            </p>
           </div>
-          <div class="blog-post" onclick="toggleContent(this)">
-            <h3 class="blog-title">Blog Post 3</h3>
-            <div class="blog-content" style="display: none;">
-              <p>Aliquam erat volutpat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                doloremque.</p>
-            </div>
+        </div>
+        <div class="blog-post" onclick="toggleContent(this)">
+          <h3 class="blog-title">Blog Post 3</h3>
+          <div class="blog-content" style="display: none;">
+            <p>Aliquam erat volutpat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+              doloremque.</p>
           </div>
-          <div class="blog-post" onclick="toggleContent(this)">
-            <h3 class="blog-title">Blog Post 4</h3>
-            <div class="blog-content" style="display: none;">
-              <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
-            </div>
+        </div>
+        <div class="blog-post" onclick="toggleContent(this)">
+          <h3 class="blog-title">Blog Post 4</h3>
+          <div class="blog-content" style="display: none;">
+            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <hr class="divider">
-    <section id="Skills">
-      <div class="container-fluid ">
-        <div class="row">
-          <div class="col-md-6 custom-col">
-            <div class="skills-container">
-              <div class="skills-container-content1">
-                <div class="row">
-                  <p class="skills">skills self-assesment</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 custom-col">
-            <div class="skills-container-content2">
+  <hr class="divider">
+  <section id="Skills">
+    <div class="container-fluid ">
+      <div class="row">
+        <div class="col-md-6 custom-col">
+          <div class="skills-container">
+            <div class="skills-container-content1">
               <div class="row">
-                <div class="col-md-6">
-                  <div class="container">
-                    <table class="table">
-                      <tbody>
-                        <tr>
-                          <td>LINUX</td>
-                          <td>
-                            <div class="volume-indicator">
-                              <div class="volume-fill" style="width: 80%;"></div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>KUBERNETES</td>
-                          <td>
-                            <div class="volume-indicator">
-                              <div class="volume-fill" style="width: 70%;"></div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>DOCKER</td>
-                          <td>
-                            <div class="volume-indicator">
-                              <div class="volume-fill" style="width: 65%;"></div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>VIRTUALIZATION</td>
-                          <td>
-                            <div class="volume-indicator">
-                              <div class="volume-fill" style="width: 55%;"></div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>SALT</td>
-                          <td>
-                            <div class="volume-indicator">
-                              <div class="volume-fill" style="width: 40%;"></div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>BASH</td>
-                          <td>
-                            <div class="volume-indicator">
-                              <div class="volume-fill" style="width: 20%;"></div>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                <p class="skills">skills self-assesment</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 custom-col">
+          <div class="skills-container-content2">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="container">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>LINUX</td>
+                        <td>
+                          <div class="volume-indicator">
+                            <div class="volume-fill" style="width: 80%;"></div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>KUBERNETES</td>
+                        <td>
+                          <div class="volume-indicator">
+                            <div class="volume-fill" style="width: 70%;"></div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>DOCKER</td>
+                        <td>
+                          <div class="volume-indicator">
+                            <div class="volume-fill" style="width: 65%;"></div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>VIRTUALIZATION</td>
+                        <td>
+                          <div class="volume-indicator">
+                            <div class="volume-fill" style="width: 55%;"></div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>SALT</td>
+                        <td>
+                          <div class="volume-indicator">
+                            <div class="volume-fill" style="width: 40%;"></div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>BASH</td>
+                        <td>
+                          <div class="volume-indicator">
+                            <div class="volume-fill" style="width: 20%;"></div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <hr class="divider">
-    <section id="Wanttolearn">
-      <h2 class="p-wanttolearn">currently learning</h2>
-      <div class="container wanttolearn-container no-gutters">
-        <div class="row">
-          <div class="col-lg-2 col-md-4 col-6 custom-column">
-            <img src="images/python.png" alt="python" fill="white" class="img-fluid" width="100" height="100">
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 custom-column">
-            <img src="images/js.png" alt="javascript" class="img-fluid" width="100" height="100">
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 custom-column">
-            <img src="images/php-programming-language.png" alt="php" class="img-fluid" width="100" height="100">
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 custom-column">
-            <img src="/images/bootstrap.png" alt="Bootstrap" class="img-fluid" width="100" height="100">
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 custom-column">
-            <img src="images/atom.png" alt="react" class="img-fluid" width="100" height="100">
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 custom-column">
-            <img src="images/css-3.png" alt="css" class="img-fluid" width="100" height="100">
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 custom-column">
-            <img src="images/after-effects.png" alt="after-effects" class="img-fluid" width="100" height="100">
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 custom-column">
-            <img src="images/photoshop.png" alt="photoshop" class="img-fluid" width="100" height="100">
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 custom-column">
-            <img src="images/artificial-intelligence.png" alt="AI" class="img-fluid" width="100" height="100">
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 custom-column">
-            <img src="images/sql-server.png" alt="sql" class="img-fluid" width="100" height="100">
-          </div>
+    </div>
+  </section>
+  <hr class="divider">
+  <section id="Wanttolearn">
+    <h2 class="p-wanttolearn">currently learning</h2>
+    <div class="container wanttolearn-container no-gutters">
+      <div class="row">
+        <div class="col-lg-2 col-md-4 col-6 custom-column">
+          <img src="images/python.png" alt="python" fill="white" class="img-fluid" width="100" height="100">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 custom-column">
+          <img src="images/js.png" alt="javascript" class="img-fluid" width="100" height="100">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 custom-column">
+          <img src="images/php-programming-language.png" alt="php" class="img-fluid" width="100" height="100">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 custom-column">
+          <img src="/images/bootstrap.png" alt="Bootstrap" class="img-fluid" width="100" height="100">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 custom-column">
+          <img src="images/atom.png" alt="react" class="img-fluid" width="100" height="100">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 custom-column">
+          <img src="images/css-3.png" alt="css" class="img-fluid" width="100" height="100">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 custom-column">
+          <img src="images/after-effects.png" alt="after-effects" class="img-fluid" width="100" height="100">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 custom-column">
+          <img src="images/photoshop.png" alt="photoshop" class="img-fluid" width="100" height="100">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 custom-column">
+          <img src="images/artificial-intelligence.png" alt="AI" class="img-fluid" width="100" height="100">
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 custom-column">
+          <img src="images/sql-server.png" alt="sql" class="img-fluid" width="100" height="100">
         </div>
       </div>
-    </section>
-    <hr class="divider">
+    </div>
+  </section>
+  <hr class="divider">
 
   </main>
 </body>

@@ -32,70 +32,56 @@ li {
 /* NAVBAR SECTION OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 /* HOME SECTION START!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+#Home{
+  height: 100vh;
+}
+.home-container {
+  height: 40vh;
+  display: flex;
+  flex-direction: row; /* Default flex direction */
+  color: white;
+}
+
+.home-content-container1 {
+  display: flex; /* Enable flexbox on this container */
+  flex-direction: column; /* Stack the <p> elements vertically */
+  justify-content: center; /* Center <p> elements vertically */
+  align-items: right; /* Center <p> elements horizontally */
+  font-size: 1.8rem;
+  text-align: right; /* Ensure text inside the <p> tags is centered */
+  padding-right: 15px;
+}
+
+.home-content-container2 {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+}
 .profilepic {
-  width: 20%; /* Maintain the 20% width */
+  width: 60%; /* Maintain the 20% width */
   border-radius: 50%; /* Rounded image */
   object-fit: cover; 
   height: auto;
   max-width: 300px; /* Maintain consistency across different screens */
   z-index: 2; /* Keep image above the wave */
 }
+.desc{
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
 
-.home-container {
-  display: flex;
-  height: 90vh;
-  position: relative;
-  z-index: 1; /* Ensures content is above the waves */
 }
-
-.home-container-content1 {
-
+.counter-container {
+  display: flex; /* Enable flexbox on this container */
+  flex-direction: column; /* Stack the <p> elements vertically */
+  justify-content: center; /* Center <p> elements vertically */
+  align-items: center; /* Center <p> elements horizontally */
   font-size: 2rem;
+  text-align: center; /* Ensure text inside the <p> tags is centered */
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: right;
-  height: 90vh;
-  width:100%;
+  height: 40vh;
 }
-.home-container-content2 {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  color: white;
-  height: 90vh;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .home-container {
-    display: flex;
-    height: 25vh;
-    position: relative;
-    z-index: 1; /* Ensures content is above the waves */
-  }
-  .home-container-content1 {
-    font-size: 2rem;
-    align-items: center;
-    text-align: center;
-    height: 60vh;
-  }
-  .home-container-content2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    height: 60vh;
-
-  }
-
-  .profilepic {
-    width: 40%; /* Adjust for smaller screens */
-    height: auto;
-  }
-}
-
 /* Wave Animation Styles */
 .wave-container {
   position: absolute;
@@ -152,21 +138,7 @@ li {
     transform: translateX(100%);
   }
 }
-.down-arrow {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2rem; /* Size of the arrow */
-  color: white;
-  cursor: pointer;
-  z-index: 3; /* Ensure it's above other content */
-  transition: transform 0.3s ease;
-}
 
-.down-arrow:hover {
-  transform: translateX(-50%) translateY(10px); /* Slight move down on hover */
-}
 /* HOME SECTION OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .divider {
@@ -176,47 +148,9 @@ li {
 }
 
 /* ABOUT ME SECTION START!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-#aboutme {
-  height: 100vh; /* Set section height to full viewport height */
-  background-color: transparent; /* Optional: background color */
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
-  flex-direction: column; /* Stack items vertically */
-  color: white; /* Set text color to white */
-  padding: 20px; /* Add padding for spacing */
-}
 
-.whoami {
-  font-size: 3rem; /* Responsive font size */
-  margin: 0; /* Remove default margin */
-  text-align: center; /* Center text */
-}
 
-.desc {
-  font-size: 1.25rem; /* Responsive font size */
-  margin: 20px 0; /* Add margin for spacing */
-  text-align: center; /* Center text */
-  max-width: 600px; /* Optional: limit width for better readability */
-}
 
-/* Media Queries for smaller screens */
-@media (max-width: 768px) {
-  .whoami {
-    font-size: 3rem; /* Decrease font size on smaller screens */
-  }
-
-  .desc {
-    font-size: 1rem; /* Adjust description font size for smaller screens */
-    padding: 0 10px; /* Add padding to prevent text from touching edges */
-  }
-
-  #aboutme {
-    padding: 10px; /* Reduce padding on smaller screens */
-  }
-}
-
-/* ABOUT ME SECTION OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* Blog SECTION START!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 .blog-posts {
