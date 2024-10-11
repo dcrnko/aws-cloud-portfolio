@@ -59,14 +59,16 @@ li {
 
 }
 .profilepic {
-  width: 45%; /* Maintain the 50% width */
+  width: 7.5rem; /* Maintain the 50% width */
   border-radius: 50%; /* Rounded image */
   object-fit: cover; 
   height: auto;
   max-width: 300px; /* Maintain consistency across different screens */
   z-index: 2; /* Keep image above the wave */
 }
-.desc{
+.desc-container{
+  display: flex;
+  flex-direction: column;
   color: white;
   text-align: center;
   font-size: 1.1rem;
@@ -108,7 +110,7 @@ li {
 }
 @media (max-width: 600px) {
   .home-container {
-    height: 40vh;
+    height: 30vh;
     display: flex;
     flex-direction: column; /* Default flex direction */
     color: white;
@@ -117,34 +119,50 @@ li {
     display: flex; /* Enable flexbox on this container */
     flex-direction: column; /* Stack the <p> elements vertically */
     justify-content: flex-end; /* Center <p> elements vertically */
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-align: center; /* Ensure text inside the <p> tags is centered */
-    height: 20vh;
   }
   .home-content-container2 {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
-    height: 30vh;
+    justify-content: center;
+    z-index: 10;
   }
   .profilepic {
+    width: 30%;
     height: auto;
     border-radius: 50%; /* Rounded image */
     max-width: 300px; /* Maintain consistency across different screens */
-    z-index: 2; /* Keep image above the wave */
+    z-index: 20; /* Keep image above the wave */
   }
-  .desc{
-    padding-top: 5vh;
+  .desc-container{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
     color: white;
     text-align: center;
     font-size: 0.8rem;
+    padding-left: 5%;
+    padding-right: 5%;
+  
   }
-  .narrow-object-container {
-      margin-top: -10vh; /* Space above narrow object */
+  .counter-number{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 0.7rem;
+    height: 10vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  
   }
 
+
   .narrow-object {
-      position: relative; /* Change to relative on smaller devices */
+      position: relative;
+      font-size: 1.6rem; /* Change to relative on smaller devices */
   }
 }
 
