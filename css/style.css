@@ -130,7 +130,7 @@ li {
     z-index: 10;
   }
   .profilepic {
-    width: 6.1rem;
+    width: 8rem;
     height: auto;
     border-radius: 50%; /* Rounded image */
     max-width: 300px; /* Maintain consistency across different screens */
