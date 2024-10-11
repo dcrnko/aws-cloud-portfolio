@@ -18,7 +18,7 @@ body,html {
   z-index: 100;
 }
 .nav-item:hover {
-  transform: scale(1.15); /* Slightly increases size to make it stand out */
+  transform: scale(1.05); /* Slightly increases size to make it stand out */
 }
 .navbar .nav-item .nav-link{
   font-size: 1.2rem;
@@ -59,7 +59,7 @@ li {
 
 }
 .profilepic {
-  width: 60%; /* Maintain the 20% width */
+  width: 45%; /* Maintain the 50% width */
   border-radius: 50%; /* Rounded image */
   object-fit: cover; 
   height: auto;
@@ -69,7 +69,7 @@ li {
 .desc{
   color: white;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 
 }
 .counter-number{
@@ -82,6 +82,70 @@ li {
   justify-content: center;
   align-items: center;
 
+}
+.narrow-object-container {
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  position: relative; /* Allow positioning of narrow object */
+
+}
+.narrow-object {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 2rem;
+  height: 5vh;
+  width: 40px; /* Width for visibility */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.narrow-object:hover {
+  transform: scale(1.15); /* Slightly increases size to make it stand out */
+}
+@media (max-width: 600px) {
+  .home-container {
+    height: 40vh;
+    display: flex;
+    flex-direction: column; /* Default flex direction */
+    color: white;
+  }
+  .home-content-container1 {
+    display: flex; /* Enable flexbox on this container */
+    flex-direction: column; /* Stack the <p> elements vertically */
+    justify-content: flex-end; /* Center <p> elements vertically */
+    font-size: 1.8rem;
+    text-align: center; /* Ensure text inside the <p> tags is centered */
+    height: 20vh;
+  }
+  .home-content-container2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 30vh;
+  }
+  .profilepic {
+    height: auto;
+    border-radius: 50%; /* Rounded image */
+    max-width: 300px; /* Maintain consistency across different screens */
+    z-index: 2; /* Keep image above the wave */
+  }
+  .desc{
+    padding-top: 5vh;
+    color: white;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  .narrow-object-container {
+      margin-top: -10vh; /* Space above narrow object */
+  }
+
+  .narrow-object {
+      position: relative; /* Change to relative on smaller devices */
+  }
 }
 
 /* Wave Animation Styles */
