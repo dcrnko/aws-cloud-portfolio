@@ -10,7 +10,7 @@ updateCounter();
 // Function to scroll down to the next section
 document.getElementById('scrollButton').addEventListener('click', function() {
   // Get the second section's position
-  const section2 = document.getElementById('blog');
+  const section2 = document.getElementById('my-experience');
   section2.scrollIntoView({ behavior: 'smooth' });
 });
 
@@ -25,4 +25,23 @@ function toggleContent(post) {
   }
 }
 
+// Select all elements inside the container you want to fade in/out
+const fadeInContents = document.querySelectorAll('.fade-in-content');
 
+// Use IntersectionObserver to detect when each element is in view
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Add the 'show' class when the content comes into view
+            entry.target.classList.add('show');
+        } else {
+            // Remove the 'show' class when content goes out of view
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+// Observe each element inside the container
+fadeInContents.forEach(content => {
+    observer.observe(content);
+});

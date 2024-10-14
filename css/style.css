@@ -18,10 +18,10 @@ body,html {
   z-index: 100;
 }
 .nav-item:hover {
-  transform: scale(1.05); /* Slightly increases size to make it stand out */
+  transform: scale(1.15); /* Slightly increases size to make it stand out */
 }
 .navbar .nav-item .nav-link{
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: white;
 }
 li {
@@ -47,11 +47,10 @@ li {
   flex-direction: column; /* Stack the <p> elements vertically */
   justify-content: center; /* Center <p> elements vertically */
   align-items: right; /* Center <p> elements horizontally */
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   text-align: right; /* Ensure text inside the <p> tags is centered */
   padding-right: 15px;
 }
-
 .home-content-container2 {
   display: flex;
   align-items: center;
@@ -71,7 +70,7 @@ li {
   flex-direction: column;
   color: white;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 
 }
 .counter-number{
@@ -109,6 +108,14 @@ li {
   transform: scale(1.15); /* Slightly increases size to make it stand out */
 }
 @media (max-width: 600px) {
+  .navbar .nav-item .nav-link{
+    font-size: 1.1rem;
+    color: white;
+  }
+  .nav-item:hover {
+    transform: none; /* Slightly increases size to make it stand out */
+
+  }
   .home-container {
     height: 30vh;
     display: flex;
@@ -407,10 +414,6 @@ img{
           margin: 10px; /* Adjust the spacing between icons as needed */
       }
 
-.fade-in-text {
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-}
 svg {
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
@@ -428,3 +431,133 @@ svg {
   }
 }
 
+
+/* Basic styles for container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: transparent;
+}
+
+/* Timeline base styles */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Main vertical timeline line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #fff; /* White vertical line */
+  transform: translateX(-50%);
+  font-style: italic; /* Cursive style */
+}
+
+/* Timeline items */
+.timeline-item {
+  position: relative;
+  margin: 20px 0;
+  width: 45%; /* Each item takes up 45% width */
+  padding: 20px;
+}
+
+/* Alternating items: left and right */
+.timeline-item.left {
+  left: 0; /* Align left */
+}
+
+.timeline-item.right {
+  left: 50%; /* Align right */
+}
+
+/* Content for each timeline item */
+.timeline-content {
+  background-color: transparent; /* Dark gray background */
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #fff; /* White border */
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+  text-align: center;
+  position: relative;
+}
+.timeline-content:hover {
+  transform: scale(1.05); /* Slightly increases size to make it stand out */
+} 
+.timeline-content h3 {
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 0;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  color: #ddd;
+  margin: 4px 0 0;
+}
+
+/* Horizontal lines connecting the items to the central vertical line */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 25px; /* Length of the horizontal line */
+  height: 1px; /* Thin connecting line */
+  background-color: #fff; /* White line */
+}
+
+.timeline-item.left::before {
+  right: -25px; /* Line connects to the right side for left-aligned items */
+}
+
+.timeline-item.right::before {
+  left: -25px; /* Line connects to the left side for right-aligned items */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline::before {
+      left: 20px; /* Move the line to the left on small screens */
+  }
+
+  .timeline-item {
+      width: 100%; /* Full width on smaller screens */
+  }
+
+  .timeline-item.right, .timeline-item.left {
+      left: 0; /* Align both left */
+  }
+
+  .timeline-item.right::before, .timeline-item.left::before {
+      left: 15px; /* Position the horizontal line on the left */
+  }
+
+  .timeline-item.left .timeline-content, .timeline-item.right .timeline-content {
+      margin-left: 40px; /* Space between content and the line */
+  }
+}
+.fade-in-content {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+  background-color: transparent;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+}
+
+/* Class added when in view */
+.fade-in-content.show {
+  opacity: 1;
+  transform: translateY(0); /* Element moves up slightly */
+}
+a{
+  text-decoration: none;
+}
