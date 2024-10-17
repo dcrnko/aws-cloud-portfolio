@@ -28,7 +28,7 @@
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" aria-current="page" href="#Home">home</a></li>
           <li class="nav-item"><a class="nav-link" aria-current="page" href="#my-experience">my experience</a></li>
-          <li class="nav-item"><a class="nav-link" aria-current="page" href="#blog">blog</a></li>
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="#projects">projects</a></li>
         </ul>
       </div>
     </div>
@@ -45,9 +45,10 @@
       <div class="home-container fade-in-content">
         <div class="home-content-container1 col-md-6">
           <p class="IAM">I am David</p>
-          <p class="Welcome">Welcome to my Digital Portfolio
-          <p>
+          <p class="Welcome">Welcome to my Digital Portfolio</p>
         </div>
+        <hr class="divider">
+
         <div class="home-content-container2 col-md-6">
           <img class="profilepic" alt="Profile Picture" src="images/profilepic.jpg">
         </div>
@@ -56,7 +57,8 @@
         <p class="desc"><i>
             An IT guy often drowned in tweaking his lab and experimenting with new technologies. I completed my
             degree in the UK but happily living in the Czech Republic.<br> I have been working as Linux Technical
-            Support engineer for most of my career, and now, I would love to learn Cloud and how to automate everything.<br> 
+            Support engineer for most of my career, and now, I would love to learn Cloud and how to automate
+            everything.<br>
             I love playing football, spending time with friends, reading, or playing good games.</i>
         </p>
       </div>
@@ -72,66 +74,66 @@
   <section id="my-experience">
     <div class="container fade-in-content">
       <div class="timeline">
-          <div class="timeline-item right">
-              <div class="timeline-content">
-                  <h3>2024</h3>
-                  <p>AWS Cloud Practitioner Certification</p>
-              </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h3>2024</h3>
+            <p>AWS Cloud Practitioner Certification</p>
           </div>
-          <div class="timeline-item left">
-              <div class="timeline-content">
-                  <h3>2022</h3>
-                  <p><b>Certification: </b>SUSE Certified Administrator (SCA) in SUSE Manager 4</p>
-                  <a aria-current="page" href="https://www.suse.com/training/exam/sca-suma-4/">certification details</a>
-              </div>
-          </div>
-          <div class="timeline-item right">
-            <div class="timeline-content">
-                <h3>2021</h3>
-                <p><b>Certification: </b>Certified Kubernetes Administrator</p>
-                <a aria-current="page" href="https://www.credly.com/badges/3bc24482-0f90-43ca-b09c-714883c9487a">verify</a>
-            </div>
         </div>
         <div class="timeline-item left">
           <div class="timeline-content">
-              <h3>2020</h3>
-              <p><b>Certification: </b>SUSE Certified Administrator in Enterprise Linux Certification</p>
-              <a aria-current="page" href="https://www.suse.com/training/exam/sca-sles-15/">certification details</a>
+            <h3>2022</h3>
+            <p><b>Certification: </b>SUSE Certified Administrator (SCA) in SUSE Manager 4</p>
+            <a aria-current="page" href="https://www.suse.com/training/exam/sca-suma-4/">certification details</a>
           </div>
         </div>
         <div class="timeline-item right">
           <div class="timeline-content">
-              <h3>2018</h3>
-              <p>Started to work as Technical Support engineer in SUSE</p>
+            <h3>2021</h3>
+            <p><b>Certification: </b>Certified Kubernetes Administrator</p>
+            <a aria-current="page" href="https://www.credly.com/badges/3bc24482-0f90-43ca-b09c-714883c9487a">verify</a>
           </div>
-      </div>
-      <div class="timeline-item left">
-        <div class="timeline-content">
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>2020</h3>
+            <p><b>Certification: </b>SUSE Certified Administrator in Enterprise Linux</p>
+            <a aria-current="page" href="https://www.suse.com/training/exam/sca-sles-15/">certification details</a>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h3>2017</h3>
+            <p>Started to work as Technical Support engineer in SUSE</p>
+            <a aria-current="page" href="https://www.suse.com/">company website</a>
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
             <h3>2017</h3>
             <p>Finished MSc. Computing degree</p>
-            <a aria-current="page" href="https://www.sunderland.ac.uk/study/computing/postgraduate-computing/">course details</a>     
+            <a aria-current="page" href="https://www.sunderland.ac.uk/study/computing/postgraduate-computing/">course
+              details</a>
+          </div>
         </div>
       </div>
-          <!-- Add more timeline items as needed -->
-      </div>
-  </div>
-  
+    </div>
   </section>
 
-  <hr class="divider">
 
-  <!-- Blog Section -->
-  <section id="blog">
+  <!-- PROJECTS Section -->
+  <section id="projects">
     <div class="container">
-      <h2 class="text-center my-4">My latest blog posts:</h2>
-      <div class="blog-posts">
-        <div class="blog-post" onclick="toggleContent(this)">
-          <h3 class="blog-title"><i>What I learned by creating this website...</i></h3>
-          <div class="blog-content" style="display: none;">
+      <h2 class="fade-in-content ">my latest projects:</h2>
+      <div class="modal-container">
+        <button class="fade-in-content" id="open-modal-btn">The Cloud Resume Challenge</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <h3><b>What I learned by completing the project...</b></h3>
             <p><em>I have included the AWS Cloud Practitioner certification on my resume. This introductory
                 certification has provided me with a solid orientation on the industry-leading AWS cloud. While I may
-                have pursued a more advanced AWS certification, the Cloud Practitioner was a perfect starting point. I
-                completed this exam online for $100 USD.</em></p>
+                have pursued a more advanced AWS certification, the Cloud Practitioner was a perfect starting point.
+                .</em></p>
 
             <p><em>I took advantage of a helpful Cloud Practitioner prep course provided by Pluralsight, a sponsor of
                 the Cloud Resume Challenge. Thanks to their special 30-day free trial of the Premium plan, I was able
@@ -197,109 +199,31 @@
 
             <p><em>And that’s the gist of it! I explored various strategies, tools, and further challenges that have
                 helped me enhance my skills and prepare for opportunities in the cloud. I even delved into the AWS
-                edition of the Cloud Resume Challenge book for additional guidance.</em></p>
+                edition of the Cloud Resume Challenge book for additional guidance.</em></p></b>
           </div>
         </div>
-        <div class="blog-post" onclick="toggleContent(this)">
-          <h3 class="blog-title">Blog Post 2</h3>
-          <div class="blog-content" style="display: none;">
-            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec egestas.
-            </p>
-          </div>
+        <button class="fade-in-content" id="open-modal-btn">The Cloud Resume Challenge</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content"></div>
+
         </div>
-        <div class="blog-post" onclick="toggleContent(this)">
-          <h3 class="blog-title">Blog Post 3</h3>
-          <div class="blog-content" style="display: none;">
-            <p>Aliquam erat volutpat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-              doloremque.</p>
-          </div>
+        <button class="fade-in-content" id="open-modal-btn">The Cloud Resume Challenge</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content"></div>
+
         </div>
-        <div class="blog-post" onclick="toggleContent(this)">
-          <h3 class="blog-title">Blog Post 4</h3>
-          <div class="blog-content" style="display: none;">
-            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
-          </div>
+        <button class="fade-in-content" id="open-modal-btn">The Cloud Resume Challenge</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content"></div>
+
+        </div>
+        <button class="fade-in-content" id="open-modal-btn">The Cloud Resume Challenge</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content"></div>
         </div>
       </div>
     </div>
-  </section>
-
-  <hr class="divider">
-  <section id="Skills">
-    <div class="container-fluid ">
-      <div class="row">
-        <div class="col-md-6 custom-col">
-          <div class="skills-container">
-            <div class="skills-container-content1">
-              <div class="row">
-                <p class="skills">skills self-assesment</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 custom-col">
-          <div class="skills-container-content2">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="container">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td>LINUX</td>
-                        <td>
-                          <div class="volume-indicator">
-                            <div class="volume-fill" style="width: 80%;"></div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>KUBERNETES</td>
-                        <td>
-                          <div class="volume-indicator">
-                            <div class="volume-fill" style="width: 70%;"></div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>DOCKER</td>
-                        <td>
-                          <div class="volume-indicator">
-                            <div class="volume-fill" style="width: 65%;"></div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>VIRTUALIZATION</td>
-                        <td>
-                          <div class="volume-indicator">
-                            <div class="volume-fill" style="width: 55%;"></div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>SALT</td>
-                        <td>
-                          <div class="volume-indicator">
-                            <div class="volume-fill" style="width: 40%;"></div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>BASH</td>
-                        <td>
-                          <div class="volume-indicator">
-                            <div class="volume-fill" style="width: 20%;"></div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
     </div>
   </section>
   <hr class="divider">

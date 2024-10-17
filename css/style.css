@@ -32,11 +32,14 @@ li {
 /* NAVBAR SECTION OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 /* HOME SECTION START!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-#Home{
-  height: 100vh;
+#Home, #my-experience{
+  height: 110vh;
+}
+#projects{
+  height: 90vh;
 }
 .home-container {
-  height: 40vh;
+  height: 30vh;
   display: flex;
   flex-direction: row; /* Default flex direction */
   color: white;
@@ -241,164 +244,6 @@ li {
 /* ABOUT ME SECTION START!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 
-
-/* Blog SECTION START!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
-.blog-posts {
-  margin-bottom: 5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem; /* Space between blog posts */
-}
-.text-center{
-  color: white;
-}
-.blog-post {
-  background: transparent; /* Light background */
-  border: 1px solid #dee2e6; /* Border color */
-  border-radius: 5px; /* Rounded corners */
-  padding: 15px; /* Padding for inner content */
-  transition: background 0.3s ease; /* Smooth background transition */
-  cursor: pointer; /* Change cursor to pointer */
-}
-
-.blog-post:hover {
-  background: transparent; /* Slightly darker background on hover */
-  transform: scale(1.01); /* Slightly increases size to make it stand out */
-}
-
-.blog-title {
-  margin: 0; /* Remove default margin */
-  color: white;
-}
-
-.blog-content {
-  margin-top: 10px; /* Space above content */
-  font-size: 1em; /* Slightly smaller font for content */
-  color: white; /* Darker text color */
-}
-/*BLOG SECTION OVER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
-.skills-container {
-  height: 90vh;
-  margin: 0;
-  padding: 0;
-}
-
-.skills {
-  font-size: 50px;
-}
-
-.skills-container-content1 {
-  background-color: transparent;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  margin: 0;
-  padding: 0;
-  height: 90vh;
-}
-
-.skills-container-content2 {
-  height: 90vh;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-}
-
-.table {
-  font-size: 30px;
-  text-align: left;
-  color: white;
-}
-
-.volume-indicator {
-  width: 200px;
-  /* Set your desired width */
-  height: 35px;
-  /* Set your desired height */
-  background-color: white;;
-  border: 1px solid black;;
-  border-radius: 5px;
-  margin: 0;
-  padding: 0;
-  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-
-
-}
-
-/* Styling for the volume fill bar */
-.volume-fill {
-  height: 100%;
-  background-color: #000e21;
-
-  /* Set your desired fill color */
-  transition: width 0.3s ease-in-out;
-  /* Add a transition for smooth changes */
-
-
-}
-
-@media screen and (max-width: 768px) {
-  .table {
-    font-size: 25px;
-    text-align: left;
-
-  }
-
-  .volume-indicator {
-    width: 150px;
-    /* Set your desired width */
-    height: 30px;
-    /* Set your desired height */
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: 0;
-    padding: 0;
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-
-  }
-
-  .volume-fill {
-    height: 100%;
-    background-color: #000e21;
-    ;
-    /* Set your desired fill color */
-    transition: width 0.3s ease-in-out;
-    /* Add a transition for smooth changes */
-
-  }
-}
-.no-gutters {
-  padding-right: 0;
-  padding-left: 0;
-}
-#Wanttolearn {
-
-  background-color: transparent;
-  text-align: center;
-  margin-bottom: 20%;
-  color: white;
-}
-.custom-column{
-  padding: 15px;
-  border-radius: 5%;
-}
-
-.p-wanttolearn {
-  text-align: center;
-  font-size: 60px;
-  padding-top: 60px;
-  margin-bottom: 15%;;
-}
 img{
  border-radius: 15%;
  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -475,11 +320,10 @@ svg {
 .timeline-item.right {
   left: 50%; /* Align right */
 }
-
 /* Content for each timeline item */
 .timeline-content {
   background-color: transparent; /* Dark gray background */
-  padding: 15px;
+  padding: 8px;
   border-radius: 8px;
   border: 1px solid #fff; /* White border */
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Subtle shadow */
@@ -488,6 +332,8 @@ svg {
 }
 .timeline-content:hover {
   transform: scale(1.05); /* Slightly increases size to make it stand out */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Deeper and larger shadow on hover */
+
 } 
 .timeline-content h3 {
   font-size: 1.4rem;
@@ -560,4 +406,83 @@ svg {
 }
 a{
   text-decoration: none;
+}
+/* The modal background */
+h2{
+  color: white;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.5); /* Greyed-out background */
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Ensure space at the top and bottom */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  font-family: 'Lucida Sans';
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 40%; /* Default width */
+  max-height: 80%; /* Ensure it's not taller than 80% of the screen */
+  overflow-y: auto; /* Enable scrolling for content */
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out; /* Smooth transitions */
+}
+
+/* Modern Scrollbar */
+.modal-content::-webkit-scrollbar {
+  width: 1rem; /* Slim scrollbar */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.3); /* Light gray scrollbar */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 100, 100, 0.5); /* Darker on hover */
+}
+
+/* Responsive styling for smaller devices */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 80%; /* Expand on smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 90%; /* Wider on very small devices */
+  }
+}
+
+/* Button styling */
+#open-modal-btn {
+  margin-top: 2%;
+  padding: 4px 8px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  width: 100%;
+  border-radius: 10px;
+
+}
+#open-modal-btn:hover{
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Deeper and larger shadow on hover */
+  transform: scale(1.05);
 }
