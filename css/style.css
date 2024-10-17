@@ -537,21 +537,6 @@ h2{
   .modal-content {
     width: 90%; /* Wider on very small devices */
   }
-  .modal-content {
-    background-color: white;
-    color: black;
-    font-weight: 500;
-    font-family: 'Lucida Sans';
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 40%; /* Default width */
-    max-height: 80%; /* Ensure it's not taller than 80% of the screen */
-    overflow-y: auto; /* Enable scrolling for content */
-    margin: 0 auto;
-    transition: all 0.3s ease-in-out; /* Smooth transitions */
-  }
 
 }
 
