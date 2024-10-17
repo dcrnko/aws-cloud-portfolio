@@ -113,7 +113,13 @@ li {
 .narrow-object:hover {
   transform: scale(1.15); /* Slightly increases size to make it stand out */
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .fade-in-content {
+    opacity: 1; /* Set opacity to fully visible */
+    transition: none; /* Cancel the fade-in effect */
+  }
+
+  
   .navbar .nav-item .nav-link{
     font-size: 1.1rem;
     color: white;
@@ -495,6 +501,12 @@ h2{
 
 /* Responsive styling for smaller devices */
 @media (max-width: 768px) {
+
+  .fade-in-content {
+    opacity: 1; /* Set opacity to fully visible */
+    transition: none; /* Cancel the fade-in effect */
+  }
+
   .modal-content {
     width: 80%; /* Expand on smaller devices */
   
@@ -517,6 +529,11 @@ h2{
   }
 }
 @media (max-width: 480px) {
+  .fade-in-content {
+    opacity: 1; /* Set opacity to fully visible */
+    transition: none; /* Cancel the fade-in effect */
+  }
+
   .modal-content {
     width: 90%; /* Wider on very small devices */
   }
