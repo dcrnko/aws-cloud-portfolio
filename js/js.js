@@ -2,7 +2,7 @@ const counter = document.querySelector(".counter-number");
 async function updateCounter() {
     let response = await fetch("https://qsl325knfxo2bsg5d5mbueokqu0cqmqk.lambda-url.eu-central-1.on.aws/");
     let data = await response.json();
-    counter.innerHTML = ` my portfolio has: <b>${data}</b> views`;
+    counter.innerHTML = `my portfolio has: <b>${data}</b> views`;
 }
 updateCounter();
 
@@ -12,7 +12,11 @@ document.getElementById('scrollButton').addEventListener('click', function() {
   const section2 = document.getElementById('my-experience');
   section2.scrollIntoView({ behavior: 'smooth' });
 });
-
+document.getElementById('scrollButton2').addEventListener('click', function() {
+  // Get the second section's position
+  const section2 = document.getElementById('projects');
+  section2.scrollIntoView({ behavior: 'smooth' });
+});
 
 
 function toggleContent(post) {

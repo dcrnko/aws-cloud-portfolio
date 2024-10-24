@@ -47,14 +47,13 @@
           <p class="IAM">I am David</p>
           <p class="Welcome">Welcome to my Digital Portfolio</p>
         </div>
-        <hr class="divider">
 
         <div class="home-content-container2 col-md-6">
           <img class="profilepic" alt="Profile Picture" src="images/profilepic.jpg">
         </div>
       </div>
       <div class="desc-container fade-in-content">
-        <p class="desc"><i>
+        <p><i>
             An IT guy often drowned in tweaking his lab and experimenting with new technologies. I completed my
             degree in the UK but happily living in the Czech Republic.<br> I have been working as Linux Technical
             Support engineer for most of my career, and now, I would love to learn Cloud and how to automate
@@ -118,117 +117,100 @@
         </div>
       </div>
     </div>
+    <div class="narrow-object-container">
+      <div class="narrow-object" id="scrollButton2">↓</div>
+    </div>
   </section>
-
 
   <!-- PROJECTS Section -->
   <section id="projects">
-    <div class="container">
-      <h2 class="fade-in-content ">my latest projects:</h2>
-      <div class="modal-container">
-        <button class="fade-in-content" id="open-modal-btn">The Cloud Resume Challenge</button>
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <h3><b>What I learned by completing the project...</b></h3>
-            <p><em>I have included the AWS Cloud Practitioner certification on my resume. This introductory
-                certification has provided me with a solid orientation on the industry-leading AWS cloud. While I may
-                have pursued a more advanced AWS certification, the Cloud Practitioner was a perfect starting point.
-                .</em></p>
-
-            <p><em>I took advantage of a helpful Cloud Practitioner prep course provided by Pluralsight, a sponsor of
-                the Cloud Resume Challenge. Thanks to their special 30-day free trial of the Premium plan, I was able
-                to study effectively and pass the exam within the allotted time.</em></p>
-
-            <p><em>I have written my resume in HTML, steering clear of Word documents and PDFs. This choice has
-                allowed me to present my work in a modern and accessible format.</em></p>
-
-            <p><em>My resume has been styled with CSS, adding a personal touch to the presentation. While I am not a
-                designer, I ensured that my resume looks polished and inviting, going beyond just raw HTML.</em></p>
-
-            <p><em>I successfully deployed my HTML resume online as an Amazon S3 static website. Although I considered
-                other services like Netlify and GitHub Pages, I opted for S3 to keep things straightforward and
-                aligned with my learning objectives.</em></p>
-
-            <p><em>The S3 website URL uses HTTPS for enhanced security, thanks to Amazon CloudFront, which I
-                configured to handle this requirement.</em></p>
-
-            <p><em>I pointed a custom DNS domain name to the CloudFront distribution, allowing my resume to be
-                accessed at my-c00l-resume-website.com. Using Amazon Route 53, I registered my domain name for about
-                ten bucks.</em></p>
-
-            <p><em>My resume webpage includes a visitor counter that displays how many people have accessed the site.
-                I wrote a bit of JavaScript to implement this feature, following a helpful tutorial to guide me
-                through the process.</em></p>
-
-            <p><em>The visitor counter retrieves and updates its count in a database, for which I chose to use
-                Amazon’s DynamoDB. I opted for on-demand pricing, ensuring minimal costs unless I store or retrieve
-                much more data than required for this project. I even took a great free course on DynamoDB to deepen
-                my understanding.</em></p>
-
-            <p><em>I did not communicate directly with DynamoDB from my JavaScript code. Instead, I created an API
-                that accepts requests from my web app and interacts with the database. I utilized AWS’s API Gateway
-                and Lambda services for this purpose, which remained free or nearly free for my project's scope.</em>
-            </p>
-
-            <p><em>I wrote some code in the Lambda function, exploring Python as my programming language of choice. I
-                found the boto3 library for AWS to be particularly useful. A good, free Python tutorial helped me get
-                started with this new language.</em></p>
-
-            <p><em>To ensure code quality, I included tests for my Python code. I referenced several resources on
-                writing effective Python tests to make sure my code runs smoothly.</em></p>
-
-            <p><em>I configured my API resources—DynamoDB table, API Gateway, and Lambda function—using an AWS
-                Serverless Application Model (SAM) template. This “infrastructure as code” approach allowed me to save
-                time and streamline my deployment process.</em></p>
-
-            <p><em>I established a continuous integration and deployment (CI/CD) pipeline to avoid manually updating
-                my back-end API or front-end website. I created a GitHub repository for my backend code, enabling
-                automatic updates whenever I made code changes.</em></p>
-
-            <p><em>I set up GitHub Actions so that when I push an update to my Serverless Application Model template
-                or Python code, my Python tests automatically run. If the tests pass, the SAM application gets
-                packaged and deployed to AWS seamlessly.</em></p>
-
-            <p><em>Additionally, I created a second GitHub repository for my website code. I configured GitHub Actions
-                to ensure that when I push new website code, the S3 bucket automatically updates. I was careful not to
-                commit AWS credentials to source control, protecting my resources from potential misuse.</em></p>
-
-            <p><em>Lastly, I included a link in the text of my resume to a short blog post detailing the things I
-                learned while working on this project. I published it on Dev.to, which was a great platform for
-                sharing my insights.</em></p>
-
-            <p><em>And that’s the gist of it! I explored various strategies, tools, and further challenges that have
-                helped me enhance my skills and prepare for opportunities in the cloud. I even delved into the AWS
-                edition of the Cloud Resume Challenge book for additional guidance.</em></p></b>
-          </div>
-        </div>
-        <button class="fade-in-content" id="open-modal-btn">The Cloud Resume Challenge</button>
-        <div id="myModal" class="modal">
-          <div class="modal-content"></div>
-
-        </div>
-        <button class="fade-in-content" id="open-modal-btn">The Cloud Resume Challenge</button>
-        <div id="myModal" class="modal">
-          <div class="modal-content"></div>
-
-        </div>
-        <button class="fade-in-content" id="open-modal-btn">The Cloud Resume Challenge</button>
-        <div id="myModal" class="modal">
-          <div class="modal-content"></div>
-
-        </div>
-        <button class="fade-in-content" id="open-modal-btn">The Cloud Resume Challenge</button>
-        <div id="myModal" class="modal">
-          <div class="modal-content"></div>
+    <div class="modal-container">
+      <button class="fade-in-content" id="open-modal-btn">The Cloud Resume Challenge</button>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <h3><b>What I learned by completing the project...</b></h3>
+          <p><em>I have included the AWS Cloud Practitioner certification on my resume. This introductory
+              certification has provided me with a solid orientation on the industry-leading AWS cloud. While I may
+              have pursued a more advanced AWS certification, the Cloud Practitioner was a perfect starting point.
+              .</em></p>
+  
+          <p><em>I took advantage of a helpful Cloud Practitioner prep course provided by Pluralsight, a sponsor of
+              the Cloud Resume Challenge. Thanks to their special 30-day free trial of the Premium plan, I was able
+              to study effectively and pass the exam within the allotted time.</em></p>
+  
+          <p><em>I have written my resume in HTML, steering clear of Word documents and PDFs. This choice has
+              allowed me to present my work in a modern and accessible format.</em></p>
+  
+          <p><em>My resume has been styled with CSS, adding a personal touch to the presentation. While I am not a
+              designer, I ensured that my resume looks polished and inviting, going beyond just raw HTML.</em></p>
+  
+          <p><em>I successfully deployed my HTML resume online as an Amazon S3 static website. Although I considered
+              other services like Netlify and GitHub Pages, I opted for S3 to keep things straightforward and
+              aligned with my learning objectives.</em></p>
+  
+          <p><em>The S3 website URL uses HTTPS for enhanced security, thanks to Amazon CloudFront, which I
+              configured to handle this requirement.</em></p>
+  
+          <p><em>I pointed a custom DNS domain name to the CloudFront distribution, allowing my resume to be
+              accessed at my-c00l-resume-website.com. Using Amazon Route 53, I registered my domain name for about
+              ten bucks.</em></p>
+  
+          <p><em>My resume webpage includes a visitor counter that displays how many people have accessed the site.
+              I wrote a bit of JavaScript to implement this feature, following a helpful tutorial to guide me
+              through the process.</em></p>
+  
+          <p><em>The visitor counter retrieves and updates its count in a database, for which I chose to use
+              Amazon’s DynamoDB. I opted for on-demand pricing, ensuring minimal costs unless I store or retrieve
+              much more data than required for this project. I even took a great free course on DynamoDB to deepen
+              my understanding.</em></p>
+  
+          <p><em>I did not communicate directly with DynamoDB from my JavaScript code. Instead, I created an API
+              that accepts requests from my web app and interacts with the database. I utilized AWS’s API Gateway
+              and Lambda services for this purpose, which remained free or nearly free for my project's scope.</em>
+          </p>
+  
+          <p><em>I wrote some code in the Lambda function, exploring Python as my programming language of choice. I
+              found the boto3 library for AWS to be particularly useful. A good, free Python tutorial helped me get
+              started with this new language.</em></p>
+  
+          <p><em>To ensure code quality, I included tests for my Python code. I referenced several resources on
+              writing effective Python tests to make sure my code runs smoothly.</em></p>
+  
+          <p><em>I configured my API resources—DynamoDB table, API Gateway, and Lambda function—using an AWS
+              Serverless Application Model (SAM) template. This “infrastructure as code” approach allowed me to save
+              time and streamline my deployment process.</em></p>
+  
+          <p><em>I established a continuous integration and deployment (CI/CD) pipeline to avoid manually updating
+              my back-end API or front-end website. I created a GitHub repository for my backend code, enabling
+              automatic updates whenever I made code changes.</em></p>
+  
+          <p><em>I set up GitHub Actions so that when I push an update to my Serverless Application Model template
+              or Python code, my Python tests automatically run. If the tests pass, the SAM application gets
+              packaged and deployed to AWS seamlessly.</em></p>
+  
+          <p><em>Additionally, I created a second GitHub repository for my website code. I configured GitHub Actions
+              to ensure that when I push new website code, the S3 bucket automatically updates. I was careful not to
+              commit AWS credentials to source control, protecting my resources from potential misuse.</em></p>
+  
+          <p><em>Lastly, I included a link in the text of my resume to a short blog post detailing the things I
+              learned while working on this project. I published it on Dev.to, which was a great platform for
+              sharing my insights.</em></p>
+  
+          <p><em>And that’s the gist of it! I explored various strategies, tools, and further challenges that have
+              helped me enhance my skills and prepare for opportunities in the cloud. I even delved into the AWS
+              edition of the Cloud Resume Challenge book for additional guidance.</em></p></b>
         </div>
       </div>
-    </div>
-    </div>
-    </div>
+      <button class="fade-in-content" id="open-modal-btn">Personal VPN using AWS</button>
+      <div id="myModal" class="modal">
+        <div class="modal-content"></div>
+      </div>
+  </div>
   </section>
-  <hr class="divider">
   </main>
 </body>
+<hr class="divider">
+
 <footer class="text-center text-white" style="background-color: transparent;">
   <!-- Grid container -->
   <div class="container pt-4">
@@ -271,13 +253,15 @@
           <path
             d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
         </svg></a>
+        
     </section>
+    <div class="text-center text-white p-3 myrights">MY DIGITAL PORTFOLIO. ALL RIGHTS RESERVED 2024</div>
+
     <!-- Section: Social media -->
   </div>
 
 
   <!-- Copyright -->
-  <div class="text-center text-white p-3 myrights">MY DIGITAL PORTFOLIO. ALL RIGHTS RESERVED 2024</div>
   <!-- Copyright -->
 </footer>
 <script src="js/js.js"></script>
