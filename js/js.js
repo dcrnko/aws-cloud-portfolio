@@ -49,17 +49,3 @@ fadeInContents.forEach(content => {
     observer.observe(content);
 });
 
-// Get elements
-const modal = document.getElementById("myModal");
-const openModalBtn = document.getElementById("open-modal-btn");
-
-// Open modal only when the button is clicked
-openModalBtn.addEventListener('click', function() {
-  modal.style.display = "flex"; // Set modal to flex display only on button click
-});
-
-// Close modal when user clicks anywhere inside the modal
-modal.addEventListener('click', function() {
-  modal.style.display = "none"; // Hide modal
-});
-

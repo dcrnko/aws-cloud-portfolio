@@ -8,7 +8,7 @@ body, html {
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 1); /* Fully dark */
 }
 body{
-  background: linear-gradient(-45deg, #2B5D6B, #306B76, #368881);
+  background: linear-gradient(-45deg, #1b2c2d, #083c40, #146266);
   background-size: 400% 400%;
   background-attachment: fixed;
   animation: gradient 15s ease infinite;
@@ -64,6 +64,7 @@ img {
 
 /* NAVBAR SECTION START!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .navbar-container {
+  background-color: #1b2c2d;
   height: 5vh;
   display: flex;
   align-items: center;
@@ -180,19 +181,27 @@ img {
   transform: scale(1.15);
   /* Slightly increases size to make it stand out */
   transition: all 0.15s ease-in-out;
+
+}.experience-container {
 }
 
-.footer{
-  color: white;
-  display: flex;  /* Enables flexbox */
-  flex-direction: column;  /* Stacks text vertically */
-  justify-content: center;  /* Centers content vertically */
-  align-items: center;  /* Moves content to the right */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
+  .footer {
+    border-top: 1px solid white;
+    background-color: #1b2c2d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fixed to the bottom */
+    bottom: 0; /* Places the footer at the bottom of the screen */
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top */
+    padding: 10px 0; /* Adds some space above and below the text */
+  }
+
+
 
 
 @media (max-width: 860px) and (max-height: 900px) {
