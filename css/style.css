@@ -5,6 +5,7 @@ body, html {
   overflow-x: hidden;
   width: 100%;
   height: 100%;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 1); /* Fully dark */
 }
 body{
   background: linear-gradient(-45deg, #2B5D6B, #306B76, #368881);
@@ -22,6 +23,34 @@ body{
   100% {
       background-position: 0% 50%;
   }
+}
+a {
+  font-size: 1.1rem;
+  color: #23d5ab;
+  text-decoration: none;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+a:hover {
+  color: #ffffff;
+  transform: scale(1.1); /* Increase size by 10% */
+}
+
+a:hover::after {
+  transform: scaleX(1);
 }
 
 p {
@@ -75,14 +104,18 @@ img {
 }
 
 .welcome-container-content2 {
+  margin-left: 2%;;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: flex-end;
 }
 
 .profilepic {
     width: 10rem; /* Keeps the circular size */
     height: auto;
     display: block;
-    border-radius: 40%; /* Ensures it stays circular */
+    border-radius: 30%; /* Ensures it stays circular */
 
 }
 
@@ -149,6 +182,18 @@ img {
   transition: all 0.15s ease-in-out;
 }
 
+.footer{
+  color: white;
+  display: flex;  /* Enables flexbox */
+  flex-direction: column;  /* Stacks text vertically */
+  justify-content: center;  /* Centers content vertically */
+  align-items: center;  /* Moves content to the right */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 
 @media (max-width: 860px) and (max-height: 900px) {
   .welcome-container {
@@ -167,7 +212,6 @@ img {
     /* Ensure text inside the <p> tags is centered */
     width: 100%;
   }
-
   .welcome-container-content2 {
     padding-top: 5%;
     padding-bottom: 5%;;
