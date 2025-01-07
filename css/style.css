@@ -7,7 +7,7 @@ body, html {
   height: 100%;
 }
 body{
-  background: linear-gradient(-45deg, #2B5D6B, #306B76, #368881, #3AA582);
+  background: linear-gradient(-45deg, #2B5D6B, #306B76, #368881);
   background-size: 400% 400%;
   background-attachment: fixed;
   animation: gradient 15s ease infinite;
@@ -62,8 +62,10 @@ img {
 }
 
 .welcome-container-content1 {
-  justify-content: center;
-  align-items: right;
+  display: flex;
+  flex-direction: column;  /* Stacks text vertically */
+  justify-content: center;  /* Centers content vertically */
+  align-items: flex-end;  /* Moves content to the right */
   font-size: 2.2rem;
   text-align: right;
   /* Ensure text inside the <p> tags is centered */
@@ -73,22 +75,29 @@ img {
 }
 
 .welcome-container-content2 {
-  justify-content: left;
+  justify-content: center;
 }
 
 .profilepic {
-  width: 7.5rem;
+    width: 10rem; /* Keeps the circular size */
+    height: auto;
+    display: block;
+    border-radius: 40%; /* Ensures it stays circular */
+
+}
+
+  
+  
+  /*width: 7.5rem;
   /* Maintain the 50% width */
-  border-radius: 50%;
+
   /* Rounded image */
-  object-fit: cover;
+  /*object-fit: cover;
   height: auto;
   max-width: 300px;
   /* Maintain consistency across different screens */
-  z-index: 500;
-  /* Keep image above the wave */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 1.0);
-}
+  /*box-shadow: 0 8px 12px rgba(0, 0, 0, 1.0);*/
+
 
 .description-container {
   align-items: center;
@@ -148,7 +157,10 @@ img {
   }
 
   .welcome-container-content1 {
-    justify-content: flex-end;
+    display: flex;  /* Enables flexbox */
+    flex-direction: column;  /* Stacks text vertically */
+    justify-content: center;  /* Centers content vertically */
+    align-items: center;  /* Moves content to the right */
     /* Center <p> elements vertically */
     font-size: 1.5rem;
     text-align: center;
@@ -166,7 +178,7 @@ img {
   }
 
   .profilepic {
-    width: 8rem;
+    width: 10rem;
     height: auto;
     border-radius: 50%;
     /* Rounded image */
