@@ -120,18 +120,6 @@ img {
 
 }
 
-  
-  
-  /*width: 7.5rem;
-  /* Maintain the 50% width */
-
-  /* Rounded image */
-  /*object-fit: cover;
-  height: auto;
-  max-width: 300px;
-  /* Maintain consistency across different screens */
-  /*box-shadow: 0 8px 12px rgba(0, 0, 0, 1.0);*/
-
 
 .description-container {
   align-items: center;
@@ -157,49 +145,103 @@ img {
   align-items: center;
 }
 
-.narrow-object-container {
+
+
+#my-experience{
   display: flex;
-  justify-content: center;
-  z-index: 10;
-  position: relative;
-  /* Allow positioning of narrow object */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  margin-bottom: 15vh; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/ 
 }
 
-.narrow-object {
-  color: white;
-  font-size: 2.3rem;
-  height: 5vh;
-  width: 40px;
-  /* Width for visibility */
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-.narrow-object:hover {
-  transform: scale(1.15);
-  /* Slightly increases size to make it stand out */
-  transition: all 0.15s ease-in-out;
-
-}.experience-container {
-}
-
-  .footer {
-    border-top: 1px solid white;
-    background-color: #1b2c2d;
-    color: white;
+.experience-container {
+  width: 70%;
+  background-color: "";
+  display: flex;
+.design-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    position: fixed; /* Fixed to the bottom */
-    bottom: 0; /* Places the footer at the bottom of the screen */
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure it stays on top */
-    padding: 10px 0; /* Adds some space above and below the text */
+    justify-content: center;
+    background-color: #1f1f1f;
+    min-height: 100vh;
+    padding: 100px 0;
   }
+  
+  .design {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timeline {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .timeline-content {
+    padding: 20px;
+    background: "";
+    -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+            box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+    border-radius: 15px;
+    color: white;
+    padding: 1.75rem;
+    transition: 0.4s ease;
+    overflow-wrap: break-word !important;
+    margin: 1rem;
+    margin-bottom: 20px;
+    border-radius: 6px;
+  }
+  
+  .timeline-component {
+    margin: 0px 20px 20px 20px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr 3px 1fr;
+    }
+    .timeline-middle {
+      position: relative;
+      background-image: linear-gradient(45deg, #146266, #5bb8bd, #8ff9ff);
+      width: 3px;
+      height: 100%;
+    }
+    .main-middle {
+      opacity: 0;
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-image: linear-gradient(45deg, #146266, #5bb8bd, #8ff9ff);
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+    }
+  }
+}
+
+.footer {
+  border-top: 1px solid white;
+  background-color: #1b2c2d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Normal positioning */
+  width: 100%;
+  padding: 10px 0;
+}
 
 
 

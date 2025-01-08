@@ -6,46 +6,15 @@ async function updateCounter() {
 }
 updateCounter();
 
-// Function to scroll down to the next section
-document.getElementById('scrollButton').addEventListener('click', function() {
-  // Get the second section's position
-  const section2 = document.getElementById('my-experience');
-  section2.scrollIntoView({ behavior: 'smooth' });
-});
-document.getElementById('scrollButton2').addEventListener('click', function() {
-  // Get the second section's position
-  const section2 = document.getElementById('projects');
-  section2.scrollIntoView({ behavior: 'smooth' });
-});
+document.addEventListener("scroll", function () {
+  const footer = document.querySelector(".footer");
+  const scrollPosition = window.scrollY + window.innerHeight;
+  const pageHeight = document.documentElement.scrollHeight;
 
-
-function toggleContent(post) {
-  const content = post.querySelector('.blog-content');
-  if (content.style.display === "none") {
-    content.style.display = "block"; // Show content
+  if (scrollPosition >= pageHeight - 10) { 
+      footer.style.bottom = "0"; // Show footer
   } else {
-    content.style.display = "none"; // Hide content
+      footer.style.bottom = "-100px"; // Hide footer
   }
-}
-
-// Select all elements inside the container you want to fade in/out
-const fadeInContents = document.querySelectorAll('.fade-in-content');
-
-// Use IntersectionObserver to detect when each element is in view
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // Add the 'show' class when the content comes into view
-            entry.target.classList.add('show');
-        } else {
-            // Remove the 'show' class when content goes out of view
-            entry.target.classList.remove('show');
-        }
-    });
-});
-
-// Observe each element inside the container
-fadeInContents.forEach(content => {
-    observer.observe(content);
 });
 
