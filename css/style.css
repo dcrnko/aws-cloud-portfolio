@@ -202,7 +202,7 @@ img {
     margin: 0px 20px 20px 20px;
   }
   
-  @media screen and (min-width: 768px) {
+  @media (max-width: 860px) and (max-height: 900px){
     .timeline {
       display: grid;
       grid-template-columns: 1fr 3px 1fr;
