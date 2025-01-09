@@ -285,4 +285,7 @@ img {
     font-size: 1rem;
     align-items: center;
   }
+  .experience-container {
+    width: 100%;
+  }
 }
