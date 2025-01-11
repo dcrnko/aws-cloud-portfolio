@@ -6,15 +6,17 @@ async function updateCounter() {
 }
 updateCounter();
 
-document.addEventListener("scroll", function () {
-  const footer = document.querySelector(".footer");
-  const scrollPosition = window.scrollY + window.innerHeight;
-  const pageHeight = document.documentElement.scrollHeight;
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
 
-  if (scrollPosition >= pageHeight - 10) { 
-      footer.style.bottom = "0"; // Show footer
-  } else {
-      footer.style.bottom = "-100px"; // Hide footer
-  }
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
 });
 

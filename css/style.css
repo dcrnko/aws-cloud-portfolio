@@ -1,29 +1,36 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: 'Abel', sans-serif;
   overflow-x: hidden;
   width: 100%;
   height: 100%;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 1); /* Fully dark */
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+  /* Fully dark */
 }
-body{
-  background: linear-gradient(-45deg, #1b2c2d, #083c40, #146266);
+
+body {
+  background: linear-gradient(-45deg, #083c40, #146266);
   background-size: 400% 400%;
   background-attachment: fixed;
   animation: gradient 15s ease infinite;
 }
+
 @keyframes gradient {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
+
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
+
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
+
 a {
   font-size: 1.1rem;
   color: #23d5ab;
@@ -46,7 +53,8 @@ a::after {
 
 a:hover {
   color: #ffffff;
-  transform: scale(1.1); /* Increase size by 10% */
+  transform: scale(1.1);
+  /* Increase size by 10% */
 }
 
 a:hover::after {
@@ -88,15 +96,21 @@ img {
   width: 100%;
   padding-top: 5%;
   padding-top: 5%;
-  padding-bottom: 5%;;
+  padding-bottom: 5%;
 }
 
 .welcome-container-content1 {
   display: flex;
-  flex-direction: column;  /* Stacks text vertically */
-  justify-content: center;  /* Centers content vertically */
-  align-items: flex-end;  /* Moves content to the right */
+  flex-direction: column;
+  /* Stacks text vertically */
+  justify-content: center;
+  /* Centers content vertically */
+  align-items: flex-end;
+  /* Moves content to the right */
   font-size: 2.2rem;
+  font-family: "Kalam", serif;
+  font-weight: 400;
+  font-style: normal;
   text-align: right;
   /* Ensure text inside the <p> tags is centered */
   padding-right: 15px;
@@ -105,7 +119,8 @@ img {
 }
 
 .welcome-container-content2 {
-  margin-left: 2%;;
+  margin-left: 2%;
+  ;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -113,10 +128,12 @@ img {
 }
 
 .profilepic {
-    width: 10rem; /* Keeps the circular size */
-    height: auto;
-    display: block;
-    border-radius: 30%; /* Ensures it stays circular */
+  width: 10rem;
+  /* Keeps the circular size */
+  height: auto;
+  display: block;
+  border-radius: 30%;
+  /* Ensures it stays circular */
 
 }
 
@@ -129,10 +146,6 @@ img {
   color: white;
 }
 
-.others-container {
-  display: flex;
-  flex-direction: column;
-}
 
 .counter-number {
   color: white;
@@ -146,87 +159,138 @@ img {
 }
 
 
-
-#my-experience{
+#my-experience {
   display: flex;
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
-  margin-bottom: 15vh; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/ 
+  justify-content: row;
+  align-items: center;
+  margin-bottom: 8vh;
 }
 
-.experience-container {
-  width: 70%;
-  background-color: "";
+.leftbar-container {
+  width: 20%;
+}
+
+.intro-container {
+  text-align: center;
+  font-size: 20px;
+  width: 20%;
+  color: white;
+}
+
+.center-container {
+  width: 10%;
+}
+
+.timeline-container {
+  width: 30%;
+  /* Reduced size by 20% */
+}
+
+.timeline {
+  position: relative;
   display: flex;
-.design-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #1f1f1f;
-    min-height: 100vh;
-    padding: 100px 0;
-  }
-  
-  .design {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .timeline {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Vertical Line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  /* Slightly thinner */
+  background-image: linear-gradient(45deg, #146266, #5bb8bd, #8ff9ff);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Timeline Item Styling */
+.timeline-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+  /* Less space between items */
+}
+
+/* Left Side */
+.timeline-item.left {
+  justify-content: flex-end;
+  padding-right: 8%;
+}
+
+/* Right Side */
+.timeline-item.right {
+  justify-content: flex-start;
+  padding-left: 8%;
+}
+
+/* Timeline Content Box */
+.timeline-content {
+  width: 50%;
+  padding: 0.8rem;
+  /* Smaller padding */
+  font-size: 0.8rem;
+  /* Smaller font */
+  background: #083c40;
+  box-shadow: 3px 3px 6px #1a1a1a, -3px -3px 6px #242424;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  /* Center text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Timeline Circle */
+.timeline-circle {
+  width: 10px;
+  height: 10px;
+  background-image: linear-gradient(45deg, #146266, #5bb8bd, #8ff9ff);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .timeline-container {
     width: 80%;
-    height: auto;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
+    /* More width on smaller screens */
+  }
+
+  .timeline::before {
+    left: 5%;
+    /* Shift the timeline to the left */
+  }
+
+  .timeline-item {
     flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 10%;
   }
-  
+
+  .timeline-item.left,
+  .timeline-item.right {
+    justify-content: flex-start;
+    padding: 0;
+  }
+
   .timeline-content {
-    padding: 20px;
-    background: "";
-    -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
-            box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
-    border-radius: 15px;
-    color: white;
-    padding: 1.75rem;
-    transition: 0.4s ease;
-    overflow-wrap: break-word !important;
-    margin: 1rem;
-    margin-bottom: 20px;
-    border-radius: 6px;
+    width: 90%;
+    text-align: center;
   }
-  
-  .timeline-component {
-    margin: 0px 20px 20px 20px;
-  }
-  
-  @media screen and (min-width: 768px) {
-    .timeline {
-      display: grid;
-      grid-template-columns: 1fr 3px 1fr;
-    }
-    .timeline-middle {
-      position: relative;
-      background-image: linear-gradient(45deg, #146266, #5bb8bd, #8ff9ff);
-      width: 3px;
-      height: 100%;
-    }
-    .main-middle {
-      opacity: 0;
-    }
-    .timeline-circle {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background-image: linear-gradient(45deg, #146266, #5bb8bd, #8ff9ff);
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
-    }
+
+  .timeline-circle {
+    left: 5%;
+    transform: translateX(0);
   }
 }
 
@@ -244,6 +308,15 @@ img {
 }
 
 
+/*EFFECTS*/
+.stand-out {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stand-out:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
 
 @media (max-width: 860px) and (max-height: 900px) {
@@ -253,19 +326,25 @@ img {
   }
 
   .welcome-container-content1 {
-    display: flex;  /* Enables flexbox */
-    flex-direction: column;  /* Stacks text vertically */
-    justify-content: center;  /* Centers content vertically */
-    align-items: center;  /* Moves content to the right */
+    display: flex;
+    /* Enables flexbox */
+    flex-direction: column;
+    /* Stacks text vertically */
+    justify-content: center;
+    /* Centers content vertically */
+    align-items: center;
+    /* Moves content to the right */
     /* Center <p> elements vertically */
     font-size: 1.5rem;
     text-align: center;
     /* Ensure text inside the <p> tags is centered */
     width: 100%;
   }
+
   .welcome-container-content2 {
     padding-top: 5%;
-    padding-bottom: 5%;;
+    padding-bottom: 5%;
+    ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,12 +359,14 @@ img {
     max-width: 300px;
     /* Maintain consistency across different screens */
   }
+
   .description-container {
     width: 100%;
     font-size: 1rem;
     align-items: center;
   }
-  .experience-container {
+
+  .timeline-container {
     width: 100%;
   }
 }
