@@ -375,7 +375,16 @@ img {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-
+  .navbar-container {
+    background-color: #1b2c2d;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    z-index: 100;
+    border-bottom: 1px solid white;
+  }
   .welcome-container {
     display: flex;
     flex-direction: column;
@@ -471,4 +480,17 @@ img {
   .form-container {
       width: 90%;
   }
+  .footer {
+    border-top: 1px solid white;
+    background-color: #1b2c2d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky; /* Normal positioning */
+    width: 100%;
+    padding: 10px 0;
+  }
+  
 }
