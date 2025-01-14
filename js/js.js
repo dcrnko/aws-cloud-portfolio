@@ -20,3 +20,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Form Data
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // Email Validation
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    // Mailto to send email
+    window.location.href = `mailto:pooleno@gmail.com?subject=Contact%20Form%20Message&body=Name:%20${name}%0AEmail:%20${email}%0AMessage:%20${message}`;
+});
