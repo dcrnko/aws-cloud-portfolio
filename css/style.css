@@ -374,7 +374,7 @@ img {
 
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .navbar-container {
     background-color: #1b2c2d;
     height: 8vh;
