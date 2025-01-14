@@ -159,7 +159,6 @@ img {
 }
 #my-experience {
   height: 100vh;
-  border: 2px solid white;
 }
 .experience-continer{
   height: 100%;
@@ -256,6 +255,9 @@ img {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  .experience-continer{
+    flex-direction: column;
+  }
   .timeline-container {
     width: 80%;
     /* More width on smaller screens */
@@ -291,7 +293,6 @@ img {
 }
 
 #projects{
-  border: 5px solid yellow;
   height: 100vh;
 }
 .projects-container{
@@ -311,7 +312,6 @@ img {
 }
 
 #contact{
-  border: 2px solid white;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -387,6 +387,9 @@ img {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .projects-container{
+    flex-direction: column;
+  }
   .form-container {
       width: 90%;
   }
