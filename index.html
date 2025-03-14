@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Crnko Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-left"><a href="#landing">dcrnko</a></div>
+            <div class="nav-right">
+                <a href="#about">About</a>
+                <a href="#blog-projects">Blog</a>
+                <a href="#contact">Contact</a>
+                <span id="theme-toggle">&#9788;</span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="landing">
+        <div class="landing-content">
+            <div class="profile-pic">
+                <img src="aipic.jpg" alt="Profile Picture">
+            </div>
+            <div class="name">David Crnko</div>
+            <div class="role-container">
+            </div>
+            <div class="social-icons">
+                <a href="https://github.com/dcrnko"><img src="pictures/github-black.svg" alt="Social 1"></a>
+                <a href="https://www.facebook.com/dawecrnko/"><img src="pictures/facebook-black.svg" alt="Social 2"></a>
+                <a href="https://www.linkedin.com/in/david-crnko/"><img src="pictures/linkedin-black.svg" alt="Social 3"></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><img src="pictures/youtube-black.svg" alt="Social 4"></a>
+                <a href="https://www.instagram.com/crovid93/"><img src="pictures/instagram-black.svg" alt="Social 5"></a>
+            </div>
+            <div class="scroll-down">Scroll Down</div>
+        </div>
+    </section>
+
+
+    <section id="about" style="margin-top: 50px;">
+        <div class="about-content">
+            <div class="about-title">About Me</div>
+            <div class="about-details">
+                <p>
+                    My background is primarily in Linux system administration, specifically with the
+                    second-largest Linux distribution. Throughout my career, I have focused on
+                    providing technical support and addressing general Linux issues while
+                    collaborating with IT departments from some of the largest companies. Although I
+                    have had opportunities to practice Kubernetes, my experience in cloud
+                    environments is limited. I am currently seeking new opportunities and would love
+                    to learn more about automation and cloud computing while improving my
+                    knowledge in the area of containerization.
+                </p>
+                <button class="download-cv">Download CV</button>
+            </div>
+            <div class="skill-indicators">
+                <div class="skill">
+                    <div class="skill-name">Linux</div>
+                    <div class="skill-level">70%</div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">AWS</div>
+                    <div class="skill-level">60%</div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Kubernetes</div>
+                    <div class="skill-level">40%</div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Web Development</div>
+                    <div class="skill-level">80%</div>
+                </div>
+            </div>
+
+            <div class="experience-title">Experience & Education</div>
+            <div class="experience-education">
+                <div class="experience">
+                    <h3>Work Experience</h3>
+                    <div class="timeline">
+                        <div class="milestone">
+                            <h4>Senior Cloud Engineer</h4>
+                            <p>Company A - 2023-Present</p>
+                            <p>Managed cloud infrastructure, implemented automation.</p>
+                        </div>
+                        <div class="milestone">
+                            <h4>System Administrator</h4>
+                            <p>Company B - 2020-2023</p>
+                            <p>Maintained server systems, provided technical support.</p>
+                        </div>
+                        <div class="milestone">
+                            <h4>Junior Developer</h4>
+                            <p>Company C - 2018-2020</p>
+                            <p>Developed web applications, assisted in project planning.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="education">
+                    <h3>Education</h3>
+                    <div class="timeline">
+                        <div class="milestone">
+                            <h4>Master of Science in Computer Science</h4>
+                            <p>University X - 2016-2018</p>
+                            <p>Specialized in distributed systems and cloud computing.</p>
+                        </div>
+                        <div class="milestone">
+                            <h4>Bachelor of Science in Information Technology</h4>
+                            <p>University Y - 2012-2016</p>
+                            <p>Focused on software development and network administration.</p>
+                        </div>
+                        <div class="milestone">
+                            <h4>High School Diploma</h4>
+                            <p>High School Z - 2008-2012</p>
+                            <p>General education with a focus on mathematics and science.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog-projects" style="margin-top: 50px;">
+        <div class="blog-projects-content">
+            <div class="blog-projects-title">Blog & Projects</div>
+            <div class="blog-project-container">
+                <div class="project-preview">
+                    <h3>Project 1: Web App Redesign</h3>
+                    <button class="details-button" data-title="Project 1: Web App Redesign"
+                        data-content="This project involved a complete redesign of a web application to improve user experience and performance.">Details</button>
+                </div>
+                <div class="blog-preview">
+                    <h3>Blog Post: Cloud Migration Best Practices</h3>
+                    <button class="details-button" data-title="Blog Post: Cloud Migration Best Practices"
+                        data-content="This blog post discusses best practices for migrating applications to the cloud, focusing on security and scalability.">Details</button>
+                </div>
+                <div class="project-preview">
+                    <h3>Project 2: Mobile App Development</h3>
+                    <button class="details-button" data-title="Project 2: Mobile App Development"
+                        data-content="Developed a mobile application for iOS and Android, focusing on user-friendly interface and efficient data management.">Details</button>
+                </div>
+                <div class="blog-preview">
+                    <h3>Blog Post: Introduction to Kubernetes</h3>
+                    <button class="details-button" data-title="Blog Post: Introduction to Kubernetes"
+                        data-content="This article provides an introduction to Kubernetes, explaining its core concepts and benefits for container orchestration.">Details</button>
+                </div>
+                <div class="project-preview">
+                    <h3>Project 3: Data Analysis Dashboard</h3>
+                    <button class="details-button" data-title="Project 3: Data Analysis Dashboard"
+                        data-content="Created a data analysis dashboard to visualize key performance indicators and provide actionable insights.">Details</button>
+                </div>
+                <div class="blog-preview">
+                    <h3>Blog Post: Web Security Fundamentals</h3>
+                    <button class="details-button" data-title="Blog Post: Web Security Fundamentals"
+                        data-content="This post covers the fundamentals of web security, highlighting common vulnerabilities and best practices for protection.">Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal" id="modal">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <div class="modal-content" id="modal-content">
+                <h3 id="modal-title"></h3>
+                <p id="modal-text"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="margin-top: 50px;">
+        <div class="contact-content">
+            <div class="contact-title">Get in Touch</div>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <div id="email-error" class="error-message"></div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="send-message">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025. DC</p>
+    </footer>
+
+    <script src="js.js"></script>
+</body>
+
+</html>
