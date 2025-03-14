@@ -2,22 +2,19 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black;
-    color: white;
-    transition: background-color 0.3s, color 0.3s;
-    min-height: 100vh;
+    background-color: black; /* Default background */
+    color: white; /* Default text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+    min-height: 100vh; /* Ensure full viewport height */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack header, sections, and footer */
 }
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Target screens 768px and below */
     body {
         padding-left: 0;
         padding-right: 0;
     }
-    .skill-indicators,
-    .experience-education {
+    .skill-indicators, .experience-education {
         grid-template-columns: 1fr;
     }
     .blog-project-container {
@@ -25,7 +22,7 @@ body {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) { /* Target screens 1200px and above */
     body {
         padding-left: 15%;
         padding-right: 15%;
@@ -34,11 +31,11 @@ body {
 
 /* Header/Navigation */
 header {
-    position: sticky;
+    position: sticky; /* Keeps the header at the top */
     top: 0;
     width: 100%;
-    background-color: black;
-    z-index: 100;
+    background-color: black; /* Semi-transparent background */
+    z-index: 100; /* Ensure it's on top */
 }
 
 nav {
@@ -46,23 +43,19 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    max-width: 70%;
-    margin: 0 auto;
+    max-width: 70%; /* Ensures the content stays within the margins on larger screens */
+    margin: 0 auto; /* Centers the nav */
 }
 
 .nav-left {
     font-size: 1.5em;
     text-decoration: none;
 }
-
-.nav-left a,
-.nav-right a,
-#theme-toggle {
+.nav-left a {
     text-decoration: none;
     color: white;
     cursor: pointer;
 }
-
 .nav-right {
     display: flex;
     align-items: center;
@@ -70,30 +63,33 @@ nav {
 
 .nav-right a {
     margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
 }
-
-#theme-toggle {
+#theme-toggle{
     margin-left: 20px;
+    color: white;
+    cursor: pointer;
 }
-
 /* Landing Section */
 #landing {
     min-height: 90vh;
     display: grid;
-    place-items: center;
+    place-items: center; /* Centers content both horizontally and vertically */
     padding: 20px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Include padding in height calculation */
 }
 
 .landing-content {
     text-align: center;
-    width: 100%;
-    max-width: 70%;
-    margin: 0 auto;
+    width: 100%; /* Full width on small screens */
+    max-width: 70%; /* Limits width on larger screens */
+    margin: 0 auto; /* Centers the content */
 }
 
 .profile-pic img {
-    width: 200px;
+    width: 200px; /* Adjust size as needed */
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
@@ -116,8 +112,8 @@ nav {
 }
 
 .social-icons img {
-    width: 30px;
-    filter: invert(100%);
+    width: 30px; /* Adjust icon size */
+    filter: invert(100%); /* Invert colors to white */
 }
 
 .scroll-down {
@@ -137,8 +133,7 @@ nav {
     margin: 0 auto;
 }
 
-.about-title,
-.experience-title {
+.about-title, .experience-title {
     font-size: 2em;
     margin-bottom: 20px;
 }
@@ -146,13 +141,10 @@ nav {
 .about-details {
     margin-bottom: 30px;
 }
-
 .experience-title {
     margin-top: 40px;
 }
-
-.skill-indicators,
-.experience-education {
+.skill-indicators, .experience-education {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -174,9 +166,7 @@ nav {
     font-size: 1.2em;
 }
 
-.download-cv,
-.details-button,
-.send-message {
+.download-cv {
     background-color: transparent;
     border: 1px solid white;
     color: white;
@@ -193,6 +183,15 @@ nav {
 .milestone {
     margin-bottom: 20px;
     position: relative;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skill-indicators, .experience-education {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Blog & Projects Section */
@@ -218,11 +217,19 @@ nav {
     gap: 20px;
 }
 
-.project-preview,
-.blog-preview {
+.project-preview, .blog-preview {
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 20px;
     text-align: center;
+}
+
+.details-button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
 /* Modal Styling */
@@ -264,6 +271,14 @@ nav {
     text-align: left;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
 /* Contact Section */
 #contact {
     min-height: 50vh;
@@ -296,18 +311,35 @@ label {
     margin-bottom: 5px;
 }
 
-input,
-textarea {
+input, textarea {
     padding: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     background-color: transparent;
     color: white;
     font-family: 'Orbitron', sans-serif;
-    resize: vertical;
+    resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+.send-message {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    align-self: flex-start; /* Align button to the left */
+    width: fit-content; /* Adjust width to content */
+    margin-top: 10px;
 }
 
 .error-message {
-    display:none; /*added this line*/
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Adjust form elements if needed */
 }
 
 /* Footer */
@@ -317,4 +349,70 @@ footer {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/*
+/* Responsive adjustments */
+@media (min-width: 1200px) {
+    body {
+        padding-left: 15%; /* Side margins */
+        padding-right: 15%;
+    }
+}
+.light-theme {
+    background-color: #f0f0f0 !important; /* Light grey background */
+    color: black !important;
+}
+.light-theme nav {
+    background-color: #f0f0f0;
+}
+.light-theme .nav-left a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.light-theme .nav-right a{
+    color: black;
+}
+.light-theme #theme-toggle {
+    color: black;
+}
+.light-theme .social-icons img {
+    filter: invert(0%); /* Default: no inversion (black) */
+}
+.light-theme .skill {
+    text-align: center;
+    padding: 20px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+}
+.light-theme .timeline {
+    border-left: 2px solid black;
+    padding-left: 20px;
+}
+.light-theme .project-preview {
+    border: 1px solid black;
+}
+.light-theme .blog-preview{
+    border: 1px solid black;
+}
+
+.light-theme footer {
+    background-color: #f0f0f0;
+}
+
+.light-theme .details-button,
+.light-theme .download-cv,
+.light-theme .send-message {
+    border-color: black;
+    color: black;
+}
+
+.light-theme input,
+.light-theme textarea {
+    border-color: black;
+    color: black;
+}
+
+/* Navbar fix to cover the whole width*/
+.light-theme header {
+    width: 100%; /* Ensure full width on light-theme */
+    background-color: #f0f0f0;
+}
