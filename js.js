@@ -17,6 +17,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+const counter = document.querySelector(".counter-number");
+async function updateCounter() {
+    let response = await fetch("https://qsl325knfxo2bsg5d5mbueokqu0cqmqk.lambda-url.eu-central-1.on.aws/");
+    let data = await response.json();
+    counter.innerHTML = ` my portfolio has ${data} Views!`;
+}
+
+updateCounter();
+
 document.addEventListener('DOMContentLoaded', function() {
     const detailsButtons = document.querySelectorAll('.details-button');
     const modalOverlay = document.getElementById('modal-overlay');
