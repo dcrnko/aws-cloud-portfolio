@@ -11,8 +11,8 @@ body {
 }
 @media (max-width: 768px) { /* Target screens 768px and below */
     body {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 1%;
+        padding-right: 1%;
     }
     .skill-indicators, .experience-education {
         grid-template-columns: 1fr;
@@ -61,13 +61,13 @@ nav {
 }
 
 .nav-right a {
-    margin-left: 20px;
+    margin-left: 10%;
     text-decoration: none;
     color: white;
     cursor: pointer;
 }
 #theme-toggle{
-    margin-left: 20px;
+    margin-left:10%;
     color: white;
     cursor: pointer;
 }
@@ -89,8 +89,8 @@ nav {
 }
 
 .profile-pic img {
-    width: 200px; /* Adjust size as needed */
-    height: 200px;
+    width: 15vh; /* Adjust size as needed */
+    height: 15vh;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -108,7 +108,7 @@ nav {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 1vh;
 }
 
 .social-icons img {
