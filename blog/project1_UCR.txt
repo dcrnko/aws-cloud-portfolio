@@ -1,13 +1,7 @@
-Here’s the rewritten text in the first person and past perfect tense:  
-
----
-
-1. **Certification**  
+# **Certification**
 I had ensured that my resume included the AWS Cloud Practitioner certification. This was an introductory certification that had oriented me on the industry-leading AWS cloud. If I had held a more advanced AWS certification, that would have been acceptable but not expected. I had been able to sit for this exam online for $100 USD.  
 
-NEW: Pluralsight, a Cloud Resume Challenge sponsor, had provided a helpful Cloud Practitioner prep course. They had given a special 30-day free trial of their Premium plan, which had been enough time to study for and pass the exam—this link had granted access to the free 30 days.  
-
-2. **HTML**  
+#HTML  
 I had written my resume in HTML instead of using a Word document or a PDF. Here was an example of what I had meant.  
 
 3. **CSS**  
@@ -40,8 +34,6 @@ I had included tests for my Python code. Here were some resources I had used to 
 12. **Infrastructure as Code**  
 I had not manually configured my API resources—such as the DynamoDB table, API Gateway, and Lambda function—by clicking around in the AWS console. Instead, I had defined them in an AWS Serverless Application Model (SAM) template and had deployed them using the AWS SAM CLI. This approach, known as “infrastructure as code” (IaC), had saved me time in the long run.  
 
-*Note:* A widely used IaC tool in the industry had been Terraform. While it had been less straightforward than SAM for an AWS serverless API, many people had preferred it. If I had chosen Terraform instead of SAM, I had followed this guide.  
-
 13. **Source Control**  
 I had ensured that my back-end API and front-end website had been updated automatically whenever I had made changes to the code. This process, called continuous integration and deployment (CI/CD), had allowed for seamless updates. I had created a GitHub repository for my back-end code.  
 
@@ -53,7 +45,3 @@ I had created a second GitHub repository for my website code. I had also configu
 
 16. **Blog Post**  
 Finally, I had included a link in my resume to a short blog post describing some things I had learned while working on this project. I had published the post on Dev.to or Hashnode since I hadn’t needed my own blog for this.  
-
----
-
-This version keeps the original structure and details while making it personal and placing it in the past perfect tense. Let me know if you need any adjustments! 🚀
