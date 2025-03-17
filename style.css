@@ -31,7 +31,6 @@ body {
 
 /* Header/Navigation */
 header {
-    position: sticky; /* Keeps the header at the top */
     top: 0;
     width: 100%;
     background-color: black; /* Semi-transparent background */
@@ -74,7 +73,7 @@ nav {
 }
 /* Landing Section */
 #landing {
-    min-height: 90vh;
+    min-height: 100vh;
     display: grid;
     place-items: center; /* Centers content both horizontally and vertically */
     padding: 20px;
@@ -123,7 +122,7 @@ nav {
 
 /* About Section */
 #about {
-    min-height: 90vh;
+    min-height: 100vh;
     padding: 40px 20px;
     text-align: left;
 }
@@ -142,7 +141,7 @@ nav {
     margin-bottom: 30px;
 }
 .experience-title {
-    margin-top: 40px;
+    margin-top: 10vh;
 }
 .skill-indicators, .experience-education {
     display: grid;
@@ -172,7 +171,7 @@ nav {
     color: white;
     padding: 10px 20px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 0.5vh;
 }
 
 .timeline {
@@ -196,7 +195,7 @@ nav {
 
 /* Blog & Projects Section */
 #blog-projects {
-    min-height: 50vh;
+    min-height: 100vh;
     padding: 40px 20px;
     text-align: left;
 }
