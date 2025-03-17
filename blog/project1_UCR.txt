@@ -1,0 +1,59 @@
+Here’s the rewritten text in the first person and past perfect tense:  
+
+---
+
+1. **Certification**  
+I had ensured that my resume included the AWS Cloud Practitioner certification. This was an introductory certification that had oriented me on the industry-leading AWS cloud. If I had held a more advanced AWS certification, that would have been acceptable but not expected. I had been able to sit for this exam online for $100 USD.  
+
+NEW: Pluralsight, a Cloud Resume Challenge sponsor, had provided a helpful Cloud Practitioner prep course. They had given a special 30-day free trial of their Premium plan, which had been enough time to study for and pass the exam—this link had granted access to the free 30 days.  
+
+2. **HTML**  
+I had written my resume in HTML instead of using a Word document or a PDF. Here was an example of what I had meant.  
+
+3. **CSS**  
+I had styled my resume with CSS. Since I hadn’t been a designer, I hadn’t needed to make it fancy, but I had ensured that the page displayed something more than raw HTML.  
+
+4. **Static Website**  
+I had deployed my HTML resume as an Amazon S3 static website. While services like Netlify and GitHub Pages had been great for personal static site deployments, they had abstracted too much for the purpose of this challenge. I had used S3 instead.  
+
+5. **HTTPS**  
+I had ensured that my S3 website URL used HTTPS for security. To achieve this, I had used Amazon CloudFront.  
+
+6. **DNS**  
+I had pointed a custom DNS domain name to my CloudFront distribution so that my resume had been accessible at a URL like *my-c00l-resume-website.com*. I had used Amazon Route 53, though any other DNS provider would have worked. Registering a domain name had cost about ten dollars.  
+
+7. **JavaScript**  
+I had included a visitor counter on my resume webpage to track how many people had accessed the site. To implement this, I had written JavaScript. Here was a helpful tutorial that had guided me in the right direction.  
+
+8. **Database**  
+My visitor counter had needed to retrieve and update its count from a database. I had used Amazon’s DynamoDB for this. By selecting on-demand pricing, I had paid essentially nothing, as the project hadn’t required large amounts of data storage or retrieval. Here was a great free course on DynamoDB.  
+
+9. **API**  
+I had not communicated directly with DynamoDB from my JavaScript code. Instead, I had created an API that had accepted requests from my web app and had communicated with the database. I had used AWS’s API Gateway and Lambda services for this, as they had been free or nearly free for this project.  
+
+10. **Python**  
+I had written some code in my Lambda function. While I could have used JavaScript, I had chosen Python instead, as it had been commonly used for back-end programs and scripts. I had leveraged the `boto3` library for AWS. Here was a good, free Python tutorial I had referenced.  
+
+11. **Tests**  
+I had included tests for my Python code. Here were some resources I had used to write good Python tests.  
+
+12. **Infrastructure as Code**  
+I had not manually configured my API resources—such as the DynamoDB table, API Gateway, and Lambda function—by clicking around in the AWS console. Instead, I had defined them in an AWS Serverless Application Model (SAM) template and had deployed them using the AWS SAM CLI. This approach, known as “infrastructure as code” (IaC), had saved me time in the long run.  
+
+*Note:* A widely used IaC tool in the industry had been Terraform. While it had been less straightforward than SAM for an AWS serverless API, many people had preferred it. If I had chosen Terraform instead of SAM, I had followed this guide.  
+
+13. **Source Control**  
+I had ensured that my back-end API and front-end website had been updated automatically whenever I had made changes to the code. This process, called continuous integration and deployment (CI/CD), had allowed for seamless updates. I had created a GitHub repository for my back-end code.  
+
+14. **CI/CD (Back end)**  
+I had set up GitHub Actions so that when I had pushed updates to my Serverless Application Model template or Python code, my Python tests had run automatically. If the tests had passed, the SAM application had been packaged and deployed to AWS.  
+
+15. **CI/CD (Front end)**  
+I had created a second GitHub repository for my website code. I had also configured GitHub Actions to update my S3 bucket automatically whenever I had pushed new website code. Additionally, I had ensured that my CloudFront cache had been invalidated as needed. *Important note:* I had never committed AWS credentials to source control, as malicious actors could have found and misused them.  
+
+16. **Blog Post**  
+Finally, I had included a link in my resume to a short blog post describing some things I had learned while working on this project. I had published the post on Dev.to or Hashnode since I hadn’t needed my own blog for this.  
+
+---
+
+This version keeps the original structure and details while making it personal and placing it in the past perfect tense. Let me know if you need any adjustments! 🚀

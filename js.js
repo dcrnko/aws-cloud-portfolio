@@ -30,7 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
     detailsButtons.forEach(button => {
         button.addEventListener('click', function() {
             modalTitle.textContent = this.getAttribute('data-title');
-            modalText.textContent = this.getAttribute('data-content');
+            modalText.textContent = this.getAttribute('data-file');
+            fetch(filePath)
+                .then(response => response.text())
+                .then(text => {
+                    modalText.textContent = text;
+                });
             modalOverlay.style.display = 'block';
             modal.style.display = 'block';
         });
@@ -54,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = 'none';
         }
     });
+
+
 
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
@@ -90,6 +97,9 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.toggle('light-theme');
         updateModalTheme(); // Update modal theme on toggle
     });
+
+
+
 
     function updateModalTheme() {
         const modal = document.getElementById('modal');
