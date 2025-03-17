@@ -1,0 +1,7 @@
+CI/CD (Back end)
+I had set up GitHub Actions so that when I had pushed updates to my Serverless Application Model template or Python code, my Python tests had run automatically. If the tests had passed, the SAM application had been packaged and deployed to AWS.
+
+CI/CD (Front end)
+I had created a second GitHub repository for my website code. I had also configured GitHub Actions to update my S3 bucket automatically whenever I had pushed new website code. Additionally, I had ensured that my CloudFront cache had been invalidated as needed. Important note: I had never committed AWS credentials to source control, as malicious actors could have found and misused them.
+
+Finally, I had included a link in my resume to a short blog post describing some things I had learned while working on this project. I had published the post on Dev.to or Hashnode since I hadn’t needed my own blog for this.

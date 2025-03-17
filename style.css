@@ -267,9 +267,16 @@ nav {
     cursor: pointer;
 }
 
-.modal-content {
-    text-align: left;
+.modal-text {
+    font-family: sans-serif; /* Or your preferred font */
+    font-size: 16px;
+    line-height: 1.6; /* Increased line height for better readability */
+    padding: 20px;
+    max-height: 400px; /* Adjust as needed */
+    overflow-y: auto; /* Enable vertical scroll bar */
+    text-align: left; /* Align text to the left */
 }
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
