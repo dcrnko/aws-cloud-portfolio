@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
     detailsButtons.forEach(button => {
         button.addEventListener('click', function() {
             modalTitle.textContent = this.getAttribute('data-title');
-            modalText.textContent = this.getAttribute('data-file');
+            //modalText.textContent = this.getAttribute('data-file');
+            const filePath = this.getAttribute('data-file');
             fetch(filePath)
                 .then(response => response.text())
                 .then(text => {
