@@ -305,6 +305,10 @@ nav {
     .blog-project-container {
         grid-template-columns: repeat(2, 1fr);
     }
+    .blog-projects-title {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
 }
 
 
