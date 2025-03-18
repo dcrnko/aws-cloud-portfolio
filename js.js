@@ -1,14 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navRight = document.querySelector('.nav-right');
-
-    hamburger.addEventListener('click', function() {
-        navRight.style.display = navRight.style.display === 'flex' ? 'none' : 'flex';
-    });
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
     // ... (rest of your existing code) ...
 
     document.querySelectorAll('nav a').forEach(anchor => {

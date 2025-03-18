@@ -72,34 +72,23 @@ nav {
     cursor: pointer;
 }
 /* ... (your existing CSS) ... */
-
-.hamburger {
-    display: none; /* Hide on larger screens */
-    font-size: 1.5em;
-    cursor: pointer;
-    color: white;
-}
-
-@media (max-width: 768px) {
-    .nav-right {
-        display: none; /* Hide navigation links on smaller screens */
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
+@media (max-width: 1268px) {
+    .nav-left {
+        display: none; /* Hide nav-left on smaller screens */
     }
 
-    .hamburger {
-        display: block; /* Show hamburger icon on smaller screens */
+    .nav-right {
+        justify-content: center; /* Center navigation items */
+        width: 100%; /* Full width */
     }
 
     .nav-right a,
     #theme-toggle {
-        margin: 10px 0;
+        margin: 0 10px; /* Adjust spacing between items */
     }
 
     nav {
-        flex-direction: column;
-        align-items: flex-start;
+        justify-content: center; /* Center nav-right within nav */
     }
 }
 
