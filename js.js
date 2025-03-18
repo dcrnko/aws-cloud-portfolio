@@ -26,20 +26,6 @@ async function updateCounter() {
 }
 
 updateCounter();
-document.addEventListener('DOMContentLoaded', function() {
-    const loadMoreButton = document.querySelector('.load-more');
-
-    if (loadMoreButton) {
-        loadMoreButton.addEventListener('click', function() {
-            loadMoreButton.classList.toggle('active');
-            if (loadMoreButton.classList.contains('active')){
-                loadMoreButton.textContent = "Load less";
-            } else {
-                loadMoreButton.textContent = "Load more";
-            }
-        });
-    }
-});
 
 document.addEventListener('DOMContentLoaded', function() {
     const detailsButtons = document.querySelectorAll('.details-button');
@@ -83,23 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
             modalOverlay.style.display = 'none';
             modal.style.display = 'none';
         }
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const loadMoreButton = document.querySelector('.load-more');
-    
-        if (loadMoreButton) {
-            loadMoreButton.addEventListener('click', function() {
-                loadMoreButton.classList.toggle('active');
-                if (loadMoreButton.classList.contains('active')){
-                    loadMoreButton.textContent = "Load less";
-                } else {
-                    loadMoreButton.textContent = "Load more";
-                }
-            });
-        }
-    
-        // ... (Your modal JavaScript code) ...
     });
 
     document.getElementById('contact-form').addEventListener('submit', function(event) {

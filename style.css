@@ -308,43 +308,24 @@ nav {
     display: none; /* Hidden by default */
 }
 
+/* ... (your existing CSS) ... */
+
+.load-more {
+    display: none; /* Hidden by default */
+}
+
+/* ... (your existing CSS) ... */
+
+.load-more {
+    display: none; /* Hidden by default */
+}
+
 @media (max-width: 768px) {
     .blog-project-container {
         display: block;
         gap: 0;
     }
 
-    .project-preview, .blog-preview {
-        width: 100%;
-        margin-bottom: 20px;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .blog-project-container > div:nth-child(n+4) {
-        display: none;
-    }
-
-    .load-more {
-        background-color: transparent;
-        border: 1px solid white;
-        color: white;
-        padding: 10px 20px;
-        cursor: pointer;
-        margin-top: 20px;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-        display: block; /* Show on small screens */
-    }
-
-    .load-more.active + .blog-project-container > div:nth-child(n+4) {
-        display: block;
-    }
-
-    .load-more.active {
-        content: "Load less";
-    }
 }
 
 
