@@ -71,6 +71,37 @@ nav {
     color: white;
     cursor: pointer;
 }
+/* ... (your existing CSS) ... */
+
+.hamburger {
+    display: none; /* Hide on larger screens */
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-right {
+        display: none; /* Hide navigation links on smaller screens */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon on smaller screens */
+    }
+
+    .nav-right a,
+    #theme-toggle {
+        margin: 10px 0;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
 
 /* Landing Section */
 #landing {
