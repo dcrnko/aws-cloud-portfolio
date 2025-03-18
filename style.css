@@ -299,25 +299,51 @@ nav {
     text-align: left;
 }
 
-/* Responsive adjustments */
+
+/* ... (your existing CSS) ... */
+
+/* ... (your existing CSS) ... */
+
+.load-more {
+    display: none; /* Hidden by default */
+}
+
 @media (max-width: 768px) {
     .blog-project-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px; /* Reduce gap */
-    }
-
-    .blog-projects-title {
-        font-size: 1.5em; /* Reduced font size */
-        margin-bottom: 15px; /* Reduced margin */
+        display: block;
+        gap: 0;
     }
 
     .project-preview, .blog-preview {
-        padding: 15px; /* Reduced padding */
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 20px;
+        text-align: center;
     }
 
-    .details-button {
-        padding: 8px 16px; /* Reduced padding */
-        margin-top: 15px; /* Reduced margin */
+    .blog-project-container > div:nth-child(n+4) {
+        display: none;
+    }
+
+    .load-more {
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-top: 20px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        display: block; /* Show on small screens */
+    }
+
+    .load-more.active + .blog-project-container > div:nth-child(n+4) {
+        display: block;
+    }
+
+    .load-more.active {
+        content: "Load less";
     }
 }
 
