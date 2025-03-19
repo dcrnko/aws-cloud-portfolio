@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // ... (rest of your existing code) ...
-
+    // Navigation links smooth scrolling
     document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
 
             const targetId = this.getAttribute('href').substring(1);
@@ -16,37 +15,48 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
 
-const counter = document.querySelector(".counter-number");
-async function updateCounter() {
-    let response = await fetch("https://qsl325knfxo2bsg5d5mbueokqu0cqmqk.lambda-url.eu-central-1.on.aws/");
-    let data = await response.json();
-    counter.innerHTML = ` my portfolio has <b>${data}</b> views`;
-}
+    // Update view counter
+    const counter = document.querySelector(".counter-number");
+    async function updateCounter() {
+        let response = await fetch(
+            "https://qsl325knfxo2bsg5d5mbueokqu0cqmqk.lambda-url.eu-central-1.on.aws/"
+        );
+        let data = await response.json();
+        counter.innerHTML = ` my portfolio has <b>${data}</b> views`;
+    }
 
-updateCounter();
+    updateCounter();
 
-document.addEventListener('DOMContentLoaded', function() {
+    // Blog and Projects Functionality
     const detailsButtons = document.querySelectorAll('.details-button');
     const modalOverlay = document.getElementById('modal-overlay');
     const modal = document.getElementById('modal');
     const modalTitle = document.getElementById('modal-title');
     const modalText = document.getElementById('modal-text');
     const modalClose = document.getElementById('modal-close');
-    const themeToggle = document.getElementById('theme-toggle');
+    const loadMoreButton = document.querySelector('.load-more');
+    const previews = document.querySelectorAll('.preview');
     const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
 
     detailsButtons.forEach(button => {
         button.addEventListener('click', function() {
             modalTitle.textContent = this.getAttribute('data-title');
-            //modalText.textContent = this.getAttribute('data-file');
             const filePath = this.getAttribute('data-file');
-            fetch(filePath)
-                .then(response => response.text())
-                .then(text => {
-                    modalText.textContent = text;
-                });
+            const dataContent = this.getAttribute('data-content');
+            if (filePath) {
+                fetch(filePath)
+                    .then(response => response.text())
+                    .then(text => {
+                        modalText.textContent = text;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching file:', error);
+                    });
+            } else if (dataContent) {
+                modalText.textContent = dataContent;
+            }
             modalOverlay.style.display = 'block';
             modal.style.display = 'block';
         });
@@ -71,6 +81,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    if (loadMoreButton) {
+        loadMoreButton.addEventListener('click', function() {
+            previews.forEach((preview, index) => {
+                if (index >= 3) {
+                    preview.classList.toggle('mobile-hidden');
+                }
+            });
+            if (loadMoreButton.textContent === 'Load More') {
+                loadMoreButton.textContent = 'Load Less';
+            } else {
+                loadMoreButton.textContent = 'Load More';
+            }
+        });
+    }
+
+    // Contact Form Functionality
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
 
@@ -91,7 +117,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const message = messageInput.value;
 
         // Basic email sending using mailto link (opens the user's email client)
-        const mailtoLink = `mailto:crnkodav@gmail.com?subject=Contact Form Submission&body=${encodeURIComponent(message)}&cc=${encodeURIComponent(email)}`;
+        const mailtoLink =
+            `mailto:crnkodav@gmail.com?subject=Contact Form Submission&body=${encodeURIComponent(message)}&cc=${encodeURIComponent(email)}`;
         window.location.href = mailtoLink;
 
         // Clear the form fields after "sending"
@@ -106,9 +133,6 @@ document.addEventListener('DOMContentLoaded', function() {
         body.classList.toggle('light-theme');
         updateModalTheme(); // Update modal theme on toggle
     });
-
-
-
 
     function updateModalTheme() {
         const modal = document.getElementById('modal');

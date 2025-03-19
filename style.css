@@ -218,19 +218,20 @@ nav {
 
 /* Blog & Projects Section */
 #blog-projects {
-    min-height: 100vh;
-    padding: 40px 20px;
-    text-align: left;
+    height: 100vh;
+    padding: 20px;
+
 }
 
 .blog-projects-content {
-    max-width: 70%;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .blog-projects-title {
     font-size: 2em;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .blog-project-container {
@@ -239,7 +240,7 @@ nav {
     gap: 20px;
 }
 
-.project-preview, .blog-preview {
+.preview {
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 20px;
     text-align: center;
@@ -254,7 +255,19 @@ nav {
     margin-top: 20px;
 }
 
-/* Modal Styling (No changes here) */
+.load-more {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: none;
+    /* Hidden by default */
+    width: fit-content;
+    margin: 20px auto 0;
+}
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -299,34 +312,29 @@ nav {
     text-align: left;
 }
 
-
-/* ... (your existing CSS) ... */
-
-/* ... (your existing CSS) ... */
-
-.load-more {
-    display: none; /* Hidden by default */
+.mobile-hidden {
+    display: none;
 }
 
-/* ... (your existing CSS) ... */
-
-.load-more {
-    display: none; /* Hidden by default */
-}
-
-/* ... (your existing CSS) ... */
-
-.load-more {
-    display: none; /* Hidden by default */
-}
 
 @media (max-width: 768px) {
     .blog-project-container {
-        display: block;
-        gap: 0;
+        grid-template-columns: 1fr;
     }
 
+    .preview {
+        display: block;
+    }
+
+    .preview:nth-child(n+4) {
+        display: none;
+    }
+
+    .load-more {
+        display: block;
+    }
 }
+
 
 
 /* Contact Section */
@@ -437,12 +445,7 @@ footer {
     border-left: 2px solid black;
     padding-left: 20px;
 }
-.light-theme .project-preview {
-    border: 1px solid black;
-}
-.light-theme .blog-preview{
-    border: 1px solid black;
-}
+
 
 .light-theme footer {
     background-color: #f0f0f0;
@@ -454,6 +457,30 @@ footer {
     border-color: black;
     color: black;
 }
+
+
+.light-theme {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.light-theme .preview,
+.light-theme .details-button,
+.light-theme .load-more {
+    border-color: black;
+    color: black;
+}
+
+.light-theme .modal {
+    background-color: white;
+    color: black;
+}
+
+.light-theme .modal-close {
+    color: black;
+}
+
+
 
 .light-theme input,
 .light-theme textarea {

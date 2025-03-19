@@ -21,27 +21,26 @@ I had used Amazon Route 53.
 To reflect on some coding capabiliteis I included a visitor counter on my resume to track how many people had accessed the site. 
 To implement this, I had written a small JavaScript with help of online tutorials. 
 The visitor counter retrieves and updates its count from the AWS DynamoDB database.
+I created an API that accepts requests from my web app and coomunicates with the database. I used AWS’s API Gateway and Lambda services for this.
 
-9. **API**  
-I had not communicated directly with DynamoDB from my JavaScript code. Instead, I had created an API that had accepted requests from my web app and had communicated with the database. I had used AWS’s API Gateway and Lambda services for this, as they had been free or nearly free for this project.  
+Using online tutorials I have also written some Python code for my Lambda funtion. I had chosen Python instead of JavaScript, as it had been commonly used for back-end programs and scripts. 
+I had leveraged the `boto3` library for AWS.  
 
-10. **Python**  
-I had written some code in my Lambda function. While I could have used JavaScript, I had chosen Python instead, as it had been commonly used for back-end programs and scripts. I had leveraged the `boto3` library for AWS. Here was a good, free Python tutorial I had referenced.  
+I had not included tests for my Python code to the website. But I tested the code according to online courses for Python testing.  
 
-11. **Tests**  
-I had included tests for my Python code. Here were some resources I had used to write good Python tests.  
+I configured my API resources—such as the DynamoDB table, API Gateway, and Lambda manually using the AWS Console but I also used the AWS cli. 
+Plus, I had also defined the resources in using Terraform which is available to view via the following link:
+<GITHUB_LINK>
 
-12. **Infrastructure as Code**  
-I had not manually configured my API resources—such as the DynamoDB table, API Gateway, and Lambda function—by clicking around in the AWS console. Instead, I had defined them in an AWS Serverless Application Model (SAM) template and had deployed them using the AWS SAM CLI. This approach, known as “infrastructure as code” (IaC), had saved me time in the long run.  
+I had ensured that my back-end API and front-end website had been updated automatically whenever I had made changes to the code.
+I had created a GitHub repository for my back-end code.  
+ 
+I had set up GitHub Actions so that when I had pushed updates to my Application Model template or Python code, my Python tests run automatically. 
 
-13. **Source Control**  
-I had ensured that my back-end API and front-end website had been updated automatically whenever I had made changes to the code. This process, called continuous integration and deployment (CI/CD), had allowed for seamless updates. I had created a GitHub repository for my back-end code.  
+I had created a second GitHub repository for my website code. I had also configured GitHub Actions to update my S3 bucket automatically whenever I had pushed new website code. 
+Additionally, I had ensured that my CloudFront cache had been invalidated as needed. 
 
-14. **CI/CD (Back end)**  
-I had set up GitHub Actions so that when I had pushed updates to my Serverless Application Model template or Python code, my Python tests had run automatically. If the tests had passed, the SAM application had been packaged and deployed to AWS.  
+*Important note:* I had never committed AWS credentials to source control, as malicious actors could have found and misused them.  
 
-15. **CI/CD (Front end)**  
-I had created a second GitHub repository for my website code. I had also configured GitHub Actions to update my S3 bucket automatically whenever I had pushed new website code. Additionally, I had ensured that my CloudFront cache had been invalidated as needed. *Important note:* I had never committed AWS credentials to source control, as malicious actors could have found and misused them.  
+Finally, by reading this you can confirm I have provided a link in my resume to a short blog post describing the things I had learned while working on this project. 
 
-16. **Blog Post**  
-Finally, I had included a link in my resume to a short blog post describing some things I had learned while working on this project. I had published the post on Dev.to or Hashnode since I hadn’t needed my own blog for this.  
