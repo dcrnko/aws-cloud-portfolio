@@ -1,46 +1,55 @@
 AWS Cloud Resume Challenge. 
 
 https://cloudresumechallenge.dev/docs/the-challenge/aws/
-
+<p>
 Intro: This project is based on the the AWS Cloud Resume Challenge. The final product of the project is the website you are currently visiting. 
-
+</p>
+<p>
 As per the challenge, the website should contain number of elements and technologies I described below. 
 The aim of this project is to showcase the skills and knowledge of the AWS Cloud as well as some additional concepts related to networking, security, storage, web development and other.
-
+</p>
+<p>
 To complete the challenge I ensured this website(my resume) included the AWS Cloud Practitioner certification. 
 This was an introductory certification that provided me with fundamental knowledge of the industry-leading AWS cloud. 
-
+</p>
+<p>
 As the challenge requires, I created my resume as a website using HTML instead of a simple Word document or PDF. 
 To enhance its appearance, I styled it with CSS, keeping it simple but structured. 
 I then deployed it as a static website on Amazon S3, opting for a hands-on approach rather than using abstracted services like Netlify or GitHub Pages. 
 To optimize the website and provide elemntary level of security, I configured Amazon CloudFront to serve the site over HTTPS.
- 
+</p>
+<p>
 I created DNS domain name to my CloudFront distribution so that my resume is accessible at a URL like *my-c00l-resume-website.com*. 
 I had used Amazon Route 53.
-
+</p>
+<p>
 To reflect on some coding capabiliteis I included a visitor counter on my resume to track how many people had accessed the site. 
 To implement this, I had written a small JavaScript with help of online tutorials. 
 The visitor counter retrieves and updates its count from the AWS DynamoDB database.
 I created an API that accepts requests from my web app and coomunicates with the database. I used AWS’s API Gateway and Lambda services for this.
-
+</p>
+<p>
 Using online tutorials I have also written some Python code for my Lambda funtion. I had chosen Python instead of JavaScript, as it had been commonly used for back-end programs and scripts. 
 I had leveraged the `boto3` library for AWS.  
-
+</p>
+<p>
 I had not included tests for my Python code to the website. But I tested the code according to online courses for Python testing.  
-
+</p>
+<p>
 I configured my API resources—such as the DynamoDB table, API Gateway, and Lambda manually using the AWS Console but I also used the AWS cli. 
 Plus, I had also defined the resources in using Terraform which is available to view via the following link:
 <GITHUB_LINK>
-
+</p>
+<p>
 I had ensured that my back-end API and front-end website had been updated automatically whenever I had made changes to the code.
 I had created a GitHub repository for my back-end code.  
- 
+</p>
 I had set up GitHub Actions so that when I had pushed updates to my Application Model template or Python code, my Python tests run automatically. 
-
+<p>
 I had created a second GitHub repository for my website code. I had also configured GitHub Actions to update my S3 bucket automatically whenever I had pushed new website code. 
 Additionally, I had ensured that my CloudFront cache had been invalidated as needed. 
-
+</p>
 *Important note:* I had never committed AWS credentials to source control, as malicious actors could have found and misused them.  
-
+<p>
 Finally, by reading this you can confirm I have provided a link in my resume to a short blog post describing the things I had learned while working on this project. 
-
+</p>
