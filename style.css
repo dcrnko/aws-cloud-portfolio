@@ -207,17 +207,17 @@ nav {
     position: relative;
 }
 
-
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .skill-indicators, .experience-education {
         grid-template-columns: 1fr;
     }
 }
 
+
+
 /* Blog & Projects Section */
 #blog-projects {
+    height: 100vh;
     padding: 20px;
 }
 
