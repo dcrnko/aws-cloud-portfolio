@@ -9,32 +9,13 @@ body {
     display: flex;
     flex-direction: column; /* Stack header, sections, and footer */
 }
-@media (max-width: 768px) { /* Target screens 768px and below */
-    body {
-        padding-left: 1%;
-        padding-right: 1%;
-    }
-    .skill-indicators, .experience-education {
-        grid-template-columns: 1fr;
-    }
-    .blog-project-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media (min-width: 1200px) { /* Target screens 1200px and above */
-    body {
-        padding-left: 15%;
-        padding-right: 15%;
-    }
-}
 
 /* Header/Navigation */
 header {
     top: 0;
     width: 100%;
-    background-color: black; /* Semi-transparent background */
-    z-index: 100; /* Ensure it's on top */
+    background-color: black;
 }
 
 nav {
@@ -72,7 +53,11 @@ nav {
     cursor: pointer;
 }
 /* ... (your existing CSS) ... */
-@media (max-width: 1268px) {
+@media (max-width: 768px) {
+    nav {
+        justify-content: center; /* Center nav-right within nav */
+        width: 100%;
+    }
     .nav-left {
         display: none; /* Hide nav-left on smaller screens */
     }
@@ -87,9 +72,7 @@ nav {
         margin: 0 10px; /* Adjust spacing between items */
     }
 
-    nav {
-        justify-content: center; /* Center nav-right within nav */
-    }
+
 }
 
 /* Landing Section */
@@ -217,7 +200,7 @@ nav {
 
 /* Blog & Projects Section */
 #blog-projects {
-    height: 100vh;
+    min-height: 100vh;
     padding: 20px;
 }
 
