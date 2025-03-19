@@ -1,26 +1,26 @@
-# **Certification**
-I had ensured that my resume included the AWS Cloud Practitioner certification. This was an introductory certification that had oriented me on the industry-leading AWS cloud. If I had held a more advanced AWS certification, that would have been acceptable but not expected. I had been able to sit for this exam online for $100 USD.  
+AWS Cloud Resume Challenge. 
 
-#HTML  
-I had written my resume in HTML instead of using a Word document or a PDF. Here was an example of what I had meant.  
+https://cloudresumechallenge.dev/docs/the-challenge/aws/
 
-3. **CSS**  
-I had styled my resume with CSS. Since I hadn’t been a designer, I hadn’t needed to make it fancy, but I had ensured that the page displayed something more than raw HTML.  
+Intro: This project is based on the the AWS Cloud Resume Challenge. The final product of the project is the website you are currently visiting. 
 
-4. **Static Website**  
-I had deployed my HTML resume as an Amazon S3 static website. While services like Netlify and GitHub Pages had been great for personal static site deployments, they had abstracted too much for the purpose of this challenge. I had used S3 instead.  
+As per the challenge, the website should contain number of elements and technologies I described below. 
+The aim of this project is to showcase the skills and knowledge of the AWS Cloud as well as some additional concepts related to networking, security, storage, web development and other.
 
-5. **HTTPS**  
-I had ensured that my S3 website URL used HTTPS for security. To achieve this, I had used Amazon CloudFront.  
+To complete the challenge I ensured this website(my resume) included the AWS Cloud Practitioner certification. 
+This was an introductory certification that provided me with fundamental knowledge of the industry-leading AWS cloud. 
 
-6. **DNS**  
-I had pointed a custom DNS domain name to my CloudFront distribution so that my resume had been accessible at a URL like *my-c00l-resume-website.com*. I had used Amazon Route 53, though any other DNS provider would have worked. Registering a domain name had cost about ten dollars.  
+As the challenge requires, I created my resume as a website using HTML instead of a simple Word document or PDF. 
+To enhance its appearance, I styled it with CSS, keeping it simple but structured. 
+I then deployed it as a static website on Amazon S3, opting for a hands-on approach rather than using abstracted services like Netlify or GitHub Pages. 
+To optimize the website and provide elemntary level of security, I configured Amazon CloudFront to serve the site over HTTPS.
+ 
+I created DNS domain name to my CloudFront distribution so that my resume is accessible at a URL like *my-c00l-resume-website.com*. 
+I had used Amazon Route 53.
 
-7. **JavaScript**  
-I had included a visitor counter on my resume webpage to track how many people had accessed the site. To implement this, I had written JavaScript. Here was a helpful tutorial that had guided me in the right direction.  
-
-8. **Database**  
-My visitor counter had needed to retrieve and update its count from a database. I had used Amazon’s DynamoDB for this. By selecting on-demand pricing, I had paid essentially nothing, as the project hadn’t required large amounts of data storage or retrieval. Here was a great free course on DynamoDB.  
+To reflect on some coding capabiliteis I included a visitor counter on my resume to track how many people had accessed the site. 
+To implement this, I had written a small JavaScript with help of online tutorials. 
+The visitor counter retrieves and updates its count from the AWS DynamoDB database.
 
 9. **API**  
 I had not communicated directly with DynamoDB from my JavaScript code. Instead, I had created an API that had accepted requests from my web app and had communicated with the database. I had used AWS’s API Gateway and Lambda services for this, as they had been free or nearly free for this project.  
