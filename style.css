@@ -55,7 +55,7 @@ nav {
 
 @media (max-width: 768px) {
     nav {
-        justify-content: center; /* Center nav-right within nav */
+        justify-content: space-between; /* Center nav-right within nav */
         width: 100%;
     }
     .nav-left {
@@ -63,7 +63,7 @@ nav {
     }
 
     .nav-right {
-        justify-content: center; /* Center navigation items */
+        justify-content: space-between; /* Center navigation items */
         width: 100%; /* Full width */
     }
 
