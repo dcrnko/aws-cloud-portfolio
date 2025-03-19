@@ -321,7 +321,7 @@ nav {
     }
     .modal {
         width: 90%; /* Adjusted width for mobile */
-        max-height: 70vh; /* Adjusted max height for mobile */
+        max-height: 50vh; /* Adjusted max height for mobile */
     }
     .preview:nth-child(n+4) {
         display: none;
