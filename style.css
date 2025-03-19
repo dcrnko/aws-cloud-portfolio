@@ -52,7 +52,7 @@ nav {
     color: white;
     cursor: pointer;
 }
-/* ... (your existing CSS) ... */
+
 @media (max-width: 768px) {
     nav {
         justify-content: center; /* Center nav-right within nav */
@@ -191,6 +191,10 @@ nav {
 }
 
 @media (max-width: 768px) {
+    .about-content {
+        max-width: 100%;
+        margin: 0 auto;
+    }
     .skill-indicators, .experience-education {
         grid-template-columns: 1fr;
     }
@@ -223,6 +227,7 @@ nav {
 
 .preview {
     border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
     padding: 20px;
     text-align: center;
 }
@@ -364,6 +369,7 @@ input, textarea {
     color: white;
     font-family: 'Orbitron', sans-serif;
     resize: vertical; /* Allow vertical resizing of the textarea */
+    border-radius: 5px;
 }
 
 .send-message {
@@ -385,7 +391,10 @@ input, textarea {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    /* Adjust form elements if needed */
+    .contact-content {
+        max-width: 100%;
+        margin: 0 auto;
+    }
 }
 
 /* Footer */
