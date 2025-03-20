@@ -203,7 +203,7 @@ nav {
 
 
 /* Blog & Projects Section */
-/* Blog & Projects Section */
+
 #blog-projects {
     min-height: 100vh;
     padding: 20px;
@@ -291,8 +291,7 @@ nav {
     font-size: 10px;
     line-height: 1.6;
     padding: 20px;
-    max-height: 90%;
-    overflow-y: auto;
+    overflow-y: auto; /* Scrollbar always enabled */
     text-align: left;
 }
 
@@ -330,25 +329,25 @@ nav {
     }
 
     .modal {
-        width: 90%;
-        max-width: 350px; /* Fixed width for small screens */
-        max-height: 70vh; /* Fixed height for small screens */
+        width: 80%; /* Adjusted width for mobile */
+        max-width: 250px; /* Reduced max-width for smaller modal */
+        max-height: 60vh; /* Reduced max-height for smaller modal */
     }
 }
 
-@media (min-width: 769px) and (max-width: 1199px) { /* Mid-size screens */
+@media (min-width: 769px) and (max-width: 1199px) {
     .modal {
         width: 70%;
-        max-width: 500px; /* Fixed width for mid-size screens */
-        max-height: 70vh; /* Fixed height for mid-size screens */
+        max-width: 500px;
+        max-height: 70vh;
     }
 }
 
-@media (min-width: 1200px) { /* Large screens */
+@media (min-width: 1200px) {
     .modal {
         width: 60%;
-        max-width: 600px; /* Fixed width for large screens */
-        max-height: 80vh; /* Fixed height for large screens */
+        max-width: 600px;
+        max-height: 80vh;
     }
 }
 /* Contact Section */
