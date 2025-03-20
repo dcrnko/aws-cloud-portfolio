@@ -273,6 +273,10 @@ nav {
     border-radius: 5px;
     z-index: 1001;
     display: none;
+    width: 40vw; /* 40% of viewport width */
+    height: 40vh; /* 40% of viewport height */
+    max-width: 600px; /* Maximum width */
+    max-height: 80vh; /* Maximum height */
 }
 
 .modal-close {
@@ -285,7 +289,7 @@ nav {
 
 .modal-text {
     font-family: sans-serif;
-    font-size: 8px; /* Reduced font size */
+    font-size: 8px;
     line-height: 1.6;
     padding: 20px;
     overflow-y: auto;
@@ -294,20 +298,21 @@ nav {
 
 /* Scrollbar Styling */
 .modal-text::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
+    width: 10px;
 }
 
 .modal-text::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1); /* Track color */
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .modal-text::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.5); /* Thumb color */
-    border-radius: 4px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
 }
 
-.modal-text::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.7); /* Hover color */
+.modal-text {
+    scrollbar-width: thin; /* Firefox scrollbar width */
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.1); /* Firefox scrollbar color */
 }
 
 .mobile-hidden {
@@ -341,28 +346,6 @@ nav {
 
     .load-more {
         display: block;
-    }
-
-    .modal {
-        width: 70%; /* Further reduced width */
-        max-width: 200px; /* Further reduced max-width */
-        max-height: 50vh; /* Further reduced max-height */
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1199px) {
-    .modal {
-        width: 70%;
-        max-width: 500px;
-        max-height: 70vh;
-    }
-}
-
-@media (min-width: 1200px) {
-    .modal {
-        width: 60%;
-        max-width: 600px;
-        max-height: 80vh;
     }
 }
 /* Contact Section */
