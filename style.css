@@ -203,20 +203,21 @@ nav {
 
 
 /* Blog & Projects Section */
+/* Blog & Projects Section */
 #blog-projects {
     min-height: 100vh;
     padding: 20px;
 }
 
 .blog-projects-content {
-    max-width: 70%; /* Limit width to 70% on large screens */
+    max-width: 70%;
     margin: 0 auto;
 }
 
 .blog-projects-title {
     font-size: 2em;
     margin-bottom: 20px;
-    text-align: left; /* Changed to left alignment */
+    text-align: left;
 }
 
 .blog-project-container {
@@ -248,7 +249,7 @@ nav {
     padding: 10px 20px;
     cursor: pointer;
     margin-top: 20px;
-    display: none; /* Hidden by default */
+    display: none;
     width: fit-content;
     margin: 20px auto 0;
 }
@@ -275,8 +276,6 @@ nav {
     border-radius: 5px;
     z-index: 1001;
     display: none;
-    width: 80%;
-    max-width: 600px;
 }
 
 .modal-close {
@@ -289,10 +288,10 @@ nav {
 
 .modal-text {
     font-family: sans-serif;
-    font-size: 7px;
+    font-size: 10px;
     line-height: 1.6;
     padding: 20px;
-    max-height: 80vh;
+    max-height: 90%;
     overflow-y: auto;
     text-align: left;
 }
@@ -300,13 +299,14 @@ nav {
 .mobile-hidden {
     display: none;
 }
-.desktop-visible{
-  display: block;
+
+.desktop-visible {
+    display: block;
 }
 
 @media (max-width: 768px) {
     .blog-projects-content {
-        max-width: 100%; /* Full width on mobile */
+        max-width: 100%;
     }
 
     .blog-project-container {
@@ -316,13 +316,11 @@ nav {
     .preview {
         display: block;
     }
-    .desktop-visible{
-      display: none;
+
+    .desktop-visible {
+        display: none;
     }
-    .modal {
-        width: 90%; /* Adjusted width for mobile */
-        max-height: 50vh; /* Adjusted max height for mobile */
-    }
+
     .preview:nth-child(n+4) {
         display: none;
     }
@@ -330,9 +328,29 @@ nav {
     .load-more {
         display: block;
     }
+
+    .modal {
+        width: 90%;
+        max-width: 350px; /* Fixed width for small screens */
+        max-height: 70vh; /* Fixed height for small screens */
+    }
 }
 
+@media (min-width: 769px) and (max-width: 1199px) { /* Mid-size screens */
+    .modal {
+        width: 70%;
+        max-width: 500px; /* Fixed width for mid-size screens */
+        max-height: 70vh; /* Fixed height for mid-size screens */
+    }
+}
 
+@media (min-width: 1200px) { /* Large screens */
+    .modal {
+        width: 60%;
+        max-width: 600px; /* Fixed width for large screens */
+        max-height: 80vh; /* Fixed height for large screens */
+    }
+}
 /* Contact Section */
 #contact {
     min-height: 50vh;
