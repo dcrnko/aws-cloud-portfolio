@@ -29,28 +29,57 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCounter();
 
     // Blog and Projects Functionality
+    const detailsButtons = document.querySelectorAll('.details-button');
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalText = document.getElementById('modal-text');
+    const modalClose = document.getElementById('modal-close');
+    const loadMoreButton = document.querySelector('.load-more');
+    const previews = document.querySelectorAll('.preview');
+    const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
 
-    document.addEventListener("DOMContentLoaded", function() {
-        const modal = document.getElementById("modal");
-        const closeBtn = document.getElementById("close");
-        const detailsButton = document.querySelector(".details-button");
-    
-        detailsButton.addEventListener("click", function() {
-            modal.style.display = "flex";
-        });
-    
-        closeBtn.addEventListener("click", function() {
-            modal.style.display = "none";
-        });
-    
-        window.addEventListener("click", function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
+    detailsButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            modalTitle.textContent = this.getAttribute('data-title');
+            const filePath = this.getAttribute('data-file');
+            const dataContent = this.getAttribute('data-content');
+            if (filePath) {
+                fetch(filePath)
+                    .then(response => response.text())
+                    .then(text => {
+                        modalText.textContent = text;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching file:', error);
+                    });
+            } else if (dataContent) {
+                modalText.textContent = dataContent;
             }
+            modalOverlay.style.display = 'block';
+            modal.style.display = 'block';
         });
     });
-    
-    
+
+    modalClose.addEventListener('click', function() {
+        modalOverlay.style.display = 'none';
+        modal.style.display = 'none';
+    });
+
+    modalOverlay.addEventListener('click', function(event) {
+        if (event.target === modalOverlay) {
+            modalOverlay.style.display = 'none';
+            modal.style.display = 'none';
+        }
+    });
+
+    window.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            modalOverlay.style.display = 'none';
+            modal.style.display = 'none';
+        }
+    });
 
     if (loadMoreButton) {
         loadMoreButton.addEventListener('click', function() {
