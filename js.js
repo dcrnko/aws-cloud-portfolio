@@ -28,17 +28,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateCounter();
 
-    // Blog and Projects Functionality (Modified)
+    // Blog and Projects Functionality (Corrected)
     const detailsButtons = document.querySelectorAll('.details-button');
     const modal = document.getElementById('modal');
-    const closeBtn = document.getElementById('close'); // Renamed from modalClose
+    const closeBtn = document.getElementById('close'); // Ensure this matches your HTML ID
+    const modalTitle = document.getElementById('modal-title');
+    const modalText = document.getElementById('modal-text');
     const body = document.body;
     const themeToggle = document.getElementById('theme-toggle');
 
     detailsButtons.forEach(button => {
         button.addEventListener('click', function() {
-            modal.style.display = 'flex';
-            body.style.overflow = "hidden"; // Prevent scrolling
+            modalTitle.textContent = this.getAttribute('data-title');
+            const filePath = this.getAttribute('data-file');
+            if (filePath) {
+                fetch(filePath)
+                    .then(response => response.text())
+                    .then(text => {
+                        modalText.innerHTML = text; // Use innerHTML to parse HTML
+                        modal.style.display = 'flex';
+                        body.style.overflow = "hidden"; // Prevent scrolling
+                    })
+                    .catch(error => {
+                        console.error('Error fetching file:', error);
+                        modalText.textContent = 'Failed to load content.';
+                        modal.style.display = 'flex';
+                        body.style.overflow = "hidden"; // Prevent scrolling
+                    });
+            } else {
+                modal.style.display = 'flex';
+                body.style.overflow = "hidden";
+            }
+
         });
     });
 
