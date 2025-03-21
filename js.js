@@ -30,12 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Blog and Projects Functionality
 
-    const body = document.body;
-    const modalText = document.getElementById('modal-text');
-    const loadMoreButton = document.querySelector('.load-more');
-    const previews = document.querySelectorAll('.preview');
-    const themeToggle = document.getElementById('theme-toggle');
-
     document.addEventListener("DOMContentLoaded", function() {
         const modal = document.getElementById("modal");
         const closeBtn = document.getElementById("close");
