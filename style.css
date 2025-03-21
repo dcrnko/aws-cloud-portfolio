@@ -277,6 +277,7 @@ nav {
     height: 40vh; /* 40% of viewport height */
     max-width: 600px; /* Maximum width */
     max-height: 80vh; /* Maximum height */
+    overflow-y: auto; /* Enable modal scroll */
 }
 
 .modal-close {
@@ -292,27 +293,7 @@ nav {
     font-size: 8px;
     line-height: 1.6;
     padding: 20px;
-    overflow-y: auto;
     text-align: left;
-}
-
-/* Scrollbar Styling */
-.modal-text::-webkit-scrollbar {
-    width: 10px;
-}
-
-.modal-text::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.modal-text::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
-}
-
-.modal-text {
-    scrollbar-width: thin; /* Firefox scrollbar width */
-    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.1); /* Firefox scrollbar color */
 }
 
 .mobile-hidden {
