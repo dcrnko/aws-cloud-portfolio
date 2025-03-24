@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalTitle = document.getElementById('modal-title');
     const modalText = document.getElementById('modal-text');
     const modalClose = document.getElementById('modal-close');
-    const loadMoreButton = document.querySelector('.load-more');
     const previews = document.querySelectorAll('.preview');
     const body = document.body;
     const themeToggle = document.getElementById('theme-toggle');
@@ -49,13 +48,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 fetch(filePath)
                     .then(response => response.text())
                     .then(text => {
-                        modalText.textContent = text;
+                        modalText.innerHTML = text;
                     })
                     .catch(error => {
                         console.error('Error fetching file:', error);
                     });
             } else if (dataContent) {
-                modalText.textContent = dataContent;
+                modalText.innerHTML = dataContent;
             }
             modalOverlay.style.display = 'block';
             modal.style.display = 'block';
@@ -80,21 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = 'none';
         }
     });
-
-    if (loadMoreButton) {
-        loadMoreButton.addEventListener('click', function() {
-            previews.forEach((preview, index) => {
-                if (index >= 3) {
-                    preview.classList.toggle('mobile-hidden');
-                }
-            });
-            if (loadMoreButton.textContent === 'Load More') {
-                loadMoreButton.textContent = 'Load Less';
-            } else {
-                loadMoreButton.textContent = 'Load More';
-            }
-        });
-    }
 
     // Contact Form Functionality
     document.getElementById('contact-form').addEventListener('submit', function(event) {

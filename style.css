@@ -196,7 +196,7 @@ nav {
 .skill-indicators {
     max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -224,7 +224,7 @@ nav {
     }
     .experience-education {
         max-width: 100%;
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr;
     }
     .skill-indicators {
         max-width: 100%;
@@ -271,69 +271,68 @@ nav {
     margin-top: 20px;
 }
 
-.load-more {
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 20px;
-    display: none;
-    width: fit-content;
-    margin: 20px auto 0;
-}
 
+/* Modal overlay background */
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
     display: none;
+    z-index: 1000;
 }
 
+/* Modal container */
 .modal {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: black;
-    color: white;
+    width: 60%;
+    max-width: 600px;
+    background: white;
     padding: 20px;
-    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
     z-index: 1001;
     display: none;
-    width: 40vw; /* 40% of viewport width */
-    height: 40vh; /* 40% of viewport height */
-    max-width: 600px; /* Maximum width */
-    max-height: 80vh; /* Maximum height */
 }
 
+/* Close button */
 .modal-close {
     position: absolute;
     top: 10px;
-    right: 10px;
-    font-size: 1.5em;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.modal-text {
-    font-family: sans-serif;
-    font-size: 8px;
-    line-height: 1.6;
-    padding: 20px;
-    overflow-y: auto;
-    text-align: left;
+/* Modal title */
+#modal-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
-@media (max-width: 968px) {
-    .blog-projects-content {
-        max-width: 100%;
-        margin: 0 auto;
+
+/* Modal content */
+#modal-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-height: 70vh; /* Keeps it within the viewport */
+    overflow-y: auto; /* Enables scrolling inside modal if needed */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal {
+        width: 90%;
+        max-width: 90%;
+        padding: 15px;
     }
-    .blog-project-container {
-        grid-template-columns: 1fr;
+    #modal-text {
+        max-height: 60vh;
     }
 }
 

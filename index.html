@@ -106,13 +106,31 @@
                 <div class="skill">
                     <div class="skill-name">Linux</div>
                     <div class="skill-level">70%</div>
-                    <button class="details-button">Details</button>
+                    <button class="details-button" data-title="Linux-skills" data-file="skills_description/linux.html">Details</button>
+                    <div class="modal-overlay" id="modal-overlay"></div>
+                    <div class="modal" id="modal">
+                        <span class="modal-close" id="modal-close">&times;</span>
+                        <div class="modal-content">
+                            <h3 id="modal-title"></h3>
+                            <p id="modal-text"></p>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="skill">
                     <div class="skill-name">AWS</div>
                     <div class="skill-level">60%</div>
-                    <button class="details-button">Details</button>
+                    <button class="details-button" data-title="AWS Cloud Skills" data-file="skills_description/aws.html">Details</button>
+                    <div class="modal-overlay" id="modal-overlay"></div>
+                    <div class="modal" id="modal">
+                        <span class="modal-close" id="modal-close">&times;</span>
+                        <div class="modal-content">
+                            <h3 id="modal-title"></h3>
+                            <p id="modal-text"></p>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="skill">
                     <div class="skill-name">Kubernetes</div>
                     <div class="skill-level">40%</div>
@@ -156,7 +174,6 @@
                     <button class="details-button" data-title="Preview 6" data-file="blog/preview6.txt">Details</button>
                 </div>
             </div>
-            <button class="load-more">Load More</button>
         </div>
         <div class="modal-overlay" id="modal-overlay"></div>
         <div class="modal" id="modal">
