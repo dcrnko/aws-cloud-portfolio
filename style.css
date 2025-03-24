@@ -149,27 +149,6 @@ nav {
 .experience-title {
     margin-top: 10vh;
 }
-.skill-indicators, .experience-education {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.skill {
-    text-align: center;
-    padding: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-}
-
-.skill-name {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.skill-level {
-    font-size: 1.2em;
-}
 
 .download-cv {
     background-color: transparent;
@@ -189,13 +168,48 @@ nav {
     margin-bottom: 20px;
     position: relative;
 }
+.experience-education {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.skill-indicators {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill {
+    text-align: center;
+    padding: 20px;
+    border: 0.1px solid white;
+    border-radius: 5px;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.skill-level {
+    font-size: 1.2em;
+}
+
 
 @media (max-width: 768px) {
     .about-content {
         max-width: 100%;
         margin: 0 auto;
     }
-    .skill-indicators, .experience-education {
+    .experience-education {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .skill-indicators {
+        max-width: 100%;
         grid-template-columns: 1fr;
     }
 }
@@ -295,7 +309,15 @@ nav {
     overflow-y: auto;
     text-align: left;
 }
-
+@media (max-width: 768px) {
+    .blog-projects-content {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .blog-project-container {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* Contact Section */
 #contact {
