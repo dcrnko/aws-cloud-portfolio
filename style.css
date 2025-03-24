@@ -126,7 +126,7 @@ nav {
     margin-top: 43vh;
     font-size: 1.1em;
 }
-@media (max-width: 968px) {
+@media (max-width: 1268px) {
     #landing {
         min-height: 100vh;
         display: grid;
