@@ -133,3 +133,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateModalTheme(); //sets the correct modal theme on page load.
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopButton = document.getElementById('back-to-top');
+    const footer = document.querySelector('footer');
+
+    if (backToTopButton && footer) {
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const footerTop = footer.getBoundingClientRect().top + window.scrollY;
+
+            if (scrollTop + windowHeight >= footerTop) {
+                backToTopButton.style.opacity = 1; // Show the button
+            } else {
+                backToTopButton.style.opacity = 0; // Hide the button
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});

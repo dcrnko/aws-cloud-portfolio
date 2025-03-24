@@ -427,11 +427,44 @@ input, textarea {
 
 /* Footer */
 footer {
+    position: relative;
     text-align: center;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.8);
 }
+#back-to-top {
+    position: absolute; /* Position relative to the footer */
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 1rem;
+    z-index: 1002;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
 
+#back-to-top:hover {
+    background-color: rgba(51, 51, 51, 0.9);
+}
+
+.arrow-up {
+    display: inline-block;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+
+@media (max-width: 768px) {
+    #back-to-top {
+        bottom: 15px;
+        right: 15px;
+    }
+}
 /* Responsive adjustments */
 @media (min-width: 968px) {
     body {
