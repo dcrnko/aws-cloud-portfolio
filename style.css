@@ -143,7 +143,6 @@ nav {
 
 
 
-
 /* About Section */
 #about {
     min-height: 100vh;
@@ -192,7 +191,10 @@ nav {
     grid-template-columns: repeat(2, 1fr);
 
 }
-
+.skills{
+    max-width: 70%;
+    margin: 0 auto;
+}
 .skill-indicators {
     max-width: 100%;
     display: grid;
@@ -226,9 +228,14 @@ nav {
         max-width: 100%;
         grid-template-columns: 2fr;
     }
-    .skill-indicators {
+    .skills{
         max-width: 100%;
-        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
+    .skill-indicators {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
@@ -251,7 +258,7 @@ nav {
 
 .blog-project-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
@@ -326,6 +333,21 @@ nav {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .blog-projects-content {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .blog-project-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+    .preview {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        padding: 20px;
+        text-align: center;
+    }
     .modal {
         width: 90%;
         max-width: 90%;
