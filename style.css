@@ -34,6 +34,7 @@ nav {
 .nav-left a {
     text-decoration: none;
     cursor: pointer;
+    color: white;
 }
 .nav-right {
     display: flex;
@@ -41,6 +42,7 @@ nav {
 }
 
 .nav-right a {
+    color: white;
     margin-left: 10%;
     text-decoration: none;
     cursor: pointer;
