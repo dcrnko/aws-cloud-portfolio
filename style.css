@@ -256,7 +256,7 @@ nav {
 }
 
 .preview {
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
     border-radius: 5px;
     padding: 20px;
     text-align: center;
@@ -384,7 +384,7 @@ label {
 
 input, textarea {
     padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid white;
     background-color: transparent;
     color: white;
     font-family: 'Orbitron', sans-serif;
