@@ -1,4 +1,4 @@
-download-cv {
+body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
@@ -9,9 +9,7 @@ download-cv {
     display: flex;
     flex-direction: column; /* Stack header, sections, and footer */
 }
-download-cv, a{
-    text-decoration: none;
-}
+
 
 /* Header/Navigation */
 header {
@@ -170,7 +168,9 @@ nav {
     cursor: pointer;
     margin-top: 0.5vh;
 }
-
+.download-cv .a {
+    text-decoration: none;
+}
 .timeline {
     border-left: 2px solid rgba(255, 255, 255, 0.3);
     padding-left: 20px;
