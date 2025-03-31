@@ -92,9 +92,9 @@ nav {
 }
 
 .profile-pic img {
-    width: 15vh; /* Adjust size as needed */
-    height: 15vh;
-    border-radius: 50%;
+    width: 16vh; /* Adjust size as needed */
+    height: 16vh;
+    /*border-radius: 50%;*/
     object-fit: cover;
 }
 
@@ -119,11 +119,11 @@ nav {
     filter: invert(100%); /* Invert colors to white */
 }
 .counter-number{
-    margin-top: 3vh;
+    margin-top: 40vh;
 }
 .scroll-down {
-    margin-top: 43vh;
-    font-size: 1.1em;
+    margin-top: 5vh;
+    font-size: 2em;
 }
 @media (max-width: 1268px) {
     .profile-pic img {
