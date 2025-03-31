@@ -237,7 +237,7 @@ nav {
 
 /* Blog & Projects Section */
 #blog-projects {
-    min-height: 100vh;
+    min-height: 60vh;
     padding: 20px;
 }
 
