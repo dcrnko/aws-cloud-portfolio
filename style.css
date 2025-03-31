@@ -22,12 +22,14 @@ header {
 }
 
 nav {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     max-width: 70%; /* Ensures the content stays within the margins on larger screens */
     margin: 0 auto; /* Centers the nav */
+    z-index: 1002; /* Higher than modal */
 }
 
 .nav-left {
