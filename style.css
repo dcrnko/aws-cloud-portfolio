@@ -505,6 +505,7 @@ footer {
 
 .light-theme .details-button,
 .light-theme .download-cv,
+.light-theme .download-cv a,
 .light-theme .send-message {
     border-color: black;
     color: black;
