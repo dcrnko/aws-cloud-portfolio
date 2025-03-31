@@ -9,7 +9,10 @@ body {
     display: flex;
     flex-direction: column; /* Stack header, sections, and footer */
 }
-
+body.modal-open {
+    overflow: hidden;
+    padding-right: 15px; /* Adjust to prevent shifting */
+}
 
 /* Header/Navigation */
 header {
