@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             modalTitle.textContent = this.getAttribute('data-title');
             const filePath = this.getAttribute('data-file');
             const dataContent = this.getAttribute('data-content');
+    
             if (filePath) {
                 fetch(filePath)
                     .then(response => response.text())
@@ -56,30 +57,34 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (dataContent) {
                 modalText.innerHTML = dataContent;
             }
+    
+            document.body.classList.add('modal-open'); // Prevents layout shift
             modalOverlay.style.display = 'block';
             modal.style.display = 'block';
         });
     });
-
+    
     modalClose.addEventListener('click', function() {
-        modalOverlay.style.display = 'none';
-        modal.style.display = 'none';
+        closeModal();
     });
-
+    
     modalOverlay.addEventListener('click', function(event) {
         if (event.target === modalOverlay) {
-            modalOverlay.style.display = 'none';
-            modal.style.display = 'none';
+            closeModal();
         }
     });
-
+    
     window.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
-            modalOverlay.style.display = 'none';
-            modal.style.display = 'none';
+            closeModal();
         }
     });
-
+    
+    function closeModal() {
+        document.body.classList.remove('modal-open');
+        modalOverlay.style.display = 'none';
+        modal.style.display = 'none';
+    }
     // Contact Form Functionality
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
