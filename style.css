@@ -168,8 +168,9 @@ nav {
     cursor: pointer;
     margin-top: 0.5vh;
 }
-.download-cv .a {
+.download-cv a {
     text-decoration: none;
+    color: white;
 }
 .timeline {
     border-left: 2px solid rgba(255, 255, 255, 0.3);
