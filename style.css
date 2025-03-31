@@ -430,6 +430,7 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1001;
 }
 #back-to-top {
     position: absolute; /* Position relative to the footer */
