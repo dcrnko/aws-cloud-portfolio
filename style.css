@@ -8,7 +8,6 @@ body {
     min-height: 100vh; /* Ensure full viewport height */
     display: flex;
     flex-direction: column; /* Stack header, sections, and footer */
-    overflow-y: scroll;  /* prevent layout shifting due to the scrollbar */
 }
 
 /* Header/Navigation */
