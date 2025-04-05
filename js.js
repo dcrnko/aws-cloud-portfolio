@@ -58,18 +58,6 @@ detailsButtons.forEach(button => {
             modalText.innerHTML = dataContent;
         }
 
-        // 💡 Scrollbar compensation
-        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-        document.body.style.paddingRight = `${scrollbarWidth}px`;
-        document.body.style.overflow = 'hidden';
-        // When modal opens
-        document.body.classList.add('modal-open');
-
-        // When modal closes
-        document.body.classList.remove('modal-open');
-
-        modalOverlay.style.display = 'block';
-        modal.style.display = 'block';
     });
 });
 
@@ -91,8 +79,6 @@ window.addEventListener('keydown', function (event) {
 
 function closeModal() {
     document.body.style.overflow = '';
-    document.body.style.paddingRight = ''; // Reset compensation
-
     modalOverlay.style.display = 'none';
     modal.style.display = 'none';
 }
