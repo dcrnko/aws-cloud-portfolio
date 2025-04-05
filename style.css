@@ -1,3 +1,8 @@
+html {
+    overflow-y: scroll; /*To prevent scrollbar layout shift*/
+  }
+  
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
