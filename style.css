@@ -14,6 +14,11 @@ body {
     display: flex;
     flex-direction: column; /* Stack header, sections, and footer */
 }
+body.modal-open {
+    padding-right: 17px; /* typical scrollbar width */
+    overflow: hidden;
+}
+
 
 /* Header/Navigation */
 header {

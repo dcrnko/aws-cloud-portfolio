@@ -62,6 +62,11 @@ detailsButtons.forEach(button => {
         const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
         document.body.style.paddingRight = `${scrollbarWidth}px`;
         document.body.style.overflow = 'hidden';
+        // When modal opens
+        document.body.classList.add('modal-open');
+
+        // When modal closes
+        document.body.classList.remove('modal-open');
 
         modalOverlay.style.display = 'block';
         modal.style.display = 'block';
@@ -91,6 +96,7 @@ function closeModal() {
     modalOverlay.style.display = 'none';
     modal.style.display = 'none';
 }
+
 
     // Contact Form Functionality
     document.getElementById('contact-form').addEventListener('submit', function(event) {
