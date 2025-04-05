@@ -319,13 +319,6 @@ nav {
     margin-bottom: 10px;
 }
 
-/* Modal content */
-#modal-text {
-    font-size: 1rem;
-    line-height: 1.5;
-    max-height: 70vh; /* Keeps it within the viewport */
-    overflow-y: auto; /* Enables scrolling inside modal if needed */
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -422,6 +415,7 @@ input, textarea {
 
 /* Footer */
 footer {
+    position: relative;
     text-align: center;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.8);
