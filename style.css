@@ -160,6 +160,7 @@ nav {
 }
 
 .download-cv {
+    border-radius: 5px;
     background-color: transparent;
     border: 1px solid white;
     color: white;
@@ -395,6 +396,7 @@ input, textarea {
 }
 
 .send-message {
+    border-radius: 5px;
     background-color: transparent;
     border: 1px solid white;
     color: white;
@@ -420,7 +422,6 @@ input, textarea {
 
 /* Footer */
 footer {
-    position: relative;
     text-align: center;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.8);
