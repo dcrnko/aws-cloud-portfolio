@@ -29,69 +29,62 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCounter();
 
  // Blog and Projects Functionality (Corrected)
-const detailsButtons = document.querySelectorAll('.details-button');
-const modalOverlay = document.getElementById('modal-overlay');
-const modal = document.getElementById('modal');
-const modalTitle = document.getElementById('modal-title');
-const modalText = document.getElementById('modal-text');
-const modalClose = document.getElementById('modal-close');
-const previews = document.querySelectorAll('.preview');
-const body = document.body;
-const themeToggle = document.getElementById('theme-toggle');
-
-detailsButtons.forEach(button => {
-    button.addEventListener('click', function () {
-        modalTitle.textContent = this.getAttribute('data-title');
-        const filePath = this.getAttribute('data-file');
-        const dataContent = this.getAttribute('data-content');
-
-        if (filePath) {
-            fetch(filePath)
-                .then(response => response.text())
-                .then(text => {
-                    modalText.innerHTML = text;
-                })
-                .catch(error => {
-                    console.error('Error fetching file:', error);
-                });
-        } else if (dataContent) {
-            modalText.innerHTML = dataContent;
-        }
-
-        // 💡 Scrollbar compensation
-        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-        document.body.style.paddingRight = `${scrollbarWidth}px`;
-        document.body.style.overflow = 'hidden';
-        modalOverlay.style.display = 'block';
-        modal.style.display = 'block';
-    });
-});
-
-modalClose.addEventListener('click', function () {
-    closeModal();
-});
-
-modalOverlay.addEventListener('click', function (event) {
-    if (event.target === modalOverlay) {
-        closeModal();
-    }
-});
-
-window.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-        closeModal();
-    }
-});
-
-function closeModal() {
-    document.body.style.overflow = '';
-    document.body.style.paddingRight = ''; // Reset compensation
-
-    modalOverlay.style.display = 'none';
-    modal.style.display = 'none';
-}
-
-
+ const detailsButtons = document.querySelectorAll('.details-button');
+ const modalOverlay = document.getElementById('modal-overlay');
+ const modal = document.getElementById('modal');
+ const modalTitle = document.getElementById('modal-title');
+ const modalText = document.getElementById('modal-text');
+ const modalClose = document.getElementById('modal-close');
+ 
+ detailsButtons.forEach(button => {
+     button.addEventListener('click', function () {
+         modalTitle.textContent = this.getAttribute('data-title');
+         const filePath = this.getAttribute('data-file');
+         const dataContent = this.getAttribute('data-content');
+ 
+         if (filePath) {
+             fetch(filePath)
+                 .then(response => response.text())
+                 .then(text => {
+                     modalText.innerHTML = text;
+                 })
+                 .catch(error => console.error('Error fetching file:', error));
+         } else if (dataContent) {
+             modalText.innerHTML = dataContent;
+         }
+ 
+         // Scrollbar compensation
+         const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+         document.body.style.paddingRight = `${scrollbarWidth}px`;
+         document.body.style.overflow = 'hidden';
+ 
+         modalOverlay.style.display = 'block';
+         modal.style.display = 'block';
+     });
+ });
+ 
+ modalClose.addEventListener('click', closeModal);
+ 
+ modalOverlay.addEventListener('click', function (event) {
+     if (event.target === modalOverlay) {
+         closeModal();
+     }
+ });
+ 
+ window.addEventListener('keydown', function (event) {
+     if (event.key === 'Escape') {
+         closeModal();
+     }
+ });
+ 
+ function closeModal() {
+     document.body.style.overflow = ''; // Restore scroll
+     document.body.style.paddingRight = ''; // Reset compensation
+ 
+     modalOverlay.style.display = 'none';
+     modal.style.display = 'none';
+ }
+ 
     // Contact Form Functionality
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
