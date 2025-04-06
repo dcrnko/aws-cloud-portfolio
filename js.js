@@ -16,20 +16,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+// Theme Toggle Functionality
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
 
-    // Theme Toggle Functionality (Restored)
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    if (themeToggle) {
-        themeToggle.addEventListener('click', function () {
-            body.classList.toggle('light-theme');
-            if (body.classList.contains('light-theme')) {
-                themeToggle.textContent = '☽';
-            } else {
-                themeToggle.textContent = '☼';
-            }
-        });
-    }
+if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+        // Toggle the 'light-theme' class on the body
+        body.classList.toggle('light-theme');
+        
+        // Update the theme toggle button's text or icon
+        if (body.classList.contains('light-theme')) {
+            themeToggle.textContent = '☽'; // Change to moon icon for light theme
+        } else {
+            themeToggle.textContent = '☼'; // Change to sun icon for dark theme
+        }
+    });
+}
 
 
     // Update view counter
@@ -46,56 +49,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    // MODAL
-    const detailsButtons = document.querySelectorAll('.details-button');
-    const modalOverlay = document.getElementById('modal-overlay');
-    const modal = document.getElementById('modal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalText = document.getElementById('modal-text');
-    const modalClose = document.getElementById('modal-close');
-    detailsButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            modalTitle.textContent = this.getAttribute('data-title');
-            const filePath = this.getAttribute('data-file');
-            const dataContent = this.getAttribute('data-content');
-    
-            if (filePath) {
-                fetch(filePath)
-                    .then(response => response.text())
-                    .then(text => {
-                        modalText.innerHTML = text;
-                    })
-                    .catch(error => {
-                        console.error('Error fetching file:', error);
-                        modalText.innerHTML = 'Error loading content.';
-                    });
-            } else if (dataContent) {
-                modalText.innerHTML = dataContent;
-            }
-    
-            modalOverlay.style.display = 'block';
-            modal.style.display = 'block';
-        });
-    });
-    
-    modalClose.addEventListener('click', closeModal);
-    modalOverlay.addEventListener('click', (event) => {
-        if (event.target === modalOverlay) {
-            closeModal();
-        }
-    });
-    
-    window.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-            closeModal();
-        }
-    });
-    
-    function closeModal() {
-        modalOverlay.style.display = 'none';
-        modal.style.display = 'none';
-    }
-    // MODAL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     // Contact Form Functionality
@@ -130,26 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // You can add a confirmation message or redirect here if needed
         alert("Your message has been sent!");
     });
-
-    themeToggle.addEventListener('click', function() {
-        body.classList.toggle('light-theme');
-        updateModalTheme(); // Update modal theme on toggle
-    });
-
-    function updateModalTheme() {
-        const modal = document.getElementById('modal');
-        if (body.classList.contains('light-theme')) {
-            modal.style.backgroundColor = 'white';
-            modal.style.color = 'black';
-            document.getElementById('close').style.color = 'black'; // Corrected ID
-        } else {
-            modal.style.backgroundColor = 'black';
-            modal.style.color = 'white';
-            document.getElementById('close').style.color = 'white'; // Corrected ID
-        }
-    }
-
-    updateModalTheme(); //sets the correct modal theme on page load.
 });
 document.addEventListener('DOMContentLoaded', function() {
     const backToTopButton = document.getElementById('back-to-top');
