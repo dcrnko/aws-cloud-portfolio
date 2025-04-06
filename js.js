@@ -29,78 +29,46 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCounter();
 
  // Blog and Projects Functionality (Corrected)
- const detailsButtons = document.querySelectorAll('.details-button');
- const modalOverlay = document.getElementById('modal-overlay');
- const modal = document.getElementById('modal');
- const modalTitle = document.getElementById('modal-title');
- const modalText = document.getElementById('modal-text');
- const modalClose = document.getElementById('modal-close');
- const pageContentWrapper = document.getElementById('page-content-wrapper');
- 
- function openModal(title, filePath, dataContent) {
-     modalTitle.textContent = title;
- 
-     if (filePath) {
-         fetch(filePath)
-             .then(response => response.text())
-             .then(text => {
-                 modalText.innerHTML = text;
-             })
-             .catch(error => {
-                 console.error('Error fetching file:', error);
-                 modalText.innerHTML = 'Error loading content.';
-             });
-     } else if (dataContent) {
-         modalText.innerHTML = dataContent;
-     }
- 
-     modalOverlay.style.display = 'block';
-     modal.style.display = 'block';
- 
-     // Prevent body scroll and handle potential layout shift
-     pageContentWrapper.style.overflow = 'hidden';
-     pageContentWrapper.style.paddingRight = window.innerWidth - document.documentElement.clientWidth + 'px';
- }
- 
- function closeModal() {
-     modalOverlay.style.display = 'none';
-     modal.style.display = 'none';
- 
-     // Restore body scroll and layout
-     pageContentWrapper.style.overflow = '';
-     pageContentWrapper.style.paddingRight = '';
- }
- 
- detailsButtons.forEach(button => {
-     button.addEventListener('click', function () {
-         openModal(this.getAttribute('data-title'), this.getAttribute('data-file'), this.getAttribute('data-content'));
-     });
- });
- 
- modalClose.addEventListener('click', closeModal);
- modalOverlay.addEventListener('click', (event) => {
-     if (event.target === modalOverlay) {
-         closeModal();
-     }
- });
- 
- window.addEventListener('keydown', (event) => {
-     if (event.key === 'Escape') {
-         closeModal();
-     }
- });
- 
- // Theme Toggle Functionality (Keeping it as is, assuming it works)
- if (themeToggle) {
-     themeToggle.addEventListener('click', function () {
-         body.classList.toggle('dark-theme');
-         if (body.classList.contains('dark-theme')) {
-             themeToggle.textContent = '☽';
-         } else {
-             themeToggle.textContent = '☼';
-         }
-     });
- }
+// Get elements
+const detailsButton = document.querySelector('.details-button');
+const modalOverlay = document.getElementById('modal-overlay');
+const modal = document.getElementById('modal');
+const modalClose = document.getElementById('modal-close');
+const modalTitle = document.getElementById('modal-title');
+const modalText = document.getElementById('modal-text');
+
+// Open modal on button click
+detailsButton.addEventListener('click', function() {
+    const title = this.getAttribute('data-title');
+    const file = this.getAttribute('data-file');
+    
+    // Fetch content from the file (you could fetch from the server if needed)
+    fetch(file)
+        .then(response => response.text())
+        .then(content => {
+            modalTitle.textContent = title;
+            modalText.textContent = content;
+        })
+        .catch(error => {
+            modalTitle.textContent = 'Error';
+            modalText.textContent = 'Failed to load content.';
+        });
+    
+    // Show modal and overlay
+    modalOverlay.style.display = 'block';
+    modal.style.display = 'block';
+});
+
+// Close modal when clicking on close button or overlay
+modalClose.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', closeModal);
+
+// Function to close the modal
+function closeModal() {
+    modalOverlay.style.display = 'none';
+    modal.style.display = 'none';
+}
+
 
     // Contact Form Functionality
     document.getElementById('contact-form').addEventListener('submit', function(event) {
