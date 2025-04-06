@@ -35,7 +35,6 @@ const modal = document.getElementById('modal');
 const modalTitle = document.getElementById('modal-title');
 const modalText = document.getElementById('modal-text');
 const modalClose = document.getElementById('modal-close');
-const previews = document.querySelectorAll('.preview');
 const body = document.body;
 const themeToggle = document.getElementById('theme-toggle');
 
