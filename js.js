@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
+    // MODAL
     const detailsButtons = document.querySelectorAll('.details-button');
     const modalOverlay = document.getElementById('modal-overlay');
     const modal = document.getElementById('modal');
@@ -53,8 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalText = document.getElementById('modal-text');
     const modalClose = document.getElementById('modal-close');
     const body = document.body;
-
-    
     detailsButtons.forEach(button => {
         button.addEventListener('click', function () {
             modalTitle.textContent = this.getAttribute('data-title');
@@ -97,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
         modalOverlay.style.display = 'none';
         modal.style.display = 'none';
     }
-    
+    // MODAL
 
 
     // Contact Form Functionality
