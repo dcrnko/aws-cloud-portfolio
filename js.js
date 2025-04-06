@@ -16,6 +16,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+
+    // Theme Toggle Functionality (Restored)
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function () {
+            body.classList.toggle('light-theme');
+            if (body.classList.contains('light-theme')) {
+                themeToggle.textContent = '☽';
+            } else {
+                themeToggle.textContent = '☼';
+            }
+        });
+    }
+
+
     // Update view counter
     const counter = document.querySelector(".counter-number");
     async function updateCounter() {
@@ -25,8 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
         let data = await response.json();
         counter.innerHTML = ` my portfolio has <b>${data}</b> views`;
     }
-
     updateCounter();
+    // Update view counter END
+
+
+
 
     const detailsButtons = document.querySelectorAll('.details-button');
     const modalOverlay = document.getElementById('modal-overlay');
@@ -35,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalText = document.getElementById('modal-text');
     const modalClose = document.getElementById('modal-close');
     const body = document.body;
-    const themeToggle = document.getElementById('theme-toggle');
+
     
     detailsButtons.forEach(button => {
         button.addEventListener('click', function () {
@@ -80,17 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.style.display = 'none';
     }
     
-    // Theme Toggle Functionality (Restored)
-    if (themeToggle) {
-        themeToggle.addEventListener('click', function () {
-            body.classList.toggle('dark-theme');
-            if (body.classList.contains('dark-theme')) {
-                themeToggle.textContent = '☽';
-            } else {
-                themeToggle.textContent = '☼';
-            }
-        });
-    }
+
 
     // Contact Form Functionality
     document.getElementById('contact-form').addEventListener('submit', function(event) {
