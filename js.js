@@ -46,12 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-
-
-
-
-    // Blog and Projects Functionality (Corrected)
-    // Get elements
+    // Modal
     const detailsButton = document.querySelector('.details-button');
     const modalOverlay = document.getElementById('modal-overlay');
     const modal = document.getElementById('modal');
@@ -64,21 +59,21 @@ document.addEventListener('DOMContentLoaded', function () {
         const title = this.getAttribute('data-title');
         const file = this.getAttribute('data-file');
 
-        // Fetch content from the file (you could fetch from the server if needed)
+        // Fetch HTML content from the file (HTML formatted content)
         fetch(file)
             .then(response => response.text())
             .then(content => {
-                modalTitle.textContent = title;
-                modalText.textContent = content;
+                modalTitle.textContent = title;  // Set modal title
+                modalText.innerHTML = content;  // Set HTML content
+
+                // Show modal and overlay
+                modalOverlay.style.display = 'block';
+                modal.style.display = 'block';
             })
             .catch(error => {
                 modalTitle.textContent = 'Error';
                 modalText.textContent = 'Failed to load content.';
             });
-
-        // Show modal and overlay
-        modalOverlay.style.display = 'block';
-        modal.style.display = 'block';
     });
 
     // Close modal when clicking on close button or overlay
@@ -90,8 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
         modalOverlay.style.display = 'none';
         modal.style.display = 'none';
     }
-
-
 
     // Contact Form Functionality
     document.getElementById('contact-form').addEventListener('submit', function (event) {
@@ -125,26 +118,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // You can add a confirmation message or redirect here if needed
         alert("Your message has been sent!");
     });
-
-    themeToggle.addEventListener('click', function () {
-        body.classList.toggle('light-theme');
-        updateModalTheme(); // Update modal theme on toggle
-    });
-
-    function updateModalTheme() {
-        const modal = document.getElementById('modal');
-        if (body.classList.contains('light-theme')) {
-            modal.style.backgroundColor = 'white';
-            modal.style.color = 'black';
-            document.getElementById('close').style.color = 'black'; // Corrected ID
-        } else {
-            modal.style.backgroundColor = 'black';
-            modal.style.color = 'white';
-            document.getElementById('close').style.color = 'white'; // Corrected ID
-        }
-    }
-
-    updateModalTheme(); //sets the correct modal theme on page load.
 });
 document.addEventListener('DOMContentLoaded', function () {
     const backToTopButton = document.getElementById('back-to-top');
