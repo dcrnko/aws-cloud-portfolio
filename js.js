@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Theme Toggle Functionality (Restored)
     const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
     if (themeToggle) {
         themeToggle.addEventListener('click', function () {
             body.classList.toggle('light-theme');
@@ -52,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalTitle = document.getElementById('modal-title');
     const modalText = document.getElementById('modal-text');
     const modalClose = document.getElementById('modal-close');
-    const body = document.body;
     detailsButtons.forEach(button => {
         button.addEventListener('click', function () {
             modalTitle.textContent = this.getAttribute('data-title');
