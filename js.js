@@ -35,8 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
  const modalTitle = document.getElementById('modal-title');
  const modalText = document.getElementById('modal-text');
  const modalClose = document.getElementById('modal-close');
- const body = document.body;
- const themeToggle = document.getElementById('theme-toggle');
+ const pageContentWrapper = document.getElementById('page-content-wrapper');
  
  function openModal(title, filePath, dataContent) {
      modalTitle.textContent = title;
@@ -59,8 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
      modal.style.display = 'block';
  
      // Prevent body scroll and handle potential layout shift
-     body.style.overflow = 'hidden';
-     body.style.paddingRight = window.innerWidth - document.documentElement.clientWidth + 'px';
+     pageContentWrapper.style.overflow = 'hidden';
+     pageContentWrapper.style.paddingRight = window.innerWidth - document.documentElement.clientWidth + 'px';
  }
  
  function closeModal() {
@@ -68,8 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
      modal.style.display = 'none';
  
      // Restore body scroll and layout
-     body.style.overflow = '';
-     body.style.paddingRight = '';
+     pageContentWrapper.style.overflow = '';
+     pageContentWrapper.style.paddingRight = '';
  }
  
  detailsButtons.forEach(button => {
