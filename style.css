@@ -295,12 +295,20 @@ nav {
     transform: translate(-50%, -50%);
     width: 60%;
     max-width: 600px;
+    max-height: 80vh; /* Limit modal height */
     background: white;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     z-index: 1001;
     display: none;
+    overflow: hidden; /* Important: Prevent modal overflow */
+}
+
+/* Modal content area (where the scrollbar will appear) */
+#modal-text {
+    max-height: calc(80vh - 100px); /* Adjust based on title and padding */
+    overflow-y: auto; /* Enable vertical scrollbar when needed */
 }
 
 /* Close button */
