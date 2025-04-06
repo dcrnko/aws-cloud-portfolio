@@ -16,23 +16,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-// Theme Toggle Functionality
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
-if (themeToggle) {
-    themeToggle.addEventListener('click', function () {
-        // Toggle the 'light-theme' class on the body
-        body.classList.toggle('light-theme');
-        
-        // Update the theme toggle button's text or icon
-        if (body.classList.contains('light-theme')) {
-            themeToggle.textContent = '☽'; // Change to moon icon for light theme
-        } else {
-            themeToggle.textContent = '☼'; // Change to sun icon for dark theme
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function () {
+            // Toggle the 'light-theme' class on the body
+            body.classList.toggle('light-theme');
+
+            // Update the theme toggle button's text or icon
+            if (body.classList.contains('light-theme')) {
+                themeToggle.textContent = '☽'; // Change to moon icon for light theme
+            } else {
+                themeToggle.textContent = '☼'; // Change to sun icon for dark theme
+            }
+        });
+        // Call updateModalTheme when theme changes
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', function () {
+                updateModalTheme();
+            });
         }
-    });
-}
+    }
 
 
     // Update view counter
@@ -50,6 +57,63 @@ if (themeToggle) {
 
 
 
+// Function to load content into the modal and open it
+const detailsButtons = document.querySelectorAll('.details-button');
+const modal = document.getElementById('modal');
+const modalOverlay = document.getElementById('modal-overlay');
+const modalClose = document.getElementById('modal-close');
+const modalTitle = document.getElementById('modal-title');
+const modalText = document.getElementById('modal-text');
+
+// Function to open the modal and load content
+detailsButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        const file = button.getAttribute('data-file');
+        const title = button.getAttribute('data-title');
+
+        // Load the HTML content from the file
+        fetch(file)
+            .then(response => response.text())
+            .then(content => {
+                // Set the modal title and content
+                modalTitle.textContent = title;
+                modalText.innerHTML = content; // Load HTML content
+
+                // Open the modal
+                modal.classList.add('open');
+                modalOverlay.classList.add('open');
+            })
+            .catch(err => {
+                console.error('Error loading file:', err);
+            });
+    });
+});
+
+// Close modal when close button or overlay is clicked
+modalClose.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', closeModal);
+
+function closeModal() {
+    modal.classList.remove('open');
+    modalOverlay.classList.remove('open');
+}
+
+// Update modal theme based on the body class
+function updateModalTheme() {
+    if (document.body.classList.contains('light-theme')) {
+        modal.style.backgroundColor = 'white';
+        modal.style.color = 'black';
+        modalClose.style.color = 'black';
+    } else {
+        modal.style.backgroundColor = 'black';
+        modal.style.color = 'white';
+        modalClose.style.color = 'white';
+    }
+}
+
+
+// Ensure modal theme is correct when loaded
+updateModalTheme();
 
 
 
