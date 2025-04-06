@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Navigation links smooth scrolling
     document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
             const targetId = this.getAttribute('href').substring(1);
@@ -28,50 +28,73 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateCounter();
 
- // Blog and Projects Functionality (Corrected)
-// Get elements
-const detailsButton = document.querySelector('.details-button');
-const modalOverlay = document.getElementById('modal-overlay');
-const modal = document.getElementById('modal');
-const modalClose = document.getElementById('modal-close');
-const modalTitle = document.getElementById('modal-title');
-const modalText = document.getElementById('modal-text');
 
-// Open modal on button click
-detailsButton.addEventListener('click', function() {
-    const title = this.getAttribute('data-title');
-    const file = this.getAttribute('data-file');
-    
-    // Fetch content from the file (you could fetch from the server if needed)
-    fetch(file)
-        .then(response => response.text())
-        .then(content => {
-            modalTitle.textContent = title;
-            modalText.textContent = content;
-        })
-        .catch(error => {
-            modalTitle.textContent = 'Error';
-            modalText.textContent = 'Failed to load content.';
+
+
+
+    const themeToggle = document.getElementById('theme-toggle');
+    // Theme Toggle Functionality (Keeping it as is, assuming it works)
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function () {
+            body.classList.toggle('dark-theme');
+            if (body.classList.contains('dark-theme')) {
+                themeToggle.textContent = '☽';
+            } else {
+                themeToggle.textContent = '☼';
+            }
         });
-    
-    // Show modal and overlay
-    modalOverlay.style.display = 'block';
-    modal.style.display = 'block';
-});
+    }
 
-// Close modal when clicking on close button or overlay
-modalClose.addEventListener('click', closeModal);
-modalOverlay.addEventListener('click', closeModal);
 
-// Function to close the modal
-function closeModal() {
-    modalOverlay.style.display = 'none';
-    modal.style.display = 'none';
-}
+
+
+
+
+    // Blog and Projects Functionality (Corrected)
+    // Get elements
+    const detailsButton = document.querySelector('.details-button');
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modal = document.getElementById('modal');
+    const modalClose = document.getElementById('modal-close');
+    const modalTitle = document.getElementById('modal-title');
+    const modalText = document.getElementById('modal-text');
+
+    // Open modal on button click
+    detailsButton.addEventListener('click', function () {
+        const title = this.getAttribute('data-title');
+        const file = this.getAttribute('data-file');
+
+        // Fetch content from the file (you could fetch from the server if needed)
+        fetch(file)
+            .then(response => response.text())
+            .then(content => {
+                modalTitle.textContent = title;
+                modalText.textContent = content;
+            })
+            .catch(error => {
+                modalTitle.textContent = 'Error';
+                modalText.textContent = 'Failed to load content.';
+            });
+
+        // Show modal and overlay
+        modalOverlay.style.display = 'block';
+        modal.style.display = 'block';
+    });
+
+    // Close modal when clicking on close button or overlay
+    modalClose.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', closeModal);
+
+    // Function to close the modal
+    function closeModal() {
+        modalOverlay.style.display = 'none';
+        modal.style.display = 'none';
+    }
+
 
 
     // Contact Form Functionality
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent the default form submission
 
         const emailInput = document.getElementById('email');
@@ -103,7 +126,7 @@ function closeModal() {
         alert("Your message has been sent!");
     });
 
-    themeToggle.addEventListener('click', function() {
+    themeToggle.addEventListener('click', function () {
         body.classList.toggle('light-theme');
         updateModalTheme(); // Update modal theme on toggle
     });
@@ -123,12 +146,12 @@ function closeModal() {
 
     updateModalTheme(); //sets the correct modal theme on page load.
 });
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const backToTopButton = document.getElementById('back-to-top');
     const footer = document.querySelector('footer');
 
     if (backToTopButton && footer) {
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const scrollTop = window.scrollY;
             const windowHeight = window.innerHeight;
             const footerTop = footer.getBoundingClientRect().top + window.scrollY;
@@ -140,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        backToTopButton.addEventListener('click', function() {
+        backToTopButton.addEventListener('click', function () {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
