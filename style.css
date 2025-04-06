@@ -128,7 +128,6 @@ nav {
     .profile-pic img {
         width: 18vh; /* Adjust size as needed */
         height: 18vh;
-        border-radius: 50%;
         object-fit: cover;
     }
 }
