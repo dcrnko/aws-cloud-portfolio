@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     // Navigation links smooth scrolling
     document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
 
             const targetId = this.getAttribute('href').substring(1);
@@ -28,66 +28,72 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateCounter();
 
+ // Blog and Projects Functionality (Corrected)
+const detailsButtons = document.querySelectorAll('.details-button');
+const modalOverlay = document.getElementById('modal-overlay');
+const modal = document.getElementById('modal');
+const modalTitle = document.getElementById('modal-title');
+const modalText = document.getElementById('modal-text');
+const modalClose = document.getElementById('modal-close');
+const previews = document.querySelectorAll('.preview');
+const body = document.body;
+const themeToggle = document.getElementById('theme-toggle');
 
+detailsButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        modalTitle.textContent = this.getAttribute('data-title');
+        const filePath = this.getAttribute('data-file');
+        const dataContent = this.getAttribute('data-content');
 
+        if (filePath) {
+            fetch(filePath)
+                .then(response => response.text())
+                .then(text => {
+                    modalText.innerHTML = text;
+                })
+                .catch(error => {
+                    console.error('Error fetching file:', error);
+                });
+        } else if (dataContent) {
+            modalText.innerHTML = dataContent;
+        }
 
-
-    const themeToggle = document.getElementById('theme-toggle');
-    // Theme Toggle Functionality (Keeping it as is, assuming it works)
-    if (themeToggle) {
-        themeToggle.addEventListener('click', function () {
-            body.classList.toggle('dark-theme');
-            if (body.classList.contains('dark-theme')) {
-                themeToggle.textContent = '☽';
-            } else {
-                themeToggle.textContent = '☼';
-            }
-        });
-    }
-
-
-    // Modal
-    const detailsButton = document.querySelector('.details-button');
-    const modalOverlay = document.getElementById('modal-overlay');
-    const modal = document.getElementById('modal');
-    const modalClose = document.getElementById('modal-close');
-    const modalTitle = document.getElementById('modal-title');
-    const modalText = document.getElementById('modal-text');
-
-    // Open modal on button click
-    detailsButton.addEventListener('click', function () {
-        const title = this.getAttribute('data-title');
-        const file = this.getAttribute('data-file');
-
-        // Fetch HTML content from the file (HTML formatted content)
-        fetch(file)
-            .then(response => response.text())
-            .then(content => {
-                modalTitle.textContent = title;  // Set modal title
-                modalText.innerHTML = content;  // Set HTML content
-
-                // Show modal and overlay
-                modalOverlay.style.display = 'block';
-                modal.style.display = 'block';
-            })
-            .catch(error => {
-                modalTitle.textContent = 'Error';
-                modalText.textContent = 'Failed to load content.';
-            });
+        // 💡 Scrollbar compensation
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+        document.body.style.overflow = 'hidden';
+        modalOverlay.style.display = 'block';
+        modal.style.display = 'block';
     });
+});
 
-    // Close modal when clicking on close button or overlay
-    modalClose.addEventListener('click', closeModal);
-    modalOverlay.addEventListener('click', closeModal);
+modalClose.addEventListener('click', function () {
+    closeModal();
+});
 
-    // Function to close the modal
-    function closeModal() {
-        modalOverlay.style.display = 'none';
-        modal.style.display = 'none';
+modalOverlay.addEventListener('click', function (event) {
+    if (event.target === modalOverlay) {
+        closeModal();
     }
+});
+
+window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});
+
+function closeModal() {
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = ''; // Reset compensation
+
+    modalOverlay.style.display = 'none';
+    modal.style.display = 'none';
+}
+
 
     // Contact Form Functionality
-    document.getElementById('contact-form').addEventListener('submit', function (event) {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
 
         const emailInput = document.getElementById('email');
@@ -118,13 +124,33 @@ document.addEventListener('DOMContentLoaded', function () {
         // You can add a confirmation message or redirect here if needed
         alert("Your message has been sent!");
     });
+
+    themeToggle.addEventListener('click', function() {
+        body.classList.toggle('light-theme');
+        updateModalTheme(); // Update modal theme on toggle
+    });
+
+    function updateModalTheme() {
+        const modal = document.getElementById('modal');
+        if (body.classList.contains('light-theme')) {
+            modal.style.backgroundColor = 'white';
+            modal.style.color = 'black';
+            document.getElementById('close').style.color = 'black'; // Corrected ID
+        } else {
+            modal.style.backgroundColor = 'black';
+            modal.style.color = 'white';
+            document.getElementById('close').style.color = 'white'; // Corrected ID
+        }
+    }
+
+    updateModalTheme(); //sets the correct modal theme on page load.
 });
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const backToTopButton = document.getElementById('back-to-top');
     const footer = document.querySelector('footer');
 
     if (backToTopButton && footer) {
-        window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', function() {
             const scrollTop = window.scrollY;
             const windowHeight = window.innerHeight;
             const footerTop = footer.getBoundingClientRect().top + window.scrollY;
@@ -136,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        backToTopButton.addEventListener('click', function () {
+        backToTopButton.addEventListener('click', function() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
