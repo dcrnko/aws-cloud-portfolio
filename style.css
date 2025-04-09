@@ -81,8 +81,6 @@ nav {
     transform-origin: left;
 }
 
-
-
 .nav-right #theme-toggle {
     cursor: pointer;
 }
@@ -91,10 +89,6 @@ nav {
     nav {
         display: flex;
         align-items: center;
-        /* Center nav-right within nav */
-
-        /* Full width */
-
     }
 
     .nav-left {
@@ -104,7 +98,7 @@ nav {
 
     .nav-right{
 
-        /* Center navigation items */
+
         width: 100%;
         display: flex; /* Add this */
         justify-content: center; /* Add this */
@@ -115,6 +109,7 @@ nav {
       }
     
       .nav-right li {
+        font-size: 1.3em;
         float: none; /* Remove float */
       }
 
@@ -193,11 +188,11 @@ nav {
         object-fit: cover;
     }
     .counter-number {
-        margin-top: 20vh;
+        margin-top: 18vh;
     }
     
     .scroll-down {
-        margin-top: 2vh;
+        margin-top: 1.7vh;
         font-size: 2em;
     }
 }
@@ -217,17 +212,14 @@ nav {
 }
 
 .about-title,
-.experience-title {
+.practical-skills-title {
+    margin-top: 10vh;
     font-size: 2em;
     margin-bottom: 20px;
 }
 
 .about-details {
     margin-bottom: 30px;
-}
-
-.experience-title {
-    margin-top: 10vh;
 }
 
 .download-cv {
@@ -246,13 +238,26 @@ nav {
 }
 
 .timeline {
-    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    border-left: 2px solid white;
     padding-left: 20px;
 }
 
 .milestone {
-    margin-bottom: 20px;
+    padding: 0px;
+    margin-bottom: 50px;
     position: relative;
+}
+.milestone h3 {
+    padding: 0px;
+    margin: 0px;
+}
+.milestone h4 {
+    padding: 0px;
+    margin: 0px;
+}
+.milestone p{
+    margin: 0px;
+    padding: 0px;
 }
 
 .experience-education {
