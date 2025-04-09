@@ -424,7 +424,7 @@ nav {
 
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1268px) {
     .blog-projects-content {
         max-width: 100%;
         margin: 0 auto;
@@ -437,7 +437,7 @@ nav {
     }
 
     .preview {
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid white;
         border-radius: 5px;
         padding: 20px;
     }
