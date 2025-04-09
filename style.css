@@ -280,9 +280,12 @@ nav {
     border: 0.1px solid white;
     border-radius: 5px;
 }
-
-.skill-name {
+.skill-name{
     filter: invert(100%);
+}
+.skill-name img{
+    width: 3rem;
+    height: 3rem;
 }
 
 .skill-level {
