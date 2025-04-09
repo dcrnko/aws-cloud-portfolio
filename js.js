@@ -171,3 +171,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+    // Simple intersection observer to trigger fade-in
+    const faders = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // fade in only once
+        }
+      });
+    });
+
+    faders.forEach(fade => observer.observe(fade));
