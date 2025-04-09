@@ -168,7 +168,8 @@ nav {
 }
 
 .social-icons img {
-    width: 30px;
+    width: 35px;
+    height: 35px;
     /* Adjust icon size */
     filter: invert(100%);
     /* Invert colors to white */
@@ -184,12 +185,20 @@ nav {
 }
 
 @media (max-width: 1268px) {
-    .profile-pic img {
+    .social-pic img {
         width: 18vh;
         /* Adjust size as needed */
         height: 18vh;
         border-radius: 50%;
         object-fit: cover;
+    }
+    .counter-number {
+        margin-top: 20vh;
+    }
+    
+    .scroll-down {
+        margin-top: 2vh;
+        font-size: 2em;
     }
 }
 
@@ -273,8 +282,7 @@ nav {
 }
 
 .skill-name {
-    font-weight: bold;
-    margin-bottom: 10px;
+    filter: invert(100%);
 }
 
 .skill-level {
@@ -593,6 +601,9 @@ footer {
     padding: 20px;
     border: 0.5px solid black;
     border-radius: 5px;
+}
+.light-theme .skill-name {
+    filter: invert(0%);
 }
 
 .light-theme .timeline {
