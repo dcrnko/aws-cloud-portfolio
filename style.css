@@ -2,7 +2,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-image: linear-gradient(to bottom, #000000, #110009, #170117, #150523, #000d32);
     /* Default background */
     color: white;
     /* Default text color */
@@ -578,15 +578,14 @@ footer {
 }
 
 .light-theme {
-    background-color: #f0f0f0 !important;
+    background-image: linear-gradient(to bottom, #eeeeff, #e8e8ff, #e1e1ff, #dbdbff, #d5d5ff);
     /* Light grey background */
-    color: black !important;
+    color: black;
 }
 
-.light-theme nav {
-    background-color: #f0f0f0;
+.light-theme nav{
+    background-color: transparent;
 }
-
 .light-theme .nav-left a {
     text-decoration: none;
     color: black;
@@ -627,7 +626,7 @@ footer {
 
 
 .light-theme footer {
-    background-color: #f0f0f0;
+    background-color: transparent;
 }
 
 .light-theme .details-button,
@@ -638,11 +637,6 @@ footer {
     color: black;
 }
 
-
-.light-theme {
-    background-color: #f0f0f0;
-    color: black;
-}
 
 .light-theme .preview,
 .light-theme .details-button {
@@ -671,7 +665,6 @@ footer {
 .light-theme header {
     width: 100%;
     /* Ensure full width on light-theme */
-    background-color: #f0f0f0;
 }
 
 .fade-in {
