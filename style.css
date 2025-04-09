@@ -314,6 +314,10 @@ nav {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
+    .skill-name img{
+        width: 2rem;
+        height: 2rem;
+    }
 }
 
 /* Blog & Projects Section */
