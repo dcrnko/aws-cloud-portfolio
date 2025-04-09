@@ -308,6 +308,10 @@ nav {
         max-width: 100%;
         margin: 0 auto;
     }
+    .skill {
+        text-align: center;
+        padding: 10px;
+    }
 
     .skill-indicators {
         display: grid;
@@ -315,8 +319,8 @@ nav {
         gap: 20px;
     }
     .skill-name img{
-        width: 1.8rem;
-        height: 1.8rem;
+        width: 2rem;
+        height: 2rem;
     }
     .skill-level {
         font-size: 0.6em;
