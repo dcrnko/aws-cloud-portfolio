@@ -316,14 +316,14 @@ nav {
     .skill-indicators {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 15px;
     }
     .skill-name img{
         width: 2rem;
         height: 2rem;
     }
     .skill-level {
-        font-size: 0.6em;
+        font-size: 0.9em;
     }
 }
 
