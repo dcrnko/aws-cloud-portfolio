@@ -395,7 +395,7 @@ nav {
     /* Default width */
     max-width: 800px;
     /* Maximum width for large screens */
-    background-color: black;
+    background-image: linear-gradient(to bottom, #000000, #110009, #170117, #150523, #000d32);
     color: white;
     border-radius: 10px;
     padding: 20px;
@@ -650,7 +650,7 @@ footer {
 }
 
 .light-theme .modal {
-    background-color: white;
+    background-image: linear-gradient(to bottom, #eeeeff, #e8e8ff, #e1e1ff, #dbdbff, #d5d5ff);
     color: black;
 }
 
