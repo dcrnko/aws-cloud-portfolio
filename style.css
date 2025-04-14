@@ -363,14 +363,17 @@ nav {
 }
 
 .details-button {
+    font-family: 'Montserrat', sans-serif;    
+    border: 1px solid white;
     border-radius: 5px;
     background-color: transparent;
-    border: 1px solid white;
     color: white;
     padding: 10px 20px;
     cursor: pointer;
     margin-top: 20px;
 }
+
+
 
 /* Modal overlay */
 .modal-overlay {
