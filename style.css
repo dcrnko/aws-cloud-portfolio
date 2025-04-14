@@ -196,9 +196,13 @@ nav {
         font-size: 2em;
     }
 }
-
-
-
+@media (max-height: 500px) {
+    .profile-pic img {
+        width: 25vh;
+        /* Adjust size as needed */
+        height: 25vh;
+    }
+}
 /* About Section */
 #about {
     min-height: 100vh;
