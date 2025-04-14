@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
+    // Scroll smooth END
 
 
     // Update view counter

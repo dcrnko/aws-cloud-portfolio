@@ -173,7 +173,7 @@ nav {
 .counter-number {
     margin-top: 30vh;
 }
-
+    /* Gap for counter */
 .scroll-down {
     margin-top: 3vh;
     font-size: 2em;
