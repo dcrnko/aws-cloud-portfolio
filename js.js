@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Navigation links smooth scrolling
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.countlt();
+            e.preventDefault(); // <- Correct method
 
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    // Scroll smooth END
+});
+
 
 
     // Update view counter
