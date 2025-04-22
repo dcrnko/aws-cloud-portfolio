@@ -167,8 +167,8 @@ nav {
 }
 
 .social-icons img {
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
     /* Adjust icon size */
     filter: invert(100%);
     /* Invert colors to white */
