@@ -6,7 +6,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to bottom, #000000, #110009, #170117, #150523, #000d32);
+    background-image: linear-gradient(to bottom, #000000 0%, #170117 10%, #110009 30%, #170117 50%, #150523 70%, #000d32 100%);
+    /*background-image: linear-gradient(to bottom, #000000, #110009, #170117, #150523, #000d32);
     /* Default background */
     color: white;
     /* Default text color */
