@@ -7,7 +7,6 @@ body {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to bottom, #000000 0%, #170117 15%, #110009 25%, #170117 45%, #150523 65%, #000d32 95%);
-    /*background-image: linear-gradient(to bottom, #000000, #110009, #170117, #150523, #000d32);
     /* Default background */
     color: white;
     /* Default text color */
