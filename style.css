@@ -191,6 +191,9 @@ nav {
 }
 
 @media (max-width: 1268px) {
+    #landing{
+        max-height: 100vh;
+    }
     .social-pic img {
         width: 18vh;
         /* Adjust size as needed */
