@@ -93,12 +93,11 @@ nav {
     nav {
         max-width: 100%;
         display: flex;
-        align-items: center;
+        
     }
 
     .nav-left {
-        display: none;
-        /* Hide nav-left on smaller screens */
+        font-size: 1.1em;
     }
 
     .nav-right{
@@ -187,12 +186,16 @@ nav {
 }
 
 @media (max-width: 1268px) {
+
     .social-pic img {
         width: 18vh;
         /* Adjust size as needed */
         height: 18vh;
         border-radius: 50%;
         object-fit: cover;
+    }
+    .container-intro {
+        width: 100%;
     }
     .counter-number {
         margin-top: 18vh;
