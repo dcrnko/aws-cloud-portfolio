@@ -15,6 +15,8 @@ const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 const modal = document.getElementById('modal');
 const modalClose = document.getElementById('modal-close');
+const sunIconPath = 'pictures/sun.png';
+const moonIconPath = 'pictures/moon.png';
 
 // Function to update the modal theme
 function updateModalTheme() {
@@ -29,22 +31,40 @@ function updateModalTheme() {
     }
 }
 
+// Function to update the theme toggle icon
+function updateThemeIcon() {
+    if (themeToggle) {
+        themeToggle.innerHTML = ''; // Clear any existing content
+
+        const icon = document.createElement('img');
+        icon.classList.add('theme-icon'); // Optional: Add a class for styling
+        icon.alt = body.classList.contains('light-theme') ? 'Dark Mode' : 'Light Mode';
+
+        if (body.classList.contains('light-theme')) {
+            icon.src = moonIconPath;
+        } else {
+            icon.src = sunIconPath;
+        }
+
+        themeToggle.appendChild(icon);
+    }
+}
+
 // Theme Toggle Event Listener
 if (themeToggle) {
     themeToggle.addEventListener('click', function () {
         // Toggle the 'light-theme' class on the body
         body.classList.toggle('light-theme');
 
-        // Update the theme toggle button's text or icon
-        if (body.classList.contains('light-theme')) {
-            themeToggle.textContent = '☽'; // Moon icon for light theme
-        } else {
-            themeToggle.textContent = '☼'; // Sun icon for dark theme
-        }
+        // Update the theme toggle button's icon
+        updateThemeIcon();
 
         // Update modal theme whenever the theme is toggled
         updateModalTheme();
     });
+
+    // Initial call to set the icon on page load
+    updateThemeIcon();
 }
 document.addEventListener('DOMContentLoaded', function() {
     // Select the element with the class 'scroll-down' (your down arrow).
