@@ -208,6 +208,7 @@ nav {
     }
     .container-intro {
         width: 100%;
+        font-size: 1.5em;
     }
     .counter-number {
         margin-top: 18vh;
@@ -215,7 +216,7 @@ nav {
     
     .scroll-down {
         margin-top: 1.7vh;
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
 @media (max-height: 500px) {
