@@ -206,6 +206,10 @@ nav {
         margin-top: 1.7vh;
         font-size: 2em;
     }
+    .container-intro{
+        width: 100%;
+        font-style: italic;
+    }
 }
 @media (max-height: 500px) {
     .profile-pic img {
