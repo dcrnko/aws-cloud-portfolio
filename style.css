@@ -91,6 +91,7 @@ nav {
 
 @media (max-width: 1268px) {
     nav {
+        width: 100vh;
         display: flex;
         align-items: center;
     }
@@ -174,8 +175,6 @@ nav {
     /* Invert colors to white */
 }
 .container-intro{
-    position: relative;
-    top: 10vh;
     width: 100%;
     font-style: italic;
 }
@@ -191,9 +190,6 @@ nav {
 }
 
 @media (max-width: 1268px) {
-    #landing{
-        max-height: 100vh;
-    }
     .social-pic img {
         width: 18vh;
         /* Adjust size as needed */
@@ -208,10 +204,6 @@ nav {
     .scroll-down {
         margin-top: 1.7vh;
         font-size: 2em;
-    }
-    .container-intro{
-        width: 100%;
-        font-style: italic;
     }
 }
 @media (max-height: 500px) {
