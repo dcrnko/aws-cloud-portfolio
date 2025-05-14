@@ -173,7 +173,12 @@ nav {
     filter: invert(100%);
     /* Invert colors to white */
 }
-
+.container-intro{
+    position: relative;
+    top: 10vh;
+    width: 100%;
+    font-style: italic;
+}
 .counter-number {
     margin-top: 30vh;
 }
@@ -181,6 +186,8 @@ nav {
 .scroll-down {
     margin-top: 3vh;
     font-size: 2em;
+    cursor: pointer; 
+
 }
 
 @media (max-width: 1268px) {

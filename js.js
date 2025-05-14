@@ -46,6 +46,26 @@ if (themeToggle) {
         updateModalTheme();
     });
 }
+document.addEventListener('DOMContentLoaded', function() {
+    // Select the element with the class 'scroll-down' (your down arrow).
+    const scrollDownButton = document.querySelector('.scroll-down');
+  
+    // Select the element with the ID 'about' (your About section).
+    const aboutSection = document.getElementById('about');
+  
+    // Check if both the button and the target section exist in the DOM.
+    if (scrollDownButton && aboutSection) {
+      // Add a click event listener to the scrollDownButton.
+      scrollDownButton.addEventListener('click', function() {
+        // When the button is clicked, scroll the 'aboutSection' into view.
+        // The 'behavior: 'smooth'' option provides a smooth scrolling animation.
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+    // If either the button or the about section is not found, this code block is skipped,
+    // preventing potential errors.
+  });
+
 
 // Modal functionality
 const detailsButtons = document.querySelectorAll('.details-button');
