@@ -85,6 +85,7 @@ nav {
     transform-origin: left;
 }
 
+
 @media (max-width: 1268px) {
     nav {
         max-width: 100%;
@@ -166,18 +167,30 @@ nav {
     filter: invert(100%);
     /* Invert colors to white */
 }
+.container-toggle{
+    margin-top: 0.5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+  }
+.theme-toggle{
+    all:unset;
+    background-color: transparent;
+    cursor: pointer;
+}
+.theme-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain; /* Optional: prevents stretching */
+    display: block; /* Optional: removes extra spacing if inside inline elements */
+  }
 .container-intro{
-    margin-top: 8vh;
+    margin-top: 2vh;
     width: 100%;
     font-style: italic;
 }
-.theme-toggle{
-    all:unset;
-    border-radius: 5px;
-    background-color: transparent;
-    margin-top: 5vh;
-    cursor: pointer;
-}
+
 .counter-number {
     margin-top: 10vh;
 }
@@ -190,6 +203,7 @@ nav {
 }
 
 @media (max-width: 1268px) {
+    
     .landing-content {
         text-align: center;
         min-width: 100%;
@@ -207,7 +221,6 @@ nav {
         object-fit: cover;
     }
     .container-intro {
-        margin-top: 3vh;
         width: 100%;
         font-size: 0.8em;
     }
