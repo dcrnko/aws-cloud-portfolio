@@ -6,7 +6,7 @@ Welcome to my personal portfolio website – a responsive and minimal design hos
 
 ## 📸 Preview
 
-![Portfolio Preview](preview.gif)  
+![Portfolio Preview](pictures/website_preview.gif)  
 *Note: Replace `preview.gif` with an actual image or gif from your project if available.*
 
 ---
@@ -14,7 +14,6 @@ Welcome to my personal portfolio website – a responsive and minimal design hos
 ## 🚀 Live Website
 
 🔗 [View Live Website](http://your-bucket-name.s3-website-region.amazonaws.com)  
-*(Replace with your actual S3 URL or custom domain)*
 
 ---
 
