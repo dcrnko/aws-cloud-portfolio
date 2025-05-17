@@ -431,6 +431,7 @@ nav {
 
 /* Modal window */
 .modal {
+    border: 1px solid white;
     position: fixed;
     top: 50%;
     left: 50%;
