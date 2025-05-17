@@ -692,6 +692,7 @@ footer {
 }
 
 .light-theme .modal {
+    border: 1px solid black;
     background-image: linear-gradient(to bottom, #eeeeff, #e8e8ff, #e1e1ff, #dbdbff, #d5d5ff);
     color: black;
 }
