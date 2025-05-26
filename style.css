@@ -338,7 +338,9 @@ nav {
     font-size: 1.2em;
 }
 
-
+.verified{
+    filter: invert(100%);
+}
 @media (max-width: 1268px) {
     .about-content {
         max-width: 100%;
