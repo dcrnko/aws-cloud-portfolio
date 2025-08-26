@@ -47,3 +47,5 @@ Welcome to my personal portfolio website – a responsive and minimal design hos
 ├── pictures/
 │   └── profile.jpg
 └── README.md
+```
+![Alt text](path/to/image.png)
