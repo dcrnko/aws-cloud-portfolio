@@ -42,7 +42,7 @@ Welcome to my personal portfolio website – a responsive and minimal design hos
 /aws-cloud-portfolio-github
 ├── index.html
 ├── css/
-│   └── styles.css
+│── styles.css
 ├── js.sj   
 ├── pictures/
 │   └── profile.jpg
