@@ -12,7 +12,7 @@ Welcome to my personal portfolio website – a responsive and minimal design hos
 
 ## 🚀 Live Website
 
-🔗 [View Live Website](http://your-bucket-name.s3-website-region.amazonaws.com)  
+🔗 [View Live Website](http://davidcrnko.com)  
 
 ---
 
