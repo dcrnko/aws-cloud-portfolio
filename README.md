@@ -48,4 +48,4 @@ Welcome to my personal portfolio website – a responsive and minimal design hos
 │   └── profile.jpg
 └── README.md
 ```
-![Alt text](path/to/image.png)
+![Alt text](Screenshot From 2025-08-26 15-01-12.png)
