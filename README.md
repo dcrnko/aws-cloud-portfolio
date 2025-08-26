@@ -48,4 +48,5 @@ Welcome to my personal portfolio website – a responsive and minimal design hos
 │   └── profile.jpg
 └── README.md
 ```
+## 🏗️ Architecture Diagram
 ![Alt text](pictures/diagram.png)
